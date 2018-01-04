@@ -39,10 +39,14 @@
   <!-- Google Analytics -->
   
 
+
+  <!-- jquery   -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 </head>
 
 
   <body>
+    
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
@@ -74,8 +78,27 @@
   </div>
 </nav>
 
-
+      
   		<div class="row">
+      <!--     <div class="row tags-filter ">
+            <a href="#"> <span class="tag">WEB</span> </a>
+            <a href="#"> <span class="tag">APP</span> </a>
+            <a href="#"> <span class="tag">Graphic</span> </a>
+            <a href="#"> <span class="tag">UI</span> </a>
+
+            <script>
+              $(document).ready(function(){
+                $('.tag').click(function(){
+                  if ($('tag').hasClass('active') == false ){
+                    $(this).addClass('active');    
+                  }else{
+                    $(this).removeClass('active');
+                  }
+                  
+                });
+            
+            </script>
+          </div>     -->
   			
 
     
@@ -126,6 +149,12 @@
         
          
           <span class="tag">
+              WEB
+          </span>
+          
+        
+         
+          <span class="tag">
               APP
           </span>
           
@@ -133,12 +162,6 @@
          
           <span class="tag">
               UI
-          </span>
-          
-        
-         
-          <span class="tag">
-              WEB
           </span>
           
         
