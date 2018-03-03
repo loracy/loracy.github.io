@@ -104,7 +104,7 @@
 </div>
 
 <!-- page/tags-container -->
-<div class="col-12">
+<div class="col-12 col-lg-10 offset-lg-1">
 
   <div class="tags-container">
     
@@ -120,13 +120,30 @@
   
 </div>
       
-<div class="col-lg-4 col-12 pt-3 px-4 pr-lg-5">
+<div class="col-12 col-lg-10 offset-lg-1 pt-3 px-4">
   <h1>英文易開罐ppt</h1>
 </div>
-<div class="col-lg-8 col-12 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
+<div class="col-12 col-lg-10 offset-lg-1 pt-lg-3 mb-4 pl-lg-5 px-lg-0 px-4 portfolio-content">
   
 </div>
 
+<div class="window">
+    <div class="close-tag"></div>
+    <img src=""/>
+</div>
+<script>
+    $('.demoImg').click(function(){
+        console.log('demoImg is clicked');
+        var src = this.src;
+        $('.window img').attr('src',src);
+        $('.window').addClass('window-show');
+    });
+
+    $('.close-tag').click(function(){
+        console.log('close-tag clicked');
+        $('.window').removeClass('window-show');
+    });
+</script>
 
       </div>
       
