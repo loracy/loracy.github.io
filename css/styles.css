@@ -17,91 +17,42 @@ form {
     margin: 0 auto;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Noto Sans TC' !important;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3{
+    margin-top: 40px;
+}
+
+p{
+    font-weight: 300;
+    text-align: center;
+}
+
 ul{
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 li{
-    /* width: 18%; */
-    /* margin: 8px 16px; */
-    /* display: flex; */
-    /* flex-direction: column; */
+    padding: 15px;
+    background-color: rgba(256,256,256,.2);
 }
 
-.demoImg{
-    border: rgba(255, 255, 255, 0.4) 5px solid;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: #000000 0px 2px 6px rgba(0,0,0,.05);
-    max-height: 256px;
+li p{
+    text-align: left;
 }
-
-.window{
-    position: fixed;
-    width: 25%;
-    left: 50%;
-    top: 50%;
-    visibility: hidden;
-    opacity: 0;
-    -webkit-transition: all 0.6s;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
-}
-
-.window img{
-    width: 100%;
-    border: rgba(255, 255, 255, 0.6) 8px solid;
-    border-radius: 4px;
-    box-shadow: #000000 0px 2px 6px rgba(0,0,0,.05);
-}
-
-.window-show{
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-}
-
-/* -----close-tag----- */
-.close-tag {
-    position: absolute;
-    right: -40px;
-    top: 20px;
-    width: 20px;
-    height: 20px;
-    border: none;
-    cursor: pointer;
-    -webkit-transition: all 1s;
-    -ms-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
-}
-.close-tag:before,
-.close-tag:after {
-    content: '';
-    position: absolute;
-    background-color: #ffffff;
-    transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-}
-.close-tag:before {
-    left: 45%;
-    top: -10%;
-    width: 10%;
-    height: 120%;
-}
-.close-tag:after {
-    top: 45%;
-    left: -10%;
-    width: 120%;
-    height: 10%;
-}
-/* close-tag */
 
 button {
     color: #777;
@@ -135,33 +86,23 @@ textarea:focus {
     outline: none;
 }
 
-.portfolio-content {
+.portfolioSection {
     line-height: 2;
     color: #555;
 }
 
-.portfolio-content a {
+.portfolioSection a {
     color: #333;
     text-decoration: none;
     border-bottom: 1px solid #bbb;
 }
 
-.portfolio-content a:hover {
+.portfolioSection a:hover {
     color: #000;
     text-decoration: none;
     border-bottom: 1px solid #555;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: 'Noto Sans TC' !important;
-    letter-spacing: 1px;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
 
 .navbar-brand {
     font-weight: 800;
@@ -282,6 +223,12 @@ h5 {
     margin-top: 48px;
 }
 
+.titleSection .tags-container{
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+}
+
 .tags-container .tag {
     background: #CFD9DF;
     border-radius: 100px;
@@ -399,6 +346,80 @@ span {
   .timeline > li {
     margin-bottom: 60px;
   }
+
+  
+.demoImg{
+    border: rgba(255, 255, 255, 0.4) 5px solid;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.05);
+    max-height: 216px;
+    width: auto;
+}
+
+.window{
+    position: fixed;
+    width: 25%;
+    left: 50%;
+    top: 50%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.6s;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
+}
+
+.window img{
+    width: 100%;
+    border: rgba(255, 255, 255, 0.6) 8px solid;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.2);
+}
+
+.window-show{
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+/* -----close-tag----- */
+.close-tag {
+    position: absolute;
+    right: -40px;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;    
+    -webkit-transition: all 1s;
+    -ms-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.close-tag:before,
+.close-tag:after {
+    content: '';
+    position: absolute;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+}
+.close-tag:before {
+    left: 45%;
+    top: -10%;
+    width: 10%;
+    height: 120%;
+}
+.close-tag:after {
+    top: 45%;
+    left: -10%;
+    width: 120%;
+    height: 10%;
+}
+/* close-tag */
   
  /* for Desktop */
 @media ( min-width : 831px ){
