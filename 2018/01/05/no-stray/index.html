@@ -99,15 +99,79 @@
             
             </script>
           </div>     -->
-  			
-  <div class="col-12 mb-4">
-    <img class="img-fluid project-img" src="/images/no-stray/cover.png" alt="流浪動物平台">
-  </div>
-
-<div class="col-12 pt-lg-3 mb-4 px-4 portfolio-content">
-  
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/no-stray/cover.png" alt="流浪動物平台">
 </div>
+      
+<div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
+  <h1>流浪動物平台</h1>
+  
+    <div class="tags-container">
 
+        
+          
+          <span class="tag">
+              WEB
+          </span>
+          
+        
+          
+          <span class="tag">
+              no RWD Q_Q
+          </span>
+          
+        
+  
+    </div>
+    
+  </div><!-- titleSection -->
+<div class="col-12 col-lg-8 offset-lg-2 pt-lg-3 mb-4 portfolioSection">
+    
+</div><!-- portfolioSection -->
+
+<div class="col-12 col-lg-10 offset-lg-1 d-flex justify-content-between navigateSection">
+    
+    <a class="d-flex align-items-center" href="#">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>
+      上一篇
+    </a>
+  
+    
+  
+    <a class="d-flex align-items-center" href="#">
+      下一篇
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg>      
+    </a>
+  
+    
+</div><!-- navigateSection -->
+<div class="window">
+    <div class="close-tag"></div>
+    <img src=""/>
+</div>
+<!-- popup modal js -->
+<script>
+    // console.log(page.prev_link);
+    $('.demoImg').click(function(){
+        console.log('demoImg is clicked');
+        var src = this.src;
+        $('.window img').attr('src',src);
+        $('.window').addClass('window-show');
+    });
+
+    $('.close-tag').click(function(){
+        console.log('close-tag clicked');
+        $('.window').removeClass('window-show');
+    });
+
+    $(document).keyup(function(e){
+        var keyWhich =  e.which;
+        var keyCode =  e.keyCode;
+        if(keyWhich == 27 || keyCode == 27){
+            $('.window').removeClass('window-show');
+        }
+    });
+</script>
 
       </div>
       

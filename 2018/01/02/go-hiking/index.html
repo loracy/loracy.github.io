@@ -99,12 +99,33 @@
             
             </script>
           </div>     -->
-  			
-  <div class="col-12 mb-4">
-    <img class="img-fluid project-img" src="/images/go-hiking/cover.png" alt="台灣步道">
-  </div>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/go-hiking/cover.png" alt="台灣步道">
+</div>
+      
+<div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
+  <h1>台灣步道</h1>
+  
+    <div class="tags-container">
 
-<div class="col-12 pt-lg-3 mb-4 px-4 portfolio-content">
+        
+          
+          <span class="tag">
+              APP
+          </span>
+          
+        
+          
+          <span class="tag">
+              IOS
+          </span>
+          
+        
+  
+    </div>
+    
+  </div><!-- titleSection -->
+<div class="col-12 col-lg-8 offset-lg-2 pt-lg-3 mb-4 portfolioSection">
   <!-- ![go-hiking_img-login](https://loracy.github.io/images/go-hiking/login.png) -->
 <h3>創作目的</h3>
 <p>讓愛好登山運動的朋友，完整收納全台的步道，<br>結合遊戲化和商業模式，吸引更多用戶的展開健康步道生活，<br>更可以認識志同道合的好朋友。</p>
@@ -201,9 +222,52 @@
 <p><a href="https://marvelapp.com/j1bg9b6/" target="_blank" rel="noopener">https://marvelapp.com/j1bg9b6/</a></p>
 <div class="col-12 d-flex justify-content-center">
     <iframe src="https://marvelapp.com/j1bg9b6?emb=1&iosapp=false&frameless=false" width="226" height="450.5" allowtransparency="true" frameborder="0"></iframe>
-</div>
-</div>
+</div>  
+</div><!-- portfolioSection -->
 
+<div class="col-12 col-lg-10 offset-lg-1 d-flex justify-content-between navigateSection">
+    
+    <a class="d-flex align-items-center" href="#">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="20" y1="12" x2="4" y2="12"></line><polyline points="10 18 4 12 10 6"></polyline></svg>
+      上一篇
+    </a>
+  
+    
+  
+    <a class="d-flex align-items-center" href="#">
+      下一篇
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="4" y1="12" x2="20" y2="12"></line><polyline points="14 6 20 12 14 18"></polyline></svg>      
+    </a>
+  
+    
+</div><!-- navigateSection -->
+<div class="window">
+    <div class="close-tag"></div>
+    <img src=""/>
+</div>
+<!-- popup modal js -->
+<script>
+    // console.log(page.prev_link);
+    $('.demoImg').click(function(){
+        console.log('demoImg is clicked');
+        var src = this.src;
+        $('.window img').attr('src',src);
+        $('.window').addClass('window-show');
+    });
+
+    $('.close-tag').click(function(){
+        console.log('close-tag clicked');
+        $('.window').removeClass('window-show');
+    });
+
+    $(document).keyup(function(e){
+        var keyWhich =  e.which;
+        var keyCode =  e.keyCode;
+        if(keyWhich == 27 || keyCode == 27){
+            $('.window').removeClass('window-show');
+        }
+    });
+</script>
 
       </div>
       
