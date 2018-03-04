@@ -125,16 +125,24 @@
 
 <div class="col-12 col-lg-10 offset-lg-1 d-flex justify-content-between navigateSection">
     
-    <a href="../../../../2018/01/05/ppt-cover/index.html">prev</a>
-  
-    
-  
-    <a href="../../../../2018/01/02/go-hiking/index.html">
-      下一篇
-      <img src="images/svg/arrow-right.svg"/>
+    <a class="d-flex align-items-center" href="../../../../2018/01/05/ppt-cover/index.html">
+      <img src="/images/svg/arrow-left.svg"/>      
+      <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
+        <span>上一篇</span>
+        英文易開罐ppt
+      </p>
     </a>
   
     
+  
+    <a class="d-flex align-items-center" href="../../../../2018/01/02/go-hiking/index.html">
+      <p class="d-flex flex-column align-items-end mb-0 mr-md-3">
+        <span>下一篇</span>
+        台灣步道
+      </p>
+      <img src="/images/svg/arrow-right.svg"/>
+    </a>
+  
 </div><!-- navigateSection -->
 <div class="window">
     <div class="close-tag"></div>
@@ -142,7 +150,6 @@
 </div>
 <!-- popup modal js -->
 <script>
-    // console.log(page.prev_link);
     $('.demoImg').click(function(){
         console.log('demoImg is clicked');
         var src = this.src;

@@ -144,30 +144,34 @@
 <h3>Web 設計</h3>
 <ul class="row">
     <li class="col-12 mb-lg-3">
-        <img src="/images/meracle/web_map.png" class="demoImg">      
+        <img src="/images/meracle/web_map.png" class="demoImg demoImgWeb">      
         <p class="mt-lg-3">web最主要提供孩童進入我們產品的憶想城市，即為一些有關記憶力提升的遊戲，讓孩童在從遊戲中獲得樂趣的過程中，也能訓練記憶力，我們並且將之紀錄後，完整而清楚的呈現。註：遊戲美術部分是另位一位規劃與設計</p>
     </li>
     <li class="col-12 mb-lg-3">
-        <img src="/images/meracle/web_index.png" class="demoImg">
+        <img src="/images/meracle/web_index.png" class="demoImg demoImgWeb">
         <p class="mt-lg-3">其中登入後可以進入管理頁面，綜合該帳號的所有孩童，以圖表或表格呈現各項數據，提供家長可以完整且清楚地查看每個孩童記憶力成果和變化，並且也能快速進入異想城市開始遊戲。</p>
     </li>
     <li class="col-12 mb-lg-3">
-        <img src="/images/meracle/web_kid.png" class="demoImg">
+        <img src="/images/meracle/web_kid.png" class="demoImg demoImgWeb">
         <p class="mt-lg-3">其中孩童資料頁面，可以查看每個孩童的詳細數據與變化，選擇不同狀態或時段，提供家長更多元的查看方式。</p>
     </li>
     <li class="col-12 mb-lg-3">
-        <img src="/images/meracle/web_add1.png" class="demoImg">
-        <img src="/images/meracle/web_add2.png" class="demoImg">
-        <img src="/images/meracle/web_add3.png" class="demoImg">
+        <img src="/images/meracle/web_add1.png" class="demoImg demoImgWeb">
+        <img src="/images/meracle/web_add2.png" class="demoImg demoImgWeb">
+        <img src="/images/meracle/web_add3.png" class="demoImg demoImgWeb">
         <p class="mt-lg-3">一個帳號最多可以新增五個孩童，為了方便家長分辨，設計了五種個性鮮明的顏色，可以代表不同孩童的資料；如果新增過程中沒有上傳大頭貼，亦有提供預設大頭貼供使用；新增完成後也可以快速點擊按鈕進入遊戲，馬上就開始進行記憶力測驗！</p>
     </li>
     <li class="col-12 mb-lg-3">
-        <img src="/images/meracle/web_cardPublic.png" class="demoImg">
+        <img src="/images/meracle/web_cardPublic.png" class="demoImg demoImgWeb">
         <p class="mt-lg-3">並且也提供大眾數據(綜合其他會員的數據)，提供家長做參考。</p>
     </li>
+    <li class="col-12 mb-lg-3">
+        <img src="/images/meracle/web_wireframe1.png" class="demoImg demoImgWeb">
+        <img src="/images/meracle/web_wireframe2.png" class="demoImg demoImgWeb">
+        <img src="/images/meracle/web_functionalmap.png" class="demoImg demoImgWeb">
+        <p class="mt-lg-3"></p>
+    </li>
 </ul>
-<p><code>管理頁面首頁wireframe img</code><br>
-<code>web functional map img</code></p>
 <h3>Android App 設計</h3>
 <p>此App主要針對Android平台做設計和開發。<br>
 <code>測量腦波imgx6</code><br>
@@ -195,16 +199,24 @@
 
 <div class="col-12 col-lg-10 offset-lg-1 d-flex justify-content-between navigateSection">
     
-    <a href="../../../../2018/12/01/cgu/index.html">prev</a>
-  
-    
-  
-    <a href="../../../../2018/01/05/no-stray/index.html">
-      下一篇
-      <img src="images/svg/arrow-right.svg"/>
+    <a class="d-flex align-items-center" href="../../../../2018/12/01/cgu/index.html">
+      <img src="/images/svg/arrow-left.svg"/>      
+      <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
+        <span>上一篇</span>
+        肺癌照護APP
+      </p>
     </a>
   
     
+  
+    <a class="d-flex align-items-center" href="../../../../2018/01/05/no-stray/index.html">
+      <p class="d-flex flex-column align-items-end mb-0 mr-md-3">
+        <span>下一篇</span>
+        流浪動物平台
+      </p>
+      <img src="/images/svg/arrow-right.svg"/>
+    </a>
+  
 </div><!-- navigateSection -->
 <div class="window">
     <div class="close-tag"></div>
@@ -212,7 +224,6 @@
 </div>
 <!-- popup modal js -->
 <script>
-    // console.log(page.prev_link);
     $('.demoImg').click(function(){
         console.log('demoImg is clicked');
         var src = this.src;
