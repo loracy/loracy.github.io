@@ -38,6 +38,14 @@ p{
     text-align: center;
 }
 
+p .biggerText{
+    font-style: italic;
+    font-size: 1.6rem;
+    font-weight: inherit;
+    text-align: center;
+    line-height: 2.4em;
+}
+
 ul{
     padding: 0;
     list-style: none;
@@ -440,6 +448,7 @@ span {
     font-size: 0.7em;
     margin: 0;
 }
+
   
  /* for Desktop */
 @media ( min-width : 831px ){
