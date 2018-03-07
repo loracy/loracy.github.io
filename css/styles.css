@@ -53,12 +53,12 @@ ul{
     justify-content: center;
 }
 
-li{
+.portfolioList li{
     padding: 15px;
     background-color: rgba(256,256,256,.2);
 }
 
-li p{
+.portfolioList li p{
     text-align: left;
 }
 
@@ -96,21 +96,20 @@ textarea:focus {
 
 .portfolioSection {
     line-height: 2;
-    color: #555;
+    color: #555555;
 }
 
-.portfolioSection a {
-    color: #333;
+.portfolioSection a{
+    color: #333333;
     text-decoration: none;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #bbbbbb;
 }
 
-.portfolioSection a:hover {
-    color: #000;
+.portfolioSection a:hover{
+    color: #000000;
     text-decoration: none;
-    border-bottom: 1px solid #555;
+    border-bottom: 1px solid #555555;
 }
-
 
 .navbar-brand {
     font-weight: 800;
@@ -126,15 +125,9 @@ textarea:focus {
     font-size: 0.8rem;
     font-weight: 300;
     letter-spacing: 1.5px;
+    padding: 10px;
 }
 
-
-/*首字放大*/
-
-
-/* .nav-item a::first-letter { 
-    font-size: 1.5rem;
-} */
 
 .navbar-toggler {
     border: 0;
@@ -344,16 +337,16 @@ span {
 .timeline {
     list-style: none;
   }
-  .timeline > li {
-    margin-bottom: 60px;
-  }
-  
-  .timeline {
-    list-style: none;
-  }
-  .timeline > li {
-    margin-bottom: 60px;
-  }
+.timeline > li {
+margin-bottom: 60px;
+}
+
+.timeline {
+list-style: none;
+}
+.timeline > li {
+margin-bottom: 60px;
+}
 
   
 .demoImg{
@@ -381,7 +374,6 @@ span {
 }
 
 .window img{
-    /* width: 100%; */
     height: 100%;
     border: rgba(255, 255, 255, 0.6) 8px solid;
     border-radius: 4px;
@@ -434,6 +426,8 @@ span {
 }
 /* close-tag */
 
+.navigateSection{}
+
 .navigateSection a{
     color: #797979;
 }
@@ -449,6 +443,26 @@ span {
     margin: 0;
 }
 
+.thankSection a{
+    color: #797979;
+    font-weight: 300;
+    text-decoration: none;
+    background: rgba(256,256,256, .2);
+    padding: 10px;
+    border-radius: 100px;
+}
+
+
+.thankSection a:hover{
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.thankSection a span{
+    font-size: 0.6em;
+}
+  
   
  /* for Desktop */
 @media ( min-width : 831px ){
