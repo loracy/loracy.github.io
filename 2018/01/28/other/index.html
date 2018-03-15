@@ -8,7 +8,7 @@
 
   <!-- Title -->
   
-  <title>Loracy</title>
+  <title>其他平面設計 - Loracy</title>
 
   <!--Favicon-->
   <link rel="icon" href="favicon/favicon.ico">
@@ -80,175 +80,83 @@
 
       
   		<div class="row">
-  			
-
-    
-
-    
-
-    
-
-    
-
-    
-
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect" onclick="javascript:window.location = '/2018/01/31/cgu/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/cgu/cover.png" alt="肺癌照護APP">
-      <div class="overlay"></div>
-      <p class="product-title">肺癌照護APP</p>
-    </div>
-    
-    <div class="tags-container">
-      
-        
-         
-          <span class="tag">
-              APP
-          </span>
-          
-        
-         
-          <span class="tag">
-              IOS
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/ppt/cover.jpg" alt="其他平面設計">
 </div>
-
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect" onclick="javascript:window.location = '/2018/01/30/coming/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/coming/cover.png" alt="康盈生技官網">
-      <div class="overlay"></div>
-      <p class="product-title">康盈生技官網</p>
-    </div>
-    
+      
+<div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
+  <h1>其他平面設計</h1>
+  
     <div class="tags-container">
-      
-        
-         
-          <span class="tag">
-              WEB
-          </span>
-          
-        
-         
-          <span class="tag">
-              RWD
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
-</div>
 
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect" onclick="javascript:window.location = '/2018/01/29/go-hiking/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/go-hiking/cover.png" alt="台灣步道">
-      <div class="overlay"></div>
-      <p class="product-title">台灣步道</p>
-    </div>
-    
-    <div class="tags-container">
-      
         
-         
-          <span class="tag">
-              APP
-          </span>
           
-        
-         
-          <span class="tag">
-              IOS
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
-</div>
-
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect" onclick="javascript:window.location = '/2018/01/28/meracle/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/meracle/cover.png" alt="憶想奇機 Meracle">
-      <div class="overlay"></div>
-      <p class="product-title">憶想奇機 Meracle</p>
-    </div>
-    
-    <div class="tags-container">
-      
-        
-         
-          <span class="tag">
-              APP
-          </span>
-          
-        
-         
-          <span class="tag">
-              WEB
-          </span>
-          
-        
-         
-          <span class="tag">
-              Android
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
-</div>
-
-
-    <div class="col-md-6 col-12 mb-4">
-  <div class="hovereffect" onclick="javascript:window.location = '/2018/01/28/other/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/ppt/cover.jpg" alt="其他平面設計">
-      <div class="overlay"></div>
-      <p class="product-title">其他平面設計</p>
-    </div>
-    
-    <div class="tags-container">
-      
-        
-         
           <span class="tag">
               Banner
           </span>
           
         
-         
+          
           <span class="tag">
               PPT
           </span>
           
         
-      
+  
     </div>
     
-  </div>
+  </div><!-- titleSection -->
+<div class="col-12 col-lg-8 offset-lg-2 pt-lg-3 mb-4 portfolioSection">
+  <html><head><script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></head><body></body></html>  
+</div><!-- portfolioSection -->
+<div class="col-12 col-sm-4 offset-sm-4 col-lg-2 offset-lg-5 d-flex flex-column thankSection">
+    <a class="text-center d-flex flex-column" href="#">
+      <span>感謝你的觀看：）</span>
+        回到最上面
+    </a>
+</div><!-- thankSection -->
+<div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
+    
+    <a class="d-flex align-items-center" href="../../../../2018/01/28/meracle/index.html">
+      <img src="/images/svg/arrow-left.svg"/>      
+      <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
+        <span>上一篇</span>
+        憶想奇機 Meracle
+      </p>
+    </a>
+  
+      
+  
+    <a class="d-flex align-items-center" href="#"></a>
+  
+</div><!-- navigateSection -->
+
+<div class="window">
+    <div class="close-tag"></div>
+    <img src=""/>
 </div>
+<!-- popup modal js -->
+<script>
+    $('.demoImg').click(function(){
+        console.log('demoImg is clicked');
+        var src = this.src;
+        $('.window img').attr('src',src);
+        $('.window').addClass('window-show');
+    });
 
+    $('.close-tag').click(function(){
+        console.log('close-tag clicked');
+        $('.window').removeClass('window-show');
+    });
 
+    $(document).keyup(function(e){
+        var keyWhich =  e.which;
+        var keyCode =  e.keyCode;
+        if(keyWhich == 27 || keyCode == 27){
+            $('.window').removeClass('window-show');
+        }
+    });        
+</script>
 
       </div>
       
