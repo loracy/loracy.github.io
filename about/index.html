@@ -89,18 +89,18 @@
     <h3>Loracy</h3>
   </div>
   <div class="d-flex flex-column sideBarContent ">
-    <a href="#about">&#x95DC;&#x65BC;&#x6211;</a>
-    <a href="#experience">&#x7D93;&#x6B77;</a>
-    <a href="#skill">&#x6280;&#x80FD;</a>    
+    <a href="#about" class="js-scroll-trigger">&#x95DC;&#x65BC;&#x6211;</a>
+    <a href="#experience" class="js-scroll-trigger">&#x7D93;&#x6B77;</a>
+    <a href="#skill" class="js-scroll-trigger">&#x6280;&#x80FD;</a>    
   </div>
 </div>
-<div class="col-9 ml-5 intro-card js-scroll-trigger" id="about">
+<div class="col-9 ml-5 intro-card" id="about">
     <h1>&#x95DC;&#x65BC;&#x6211;</h1>
   <h5 class="description">
         &#x6211;&#x662F;&#x76EE;&#x524D;&#x5C31;&#x8B80;&#x65BC; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; &#x6578;&#x4F4D;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;&#x7684;&#x5927;&#x4E09;&#x751F;&#xFF0C;&#x4E3B;&#x8981;&#x5C08;&#x9577;&#x70BA; UI/UX Design&#x3001;&#x524D;&#x7AEF;&#x958B;&#x767C;&#x3001;&#x591A;&#x5A92;&#x9AD4;&#x8A2D;&#x8A08;&#xFF0C;&#x5E73;&#x6642;&#x559C;&#x6B61;&#x95DC;&#x6CE8;&#x6709;&#x95DC;&#x6578;&#x4F4D;&#x7522;&#x54C1;&#x76F8;&#x95DC;&#x8B70;&#x984C;&#xFF0C;&#x548C;&#x53C3;&#x8207;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x793E;&#x7FA4;&#x53CA;&#x8B1B;&#x5EA7;&#xFF0C;&#x6A02;&#x65BC;&#x548C;&#x4E0D;&#x540C;&#x7684;&#x4EBA;&#x63A5;&#x89F8;&#x3001;&#x4EA4;&#x6D41;&#x60F3;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#x9019;&#x500B;&#x7DB2;&#x7AD9;&#x9084;&#x6C92;&#x505A;&#x597D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x518D;&#x770B;&#x4E86;&#x8ACB;&#x95DC;&#x6389;&#xFF01;
   </h5>
 </div>
-<div class="col-9 ml-5 intro-card js-scroll-trigger" id="experience">
+<div class="col-9 ml-5 intro-card" id="experience">
     <h1>&#x7D93;&#x6B77;</h1>
   <ul class="timeline">
   <li>
@@ -126,7 +126,7 @@
     </li>
   </ul>
 </div>
-<div class="col-9 ml-5 intro-card js-scroll-trigger" id="skill">
+<div class="col-9 ml-5 intro-card" id="skill">
     <h1>&#x6280;&#x80FD;</h1>
   <p>Sketch&#x3001;illustrator&#x3001;Photoshop&#x3001;Principle&#x3001;Zeplin&#x3001;HTML&#x3001;CSS&#x3001;Bootstrap&#x3001;React Native&#x3001;Android&#x3001;jQuery&#x3001;Git</p>
 </div>
@@ -134,6 +134,37 @@
 </div>
 
 <script>
+  (function($) {  
+  "use strict"; // Start of use strict
+
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      console.log(''+this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: (target.offset().top)
+        }, 1000, "easeInOutExpo");
+        return false;
+      }
+    }
+  });
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+    console.log('test....');
+  });
+
+  // // Activate scrollspy to add active class to navbar items on scroll
+  $('body').on('scrollSpy:enter', function() {
+    target: '.sideBar'
+  });
+
+})(jQuery); // End of use strict
+
     // window.onscroll = function() {
       $(window).scroll(function(){
 
@@ -207,11 +238,11 @@
   	</div>
 
     <!-- After footer scripts -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-<script src="js/resume.js"></script>
+<!-- <script src="js/resume.js"></script> -->
 
   </body>
 </html>
