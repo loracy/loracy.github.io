@@ -485,7 +485,7 @@ span {
 
 .introCard{
     width: 100%;
-    overflow: scroll;
+    overflow: hidden;
     position: relative;
     margin: 0 0 3rem 3rem;
     padding: 52px;
@@ -504,6 +504,7 @@ span {
 .aboutContent{
     line-height: 2.5rem;
     margin: 2.2rem 0 0 0;
+    opacity: .9;
 }
 
 .timeline {
@@ -554,21 +555,76 @@ span {
     margin-bottom: .8rem;
 }
 
+/* ------skill------ */
+
 #skill div{
-    padding: 1rem;
+    padding: .2 rem;
 }
 
 #skill span{
-    /* color: #8AA1B1; */
-    color: #5F7E8B;
-    
+    position: relative;    
+    opacity: .8;    
     font-family: inherit;
     font-size: 1.2rem;
-    padding: .6rem 1rem;
+    padding: .6rem 1.2rem;
+    margin: .4rem .6rem;
+    border: rgba(256,256,256,.7) 1px solid;
     border-radius: 3px;
-    background: rgba(256,256,256,.5);
+    background: rgba(256,256,256,.6);
     box-shadow: 0px 1px 3px rgba(0,0,0,.05);    
+}
 
+#skill span p{
+    margin: 0;
+}
+
+#skill span:hover{
+    opacity: 1;
+    box-shadow: 0px 1px 5px rgba(0,0,0,.08);
+    transition: all .4s;
+}
+
+.skill-90:after,
+.skill-70:after,
+.skill-50:after,
+.skill-30:after {
+    content: '';
+    position: absolute;
+    left: 1.5px;
+    bottom: 1.5px;
+    height: 4px;
+    border-radius: 2px;
+    width: 0%; 
+}
+
+.skill-30:after{
+    background: #E0EAEF;
+}
+.skill-50:after{
+    background: #e5e5d1;
+}
+.skill-70:after{
+    background: #8AA1B1;
+}
+.skill-90:after{
+    background: #9AC2C9;
+}
+
+#skill span:hover .skill-30:after{
+    width: 27%;  
+    transition: all .6s;
+}
+#skill span:hover .skill-50:after{
+    width: 43%;  
+    transition: all .8s;
+}
+#skill span:hover .skill-70:after{
+    width: 62%;
+    transition: all .8s;
+}
+#skill span:hover .skill-90:after{
+    width: 88%;
+    transition: all .8s;
 }
 
 #outro a{
@@ -589,3 +645,4 @@ span {
     box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
     transition: all 1s;
 }
+
