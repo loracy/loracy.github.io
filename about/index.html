@@ -41,7 +41,10 @@
 
 
   <!-- jquery   -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  
 </head>
 
 
@@ -49,13 +52,17 @@
     
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
-      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <a class="navbar-brand ml-2" href="/">Loracy</a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse text-center" id="navbarCollapse">
     <ul class="navbar-nav ml-auto my-auto">
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/">Works</a>
+        </li>
       
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
@@ -70,7 +77,7 @@
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="https://www.pinterest.com/lora860227">Pinterest</a>
+          <a class="nav-link" href="https://dribbble.com/Loracy">Dribbble</a>
         </li>
       
     </ul>
@@ -83,27 +90,27 @@
   			
 <div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-end">
   <html><head></head><body><div class="col-2 sideBar">
-  <div class="sideBarAvatar">
+  <div class="mb-3 sideBarAvatar">
     <img src="./assets/avatar.jpg">
     <h1>&#x6797;&#x4E9E;&#x5112;</h1>
     <h3>Loracy</h3>
   </div>
-  <div class="d-flex flex-column sideBarContent ">
-    <a href="#about" class="js-scroll-trigger">&#x95DC;&#x65BC;&#x6211;</a>
-    <a href="#experience" class="js-scroll-trigger">&#x7D93;&#x6B77;</a>
-    <a href="#skill" class="js-scroll-trigger">&#x6280;&#x80FD;</a>    
+  <div class="d-flex flex-column sideBarContent">
+    <a href="#about" class="js-scroll-trigger" id="aboutTarget">&#x95DC;&#x65BC;&#x6211;</a>
+    <a href="#experience" class="js-scroll-trigger" id="experienceTarget">&#x7D93;&#x6B77;</a>
+    <a href="#skill" class="js-scroll-trigger" id="skillTarget">&#x6280;&#x80FD;</a>    
   </div>
 </div>
-<div class="col-9 ml-5 intro-card" id="about">
-    <h1>&#x95DC;&#x65BC;&#x6211;</h1>
-  <h5 class="description">
-        &#x6211;&#x662F;&#x76EE;&#x524D;&#x5C31;&#x8B80;&#x65BC; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; &#x6578;&#x4F4D;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;&#x7684;&#x5927;&#x4E09;&#x751F;&#xFF0C;&#x4E3B;&#x8981;&#x5C08;&#x9577;&#x70BA; UI/UX Design&#x3001;&#x524D;&#x7AEF;&#x958B;&#x767C;&#x3001;&#x591A;&#x5A92;&#x9AD4;&#x8A2D;&#x8A08;&#xFF0C;&#x5E73;&#x6642;&#x559C;&#x6B61;&#x95DC;&#x6CE8;&#x6709;&#x95DC;&#x6578;&#x4F4D;&#x7522;&#x54C1;&#x76F8;&#x95DC;&#x8B70;&#x984C;&#xFF0C;&#x548C;&#x53C3;&#x8207;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x793E;&#x7FA4;&#x53CA;&#x8B1B;&#x5EA7;&#xFF0C;&#x6A02;&#x65BC;&#x548C;&#x4E0D;&#x540C;&#x7684;&#x4EBA;&#x63A5;&#x89F8;&#x3001;&#x4EA4;&#x6D41;&#x60F3;&#x6CD5;&#x3002;&#x4F46;&#x662F;&#x9019;&#x500B;&#x7DB2;&#x7AD9;&#x9084;&#x6C92;&#x505A;&#x597D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x8981;&#x518D;&#x770B;&#x4E86;&#x8ACB;&#x95DC;&#x6389;&#xFF01;
+<div class="col-9 introCard" id="about">
+  <h1>&#x95DC;&#x65BC;&#x6211;</h1>
+  <h5 class="aboutContent">
+      Hello&#xFF5E;&#x6211;&#x662F;&#x4F86;&#x81EA;&#x53F0;&#x4E2D;&#x7684;&#x6797;&#x4E9E;&#x5112;&#xFF0C;&#x662F;&#x4E00;&#x540D;&#x5927;&#x4E09;&#x7684;&#x5B78;&#x751F;&#xFF0C;&#x76EE;&#x524D;&#x5C31;&#x8B80;&#x65BC; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78;&#x7684;&#x6578;&#x4F4D;&#x79D1;&#x6280;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;&#xFF0C;&#x4E3B;&#x8981;&#x5C08;&#x9577;&#x70BA; App/Web &#x7684; UI Design&#x3001;&#x524D;&#x7AEF;&#x958B;&#x767C;&#x3001;&#x591A;&#x5A92;&#x9AD4;&#x8A2D;&#x8A08;&#xFF0C;&#x5E73;&#x6642;&#x559C;&#x6B61;&#x95DC;&#x6CE8;&#x6578;&#x4F4D;&#x7522;&#x54C1;&#x7684;&#x76F8;&#x95DC;&#x8A71;&#x984C;&#xFF0C;&#x548C;&#x53C3;&#x8207;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x793E;&#x7FA4;&#x53CA;&#x8B1B;&#x5EA7;&#xFF0C;&#x559C;&#x6B61;&#x548C;&#x4E0D;&#x540C;&#x7684;&#x4EBA;&#x63A5;&#x89F8;&#x3001;&#x4EA4;&#x6D41;&#x60F3;&#x6CD5;&#x3002;&#x671F;&#x8A31;&#x81EA;&#x5DF1;&#x66F4;&#x5145;&#x5BE6;&#x80FD;&#x529B;&#x3001;&#x4FDD;&#x6301;&#x5C0D;&#x751F;&#x6D3B;&#x7684;&#x71B1;&#x5FF1;&#x3001;&#x4EAB;&#x53D7;&#x6BCF;&#x4E00;&#x5929;&#xFF01;
   </h5>
 </div>
-<div class="col-9 ml-5 intro-card" id="experience">
+<div class="col-9 introCard" id="experience">
     <h1>&#x7D93;&#x6B77;</h1>
   <ul class="timeline">
-  <li>
+    <li>
       <p class="timeline-date">2017/07 - 2017/08</p>
       <div class="timeline-content">
         <h5>&#x5275;&#x79D1;&#x8CC7;&#x8A0A;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8;</h5>
@@ -120,116 +127,102 @@
     <li>
       <p class="timeline-date">2017 / 11 / 23</p>
       <div class="timeline-content">
-        <h5>&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; Web &amp; App &#x5275;&#x4F5C;&#x7AF6;&#x8CFD;</h5>
+        <h5>&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; Web &amp; App &#x5275;&#x4F5C;&#x7AF6;&#x8CFD;</h5>
         <p>App &#x4F01;&#x5283;&#x7D44;+&#x6210;&#x54C1;&#x5BE6;&#x4F5C;&#x7D44; &#x7B2C;&#x4E8C;&#x540D;</p>
+      </div>
+    </li>
+    <li>
+      <p class="timeline-date">2018 / 01 - now</p>
+      <div class="timeline-content now">
+        <h5>&#x5FAE;&#x8EDF;&#x5BE6;&#x7FD2;&#x8A08;&#x756B;</h5>
+        <p>&#x524D;&#x7AEF; Intern</p>
       </div>
     </li>
   </ul>
 </div>
-<div class="col-9 ml-5 intro-card" id="skill">
+<div class="col-9 introCard" id="skill">
     <h1>&#x6280;&#x80FD;</h1>
-  <p>Sketch&#x3001;illustrator&#x3001;Photoshop&#x3001;Principle&#x3001;Zeplin&#x3001;HTML&#x3001;CSS&#x3001;Bootstrap&#x3001;React Native&#x3001;Android&#x3001;jQuery&#x3001;Git</p>
+    <div class="d-flex">
+      <span>Sketch</span>
+      <span>Illustrator</span>
+      <span>Photoshop</span>
+      <span>Principle</span>
+      <span>Zeplin</span>
+    </div>
+    <div class="d-flex">    
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>Jquery</span>      
+      <span>Bootstrap</span>
+      <span>React Native</span>
+    </div>
+</div>
+<div class="col-9 d-flex flex-column align-items-center" id="outro">
+    <h5>&#x611F;&#x8B1D;&#x4F60;&#x7684;&#x89C0;&#x770B;:)</h5>
+    <div class="d-flex flex-row justfy-content-center">
+      <a class="text-center" role="button" id="gotoTop">
+          &#x56DE;&#x5230;&#x4E0A;&#x9762; 
+      </a>
+      <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_blank" rel="noopener">
+          &#x806F;&#x7D61;&#x6211;
+      </a>
+    </div>
 </div>
 <script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
 </div>
 
 <script>
-  (function($) {  
-  "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      console.log(''+this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top)
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
+//點擊sideBar的動畫
+$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    console.log('' + this.hash + '=' + target.offset().top);
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top-20
+      }, 1000, "easeInOutExpo");
+      return false;
     }
-  });
+  }
+});
 
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-    console.log('test....');
-  });
+sideBar = $('.sideBar') ;
+sticky = $('.sideBar').offset().top-22;
 
-  // // Activate scrollspy to add active class to navbar items on scroll
-  $('body').on('scrollSpy:enter', function() {
-    target: '.sideBar'
-  });
+//捲動視窗時  
+$(window).scroll(function(){
+  fixSideBar(); //固定sideBar
+  showActive(); //顯示active樣式
+});
 
-})(jQuery); // End of use strict
-
-    // window.onscroll = function() {
-      $(window).scroll(function(){
-
-      fixSideBar();
-      
-      var window_height = $( window ).height();
-      var document_height = $( document ).height();
-      var base = document_height - window_height;
-      var window_scrollTop = $(window).scrollTop();
-      var onscroll_height = (window_scrollTop+1) / base;
-      if( onscroll_height <= 0.3 ){
-        // $('#skill').fadeIn(1000);              
-        // gotoAbout();
-      }else if( onscroll_height >= 0.3 && onscroll_height < 0.6 ){   
-        // gotoExperiece();
-      }else if( onscroll_height >= 0.6 ){
-        // gotoSkill();     
-      }
-      });
-
-    sticky = $('.sideBar').offset().top;
-
-    function gotoAbout() {
-      console.log('go to about');
-      // $('#about').toggleClass('d-none');
-      $('#about').fadeToggle(1000);
-      // $('#skill').toggleClass('d-none');
-      $('#skill').fadeToggle(1000);      
-      // $('#experience').toggleClass('d-none');
-      $('#experience').fadeToggle(1000);    
-        
-
+function showActive() {
+    if(sideBar.offset().top+22 >= 196 && sideBar.offset().top+22 < 540){
+      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');
+      $('#aboutTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#aboutTarget').css('color','#050505');
+    }else if(sideBar.offset().top+22 >= 540 && sideBar.offset().top+22 < 1090){
+      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#experienceTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#experienceTarget').css('color','#050505');
+    }else if(sideBar.offset().top+22 >= 1090){
+      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#skillTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#skillTarget').css('color','#050505');
     }
+}
 
-    function gotoExperiece() {
-        console.log('go to experience');
-        // $('#about').addClass('d-none');
-        $('#about').fadeOut(3000);
-        // $('#skill').addClass('d-none');
-        $('#skill').fadeToggle(3000);
-        // $('#experience').removeClass('d-none');
-        $('#experience').fadeToggle(3000);
-    }
-
-    function gotoSkill() {
-        console.log('go to skill');
-        // $('#about').addClass('d-none');
-        $('#about').fadeToggle(1000);        
-        // $('#experience').addClass('d-none');
-        $('#skill').fadeToggle(1000);        
-        // $('#skill').removeClass('d-none');
-        $('#experience').fadeToggle(1000);        
-    }
-    
-    function fixSideBar() {
-      console.log('sideBar offset top =' + sticky);
-
-      if (window.pageYOffset >= sticky) {
-        $('.sideBar').addClass('sticky');
-      } else {
-        $('.sideBar').removeClass('sticky'); 
-      }
-    }
-
-
+function fixSideBar() {
+  if (window.pageYOffset >= sticky) {
+    $('.sideBar').addClass('sticky');
+  } else {
+    $('.sideBar').removeClass('sticky'); 
+  }
+}
 </script>
 
 
@@ -239,9 +232,17 @@
 
     <!-- After footer scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+<script>
+$('#gotoTop').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+      }, 1000, "easeInOutExpo");
+  });
+</script>
 <!-- <script src="js/resume.js"></script> -->
 
   </body>

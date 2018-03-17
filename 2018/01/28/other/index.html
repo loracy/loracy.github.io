@@ -41,7 +41,10 @@
 
 
   <!-- jquery   -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  
 </head>
 
 
@@ -49,13 +52,17 @@
     
   	<div class="container-fluid navbar-container m-sm-5">
       <!-- Header -->
-      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-5">
+      <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <a class="navbar-brand ml-2" href="/">Loracy</a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse text-center" id="navbarCollapse">
     <ul class="navbar-nav ml-auto my-auto">
+      
+        <li class="nav-item">
+          <a class="nav-link" href="/">Works</a>
+        </li>
       
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
@@ -70,7 +77,7 @@
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="https://www.pinterest.com/lora860227">Pinterest</a>
+          <a class="nav-link" href="https://dribbble.com/Loracy">Dribbble</a>
         </li>
       
     </ul>
@@ -110,7 +117,7 @@
   <html><head><script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></head><body></body></html>  
 </div><!-- portfolioSection -->
 <div class="col-12 col-sm-4 offset-sm-4 col-lg-2 offset-lg-5 d-flex flex-column thankSection">
-    <a class="text-center d-flex flex-column" href="#">
+    <a class="text-center d-flex flex-column" role="button" id="gotoTop">
       <span>感謝你的觀看：）</span>
         回到最上面
     </a>
@@ -164,9 +171,17 @@
 
     <!-- After footer scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
+<script>
+$('#gotoTop').click(function() {
+    $('html, body').animate({
+        scrollTop: 0
+      }, 1000, "easeInOutExpo");
+  });
+</script>
 <!-- <script src="js/resume.js"></script> -->
 
   </body>
