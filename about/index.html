@@ -96,30 +96,30 @@
       
   		<div class="row">
   			
-<div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-end">
-  <html><head></head><body><div class="col-2 sideBar">
-  <div class="mb-3 sideBarAvatar">
+<div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-sm-end">
+  <html><head></head><body><div class="col-12 col-sm-2 sideBar">
+  <div class="mb-sm-3 sideBarAvatar">
     <img src="./assets/avatar.jpg">
     <h1>&#x6797;&#x4E9E;&#x5112;</h1>
     <h3>Loracy</h3>
   </div>
-  <div class="d-flex flex-column sideBarContent">
+  <div class="d-flex flex-row flex-sm-column sideBarContent">
     <a href="#about" class="js-scroll-trigger" id="aboutTarget">&#x95DC;&#x65BC;&#x6211;</a>
     <a href="#experience" class="js-scroll-trigger" id="experienceTarget">&#x7D93;&#x6B77;</a>
     <a href="#skill" class="js-scroll-trigger" id="skillTarget">&#x6280;&#x80FD;</a>    
   </div>
 </div>
-<div class="col-9 introCard" id="about">
+<div class="col-12 col-sm-9 introCard" id="about">
   <h1>&#x95DC;&#x65BC;&#x6211;</h1>
   <h5 class="aboutContent">
       Hello&#xFF5E;&#x6211;&#x662F;&#x4F86;&#x81EA;&#x53F0;&#x4E2D;&#x7684;&#x6797;&#x4E9E;&#x5112;&#xFF0C;&#x662F;&#x4E00;&#x540D;&#x5927;&#x4E09;&#x7684;&#x5B78;&#x751F;&#xFF0C;&#x76EE;&#x524D;&#x5C31;&#x8B80;&#x65BC; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78;&#x7684;&#x6578;&#x4F4D;&#x79D1;&#x6280;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;&#xFF0C;&#x4E3B;&#x8981;&#x5C08;&#x9577;&#x70BA; App/Web &#x7684; UI Design&#x3001;&#x524D;&#x7AEF;&#x958B;&#x767C;&#x3001;&#x591A;&#x5A92;&#x9AD4;&#x8A2D;&#x8A08;&#xFF0C;&#x5E73;&#x6642;&#x559C;&#x6B61;&#x95DC;&#x6CE8;&#x6578;&#x4F4D;&#x7522;&#x54C1;&#x7684;&#x76F8;&#x95DC;&#x8A71;&#x984C;&#xFF0C;&#x548C;&#x53C3;&#x8207;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x793E;&#x7FA4;&#x53CA;&#x8B1B;&#x5EA7;&#xFF0C;&#x559C;&#x6B61;&#x548C;&#x4E0D;&#x540C;&#x7684;&#x4EBA;&#x63A5;&#x89F8;&#x3001;&#x4EA4;&#x6D41;&#x60F3;&#x6CD5;&#x3002;&#x671F;&#x8A31;&#x81EA;&#x5DF1;&#x66F4;&#x5145;&#x5BE6;&#x80FD;&#x529B;&#x3001;&#x4FDD;&#x6301;&#x5C0D;&#x751F;&#x6D3B;&#x7684;&#x71B1;&#x5FF1;&#x3001;&#x4EAB;&#x53D7;&#x6BCF;&#x4E00;&#x5929;&#xFF01;
   </h5>
 </div>
-<div class="col-9 introCard" id="experience">
+<div class="col-12 col-sm-9 introCard" id="experience">
     <h1>&#x7D93;&#x6B77;</h1>
   <ul class="timeline">
     <li>
-      <p class="timeline-date">2017/07 - 2017/08</p>
+      <p class="timeline-date">2017/07 - 08</p>
       <div class="timeline-content">
         <h5>&#x5275;&#x79D1;&#x8CC7;&#x8A0A;&#x80A1;&#x4EFD;&#x6709;&#x9650;&#x516C;&#x53F8;</h5>
         <p>UI/UX Designer Intern</p>
@@ -148,7 +148,7 @@
     </li>
   </ul>
 </div>
-<div class="col-9 introCard" id="skill">
+<div class="col-12 col-sm-9 introCard" id="skill">
     <h1>&#x6280;&#x80FD;</h1>
     <div class="d-flex flex-wrap mt-4">
       <span><p class="skill-90">Sketch</p></span>
@@ -169,13 +169,13 @@
       <span><p class="skill-30">WordPress</p></span>
     </div>
 </div>
-<div class="col-9 d-flex flex-column align-items-center" id="outro">
+<div class="col-12 col-sm-9 d-flex flex-column align-items-center" id="outro">
     <h5>&#x611F;&#x8B1D;&#x4F60;&#x7684;&#x89C0;&#x770B;:)</h5>
     <div class="d-flex flex-row justfy-content-center">
       <a class="text-center" role="button" id="gotoTop">
           &#x56DE;&#x5230;&#x4E0A;&#x9762; 
       </a>
-      <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_blank" rel="noopener">
+      <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_self">
           &#x806F;&#x7D61;&#x6211;
       </a>
     </div>
@@ -184,33 +184,46 @@
 </div>
 
 <script>
+//定義calssName
+var sideBar = $('.sideBar') ;
+//sideBar距離上面
+var sticky = $('.sideBar').offset().top;
+// var stickyXS = sticky-50;
+var stickySM = sticky-22;
+//裝置寬度
+var deviceWidth = $(window).width();
+//break point
+var smSize = 575.98;
 
-//點擊sideBar的動畫
-$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
-  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    console.log('' + this.hash + '=' + target.offset().top);
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top-20
-      }, 1000, "easeInOutExpo");
-      return false;
-    }
-  }
+
+
+$(document).ready(function(){
+  console.log('document ready(o)');
+  fixSideBar();
 });
 
-sideBar = $('.sideBar') ;
-sticky = $('.sideBar').offset().top-22;
+//調整裝置大小時
+$(window).resize(function() {
+  deviceWidth = $(window).width();
+  console.log('resize........to ' + deviceWidth + 'px');
+  showActive(); //重新判斷active的條件
+});
 
 //捲動視窗時  
 $(window).scroll(function(){
+  console.log('----------------\nwindow is scrolling to ' + window.pageYOffset + 
+  'px,\n and sideBar is away from top ' + sideBar.offset().top + ' px\n---------------');  
   fixSideBar(); //固定sideBar
   showActive(); //顯示active樣式
 });
 
+
 function showActive() {
-    if(sideBar.offset().top+22 >= 196 && sideBar.offset().top+22 < 540){
+  if( deviceWidth > smSize ){ //裝置高於575.98px時，顯示active的區域
+
+    $('.sideBarContent a').css('border-bottom','none');//把border-bottom的樣式取消
+    
+    if(sideBar.offset().top+22 < 540){
       $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');
       $('#aboutTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
@@ -226,15 +239,69 @@ function showActive() {
       $('#skillTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
       $('#skillTarget').css('color','#050505');
     }
+
+  }else{ //裝置低於575.98px時，顯示active的區域
+
+    $('.sideBarContent a').css('border-right','none');//把border-right的樣式取消
+
+    if(window.pageYOffset < 540){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');
+      $('#aboutTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#aboutTarget').css('color','#050505');
+    }else if(window.pageYOffset < 1220){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#experienceTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#experienceTarget').css('color','#050505');
+    }else if(window.pageYOffset >= 1220){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#skillTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#skillTarget').css('color','#050505');
+    }
+
+  }
 }
 
 function fixSideBar() {
-  if (window.pageYOffset >= sticky) {
-    $('.sideBar').addClass('sticky');
-  } else {
-    $('.sideBar').removeClass('sticky'); 
+  if( deviceWidth > smSize ){
+    if (window.pageYOffset >= stickySM) {
+      $('.sideBar').addClass('sticky');
+    } else {
+      $('.sideBar').removeClass('sticky'); 
+    }
+  }else{
+    if (window.pageYOffset >= 70) {
+      $('.sideBar').addClass('sticky');
+    } else {
+      $('.sideBar').removeClass('sticky'); 
+    }
   }
 }
+
+
+//點擊sideBarContent的動畫
+$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    console.log('' + this.hash + '=' + target.offset().top);
+    if (target.length) {
+      if( deviceWidth > smSize ){
+        $('html, body').animate({
+          scrollTop: target.offset().top-20
+        }, 1000, "easeInOutExpo");
+        return false;
+      }else{
+        $('html, body').animate({
+          scrollTop: target.offset().top-140
+        }, 1000, "easeInOutExpo");
+        return false;
+      }
+    }
+  }
+});
 </script>
 
 

@@ -437,6 +437,14 @@ span {
 
 /* ------about------ */
 
+.sticky{
+    position: fixed;
+    top: 4%;
+    left: 7%;
+    width: 100%;
+    padding-left: 30px;
+}
+
 .sideBarAvatar img{
     width: 100%;
     border: rgba(255, 255, 255, 0.4) 5px solid;
@@ -452,23 +460,82 @@ span {
     margin: 8px 0;
 }
 
-.sticky{
-    position: fixed;
-    top: 4%;
-    left: 7%;
-    width: 100%;
-    padding-left: 30px;
+@media screen and (max-width: 1024px) {
+    .sideBarAvatar h1{
+        font-size: 2.3rem;
+    }
+    .sideBarAvatar h3{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 974px) {
+    .sideBarAvatar h1{
+        font-size: 1.6rem;
+        letter-spacing: 0;
+    }
+    .sideBarAvatar h3{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sideBar {
+        padding-right: 0;
+        padding-left: 5px;
+    }
+    .sideBarAvatar h1{
+        font-size: 1.4rem;
+    }
+    .sideBarAvatar h3{
+        font-size: .9rem;
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .sideBar{
+        position: fixed;
+        top: 96px;
+        left: 0%;
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        flex-direction: row;
+        background: #E0E9EE;
+        z-index: 100;
+    }
+    .sticky{
+        top: 0%;        
+    }   
+    .sideBarAvatar{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .sideBarAvatar h1{
+        font-size: 1rem;
+        margin: 4px 0 0 0;
+    }
+    .sideBarAvatar h3{
+        margin: 2px 0;
+        font-size: .7rem;
+    }
+    .sideBarAvatar img{
+        border: rgba(255, 255, 255, 0.4) 2px solid;
+        height: 56px;
+        width: auto;
+    }
+    
 }
 
 .sideBarContent{
-    padding: 1rem .8rem 1rem 0;
+    padding: 1rem .7rem 1rem 0;
 }
 
 .sideBarContent a{
     text-align: center;
     border-right: rgba(0, 0, 0, 0.01) 5px solid;
     background: rgba(256, 256, 256, 0);
-    padding: .8rem 1.4rem .8rem .8rem;
+    padding: .8rem .9rem .8rem 0rem;
     color: #595959;
     text-decoration: none;
     transition: all 1s;
@@ -481,11 +548,40 @@ span {
     -webkit-transition: all .5s;
 }
 
+@media screen and (max-width: 768px) {
+    .sideBarContent{
+        padding: 1rem .2rem 1rem 0;
+    }
+    .sideBarContent a{
+        padding: .8rem .2rem .8rem 0rem;
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .sideBarContent{
+        padding: .8rem;
+        width: 80%;   
+    }
+    .sideBarContent a{
+        width: 30%;
+        border-bottom: rgba(0, 0, 0, 0.01) 5px solid;
+        padding: .4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .sideBarContent a:hover{
+        background: rgba(256,256,256,.1);
+        transition: all .5s;
+        -webkit-transition: all .5s;
+    }
+}
+
 .introCard{
     width: 100%;
     overflow: hidden;
     position: relative;
-    margin: 0 0 3rem 3rem;
+    margin: 0 0 3rem 2.4rem;
     padding: 52px;
     background: rgba(256,256,256,.6);
     border: rgba(256,256,256,.6) 1.5px solid;
@@ -515,6 +611,7 @@ span {
 .timeline > li {
     overflow: hidden;
     margin: 0;
+    display: flex;
 }
 
 .timeline-date {
@@ -552,6 +649,30 @@ span {
     text-align: left;
     margin-bottom: .8rem;
 }
+
+@media screen and (max-width: 768px) {
+    .introCard{
+        padding: 24px;
+    }
+    .timeline-date {
+        width: 100px;
+        font-size: .9rem;
+        margin: 1rem 1.2rem 0 0;
+    }
+    .timeline-content {
+        padding: 1rem 0 1rem 1.4rem;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    #about{
+        margin-top: 7rem;
+    }
+    .introCard{
+        margin: 0 .6rem 3rem .6rem;
+    }
+}
+
 
 /* ------skill------ */
 
