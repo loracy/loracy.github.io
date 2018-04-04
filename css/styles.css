@@ -44,8 +44,6 @@ p .biggerText{
     font-weight: inherit;
     text-align: center;
     line-height: 2.4em;
-    /* padding: 2px 6px; */
-    /* background-color: rgba(256,256,256,.15); */
 }
 
 ul{
@@ -69,7 +67,7 @@ button {
     background: #fff;
     padding: 4px 12px 4px 12px;
     border: solid #777 2px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;    
     text-decoration: none;
 }
 
@@ -87,6 +85,7 @@ textarea {
     padding: 0.5rem 0.7rem;
     margin: 5px 0;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
     width: 100%;
 }
 
@@ -391,6 +390,8 @@ span {
     color: #000000;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    
 }
 
 .navigateSection a p span{
@@ -406,16 +407,17 @@ span {
     padding: 10px;
     border-radius: 100px;
     box-shadow: 0px 1px 2px rgba(0,0,0,.02);
-    transition: all 1s;    
+    transition: all 1s;
+    -webkit-transition: all 1s;
 }
 
 
 .thankSection a:hover{
     color: #000000!important;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
     box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
     transition: all 1s;
+    -webkit-transition: all 1s;    
 }
 
 .thankSection a span{
@@ -527,6 +529,30 @@ span {
     
 }
 
+
+.sideBarContact > div {
+    overflow: hidden;
+    font-size: .6em;
+    padding: .4em;
+    margin: .4em 0;
+    background: rgba(256,256,256,.4);
+    border: rgba(256,256,256,.5) 1px solid;
+    border-radius: 4px;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+}
+
+#phone:before,
+#email:before{
+    margin-right: 4px;
+}
+
+#phone:before{
+    /* content: "\1f311"; */
+}
+#email:before{
+    /* content: "\e945"; */
+}
+
 .sideBarContent{
     padding: 1rem .7rem 1rem 0;
 }
@@ -601,18 +627,33 @@ span {
     opacity: .9;
 }
 
+/* ------timeline----- */
+
 .timeline {
     list-style: none;
     display: flex;
     flex-direction: column;
     margin: 1.8rem 0 0 0 ;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    
 }
 
 .timeline > li {
+    /* cursor: pointer;   */
     overflow: hidden;
     margin: 0;
     display: flex;
+    /* transition: all .4s; */
+    /* -webkit-transition: all .4s; */
+
 }
+.timeline > li:hover {
+    /* box-shadow: 0px 1px 3px rgba(0,0,0,.08); */
+    /* transition: all .4s; */
+    /* -webkit-transition: all .4s; */
+}
+
 
 .timeline-date {
     width: 160px;
@@ -627,7 +668,17 @@ span {
     border-left: 3px #e5e5d1 solid;
     padding: 1rem 0 1rem 2.6rem;
     position: relative;
+    cursor: pointer;  
+    transition: all .4s;
+    -webkit-transition: all .4s;
 }
+
+.timeline-content:hover {
+    background-color:  rgba(0,0,0,.02);
+    transition: all .6s;
+    -webkit-transition: all .6s;
+}
+
 
 .timeline-content:before{
   content: '';
@@ -765,3 +816,48 @@ span {
     transition: all 1s;
 }
 
+
+#main{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+#test{
+}
+
+.mask-top{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0);
+    position: absolute;
+    top: -150px;
+    left: 0;
+    transition: all .8s;
+    z-index: 10;
+    
+    
+}
+
+.mask-bottom{
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0);
+    position: absolute;
+    top: 150px;
+    left: 0;
+    transition: all .8s;
+    z-index: 10;
+}
+
+
+
+.mask-top:hover,
+.mask-bottom:hover{
+    top: 0px;
+    background: rgb(0,0,0,.7);
+    transform: translateX(0%) translateY(0%);
+    transition: all .8s;
+    z-index: 100;
+}

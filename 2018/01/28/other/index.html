@@ -37,7 +37,7 @@
 
   <!-- Pure CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Open+Sans:300,800" rel="stylesheet">  
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -56,7 +56,10 @@
   <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
-  
+<!-- <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script> -->
+<!-- <script src="script.js"></script> -->
+<!-- <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script> -->
+<script src="path/to/dist/feather.js"></script>
 </head>
 
 
@@ -184,6 +187,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script>
+//get feather icons
+feather.replace();
+
+//go to top animation
 $('#gotoTop').click(function() {
     $('html, body').animate({
         scrollTop: 0
