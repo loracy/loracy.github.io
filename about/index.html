@@ -86,10 +86,6 @@
           <a class="nav-link" href="mailto:lora860227@gmail.com">Contact</a>
         </li>
       
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.facebook.com/LoracyLin">Facebook</a>
-        </li>
-      
     </ul>
     <hr class="hidden-md-up" />
   </div>
@@ -105,11 +101,20 @@
     <h1>&#x6797;&#x4E9E;&#x5112;</h1>
     <h3>Loracy</h3>
   </div>
-  <!-- <div class="mb-sm-3 sideBarContact">
-    <a id="phone" href="#"><i data-feather="file-minus"></i></a>
-    <a id="phone" href="#"><i data-feather="phone"></i></a>
-    <a id="email" href="#"><i data-feather="mail"></i></a>
-  </div> -->
+  <div class="mb-sm-3 sideBarContact">
+    <a id="phone" onclick="copyInfo(&apos;#phone&apos;)">
+      <span class="d-none">0983816167</span>
+      <i data-feather="phone"></i>
+    </a>
+    <a id="email" onclick="copyInfo(&apos;#email&apos;)">
+      <span class="d-none">lora860227@gmail.com</span>
+      <i data-feather="mail"></i>
+    </a>
+    <a id="facebook" href="https://www.facebook.com/LoracyLin" target="_blank" rel="noopener">
+      <i data-feather="facebook"></i>
+    </a>
+    <div class="popup"></div>
+  </div>
   <div class="d-flex flex-row flex-sm-column sideBarContent">
     <a href="#about" class="js-scroll-trigger" id="aboutTarget">&#x95DC;&#x65BC;&#x6211;</a>
     <a href="#experience" class="js-scroll-trigger" id="experienceTarget">&#x7D93;&#x6B77;</a>
@@ -376,6 +381,31 @@ $(document).keyup(function(e){
   }
 });
 
+//複製我的資料
+function copyInfo(id) {
+  console.log('test==');
+
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(id).children('span').text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+
+  if(id == '#phone'){
+    popUpDialog('成功複製<b>電話號碼</b>！');
+  }else if(id == '#email'){
+    popUpDialog('成功複製<b>電子郵件</b>！');
+  }else{
+    return;
+  }
+
+}
+function popUpDialog(content){
+  $('.popup').html(content);
+  $('.popup').fadeIn(1000,function(){
+      $('.popup').fadeOut(1500);
+  });
+}
 
 </script>
 

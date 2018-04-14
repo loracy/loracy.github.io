@@ -530,19 +530,73 @@ span {
 }
 
 
+.sideBarContact{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+@media screen and (max-width: 1024px) {
+    .sideBarContact{
+        padding-left: .6em;
+        padding-right: .6em;
+    }
+}
+@media screen and (max-width: 974px) {
+    .sideBarContact{
+        padding-left: .2em;
+        padding-right: .2em;
+    }
+}
+@media screen and (max-width: 768px) {
+    .sideBarContact{
+        padding-left: .1em;
+        padding-right: .1em;
+    }
+}
+@media screen and (max-width: 575.98px) {
+    .sideBarContact{
+        display: none;
+    }
+}
+
 .sideBarContact > a {
+    cursor: pointer;
     overflow: hidden;
-    color: inherit;
+    width: 30px;
+    height: 30px;
+    color: rgb(49, 49, 49)!important;
     font-size: .6em;
-    width: 30%;
-    padding: .4em;
-    margin: .4em 0;
+    padding: .6em;
     background: rgba(256,256,256,.4);
     border: rgba(256,256,256,.5) 1px solid;
-    border-radius: 50%;
+    border-radius: 100%;
     box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
     display: inline-flex;
     align-items: center;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+}
+
+.sideBarContact > a:hover {
+    color: #5F7E8B!important;    
+    background:#F2F6F8;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+}
+
+.popup{
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: .8em;
+    padding: .6em;
+    background: rgba(256,256,256,.9);
+    border: rgba(256,256,256,.5) 1px solid;
+    border-radius: 4px;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
 }
 
 
