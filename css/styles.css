@@ -122,6 +122,14 @@ textarea:focus {
     font-weight: 800;
     font-size: 1.5rem;
     letter-spacing: 0.5px;
+    color: #798DA9!important; 
+    transition: all 1s; 
+}
+
+.navbar-brand:hover {
+
+    text-shadow: .5px .5px #576982;
+    transition: all 1s; 
 }
 
 .navbar {

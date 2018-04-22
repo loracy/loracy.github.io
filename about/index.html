@@ -69,7 +69,7 @@
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Loracy</a> -->
   <a class="navbar-brand ml-2" href="/">
-    <img src="/images/logo.png" height="40px" class="mr-1" />oracy
+    <img src="/images/logo.png" height="40px" class="mr-2" />oracy
   </a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -171,7 +171,7 @@
     </li>
     <li>
       <p class="timeline-date">2018 / 01 - now</p>
-      <div class="timeline-content  d-flex justify-content-between now" data-title="&#x53F0;&#x7063;&#x5FAE;&#x8EDF; &#x7B2C;14&#x5C46; &#x672A;&#x4F86;&#x751F;&#x6DAF;&#x9AD4;&#x9A57;&#x8A08;&#x5283;" data-subtitle="RDAA Intern" data-des="&#x5728;&#x5BE6;&#x7FD2;&#x8A08;&#x756B;&#x88E1;&#x9762;&#x6211;&#x8CA0;&#x8CAC;&#x4FEE;&#x6539;&#x7DB2;&#x9801;&#x7684;html&#x548C;css&#xFF0C;&#x9664;&#x4E86;&#x66F4;&#x4E86;&#x89E3;" data-haslink="none" data-link="">
+      <div class="timeline-content  d-flex justify-content-between now" data-src1="none" data-src2="none" data-title="&#x53F0;&#x7063;&#x5FAE;&#x8EDF; &#x7B2C;14&#x5C46; &#x672A;&#x4F86;&#x751F;&#x6DAF;&#x9AD4;&#x9A57;&#x8A08;&#x5283;" data-subtitle="RDAA Intern" data-des="&#x5728;&#x5BE6;&#x7FD2;&#x8A08;&#x756B;&#x88E1;&#x9762;&#x6211;&#x8CA0;&#x8CAC;&#x4FEE;&#x6539;&#x7DB2;&#x9801;&#x88E1;&#x7684;&#x7684;html&#x548C;css&#xFF0C;&#x904E;&#x7A0B;&#x4E2D;&#x6211;&#x66F4;&#x719F;&#x6089;Git&#x7684;&#x6D41;&#x7A0B;&#x548C;&#x64CD;&#x4F5C;&#xFF0C;&#x9084;&#x6709;Bootstrap&#x7684;&#x898F;&#x7BC4;&#x548C;&#x61C9;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x85C9;&#x8457;&#x5C08;&#x6848;&#x63D0;&#x5347;&#x4E86;&#x8A2D;&#x8A08;&#x97FF;&#x61C9;&#x5F0F;&#x7DB2;&#x9801;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x9084;&#x6709;scss&#x7684;&#x6280;&#x80FD;&#x3002;" data-haslink="none" data-link="">
         <div class="d-flex flex-column">            
           <h5>&#x53F0;&#x7063;&#x5FAE;&#x8EDF; &#x7B2C;14&#x5C46; &#x672A;&#x4F86;&#x751F;&#x6DAF;&#x9AD4;&#x9A57;&#x8A08;&#x5283;</h5>
           <p>RDAA Intern</p>
@@ -380,14 +380,17 @@ $('.btn_more').click(function() {
   var haslink = clicked_content.data('haslink');
   var link = clicked_content.data('link');
   
-  if(src1 !== 'none'){
+  if(src1 !== 'none' && src2 !== 'none'){
+    console.log('src1&src2!==none');
     $('#expGalleryImg-1').attr('src',src1);
-  }
-  if(src2 !== 'none'){
     $('#expGalleryImg-2').attr('src',src2);
-  }else{
-    $('#expGalleryImg-2').css('display','none');
+  }else if(src1 !== 'none' && src2 == 'none'){
+    $('#expGalleryImg-2').parent('.carousel-item').css('display','none');
+  }else if(src1 == 'none' && src2 == 'none'){
+    $('#expGallery').css('display','none');
+    $('#expArticle').css('width','100%');
   }
+ 
   $('#expArticle h5').html(title);
   $('#expArticle p:first').html(subtitle);
   $('#expArticle p:last').html(des);
