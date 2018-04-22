@@ -101,6 +101,13 @@ textarea:focus {
     outline: none;
 }
 
+.portfolioSection::before{
+    content: '';
+    display: inline-flex;
+    background-image: url("../images/dot.png") no-repeat;
+    /* WIP */
+}
+
 .portfolioSection {
     line-height: 2;
     color: #555555;
@@ -765,8 +772,17 @@ span {
     -webkit-transition: all .2s;
 }
 
+.introCard h1{
+    text-align: left;
+}
+
+.introCard h1>div{
+    display: inline-flex;
+    font-size: .6em;
+}
+
 .introCard h1::after{
-    content: '，';
+    /* content: '，'; */
 }
 
 .aboutContent{

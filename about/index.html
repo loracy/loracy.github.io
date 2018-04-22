@@ -69,7 +69,28 @@
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Loracy</a> -->
   <a class="navbar-brand ml-2" href="/">
-    <img src="/images/logo.png" height="40px" class="mr-2" />oracy
+    <img src="/images/logo.png" height="48px" class="logo" />
+    <img src="/images/oracy.png" height="48px" class="oracy" />
+    <script>
+        $('.logo').mouseenter(function(){
+          $(this).attr('src','/images/logo-hover.png')
+        });
+        $('.logo').mouseleave(function(){
+          $(this).attr('src','/images/logo.png')
+        });
+        $('.oracy').mouseenter(function(){
+          $(this).attr('src','/images/oracy-hover.png')
+        });
+        $('.oracy').mouseleave(function(){
+          $(this).attr('src','/images/oracy.png')
+        });
+        $('.oracy').mousedown(function(){
+          $(this).attr('src','/images/oracy.png')
+        });
+        $('.oracy').mouseup(function(){
+          $(this).attr('src','/images/oracy.png')
+        });
+    </script>
   </a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -125,13 +146,13 @@
   </div>
 </div>
 <div class="col-12 col-sm-9 introCard" id="about">
-  <h1>&#x95DC;&#x65BC;&#x6211;</h1>
+  <h1><img src="../images/dot.png" height="48px" class="">&#x95DC;&#x65BC;&#x6211; <div>About Me</div></h1>
   <h5 class="aboutContent">
       Hello&#xFF5E;&#x6211;&#x662F;&#x4F86;&#x81EA;&#x53F0;&#x4E2D;&#x7684;&#x6797;&#x4E9E;&#x5112;&#xFF0C;&#x662F;&#x4E00;&#x540D;&#x5927;&#x4E09;&#x7684;&#x5B78;&#x751F;&#xFF0C;&#x76EE;&#x524D;&#x5C31;&#x8B80;&#x65BC; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78;&#x7684;&#x6578;&#x4F4D;&#x79D1;&#x6280;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;&#xFF0C;&#x4E3B;&#x8981;&#x5C08;&#x9577;&#x70BA; App/Web &#x7684; UI Design&#x3001;&#x524D;&#x7AEF;&#x958B;&#x767C;&#x3001;&#x591A;&#x5A92;&#x9AD4;&#x8A2D;&#x8A08;&#x3002;&#x5E73;&#x6642;&#x559C;&#x6B61;&#x95DC;&#x6CE8;&#x6578;&#x4F4D;&#x7522;&#x54C1;&#x7684;&#x76F8;&#x95DC;&#x8A71;&#x984C;&#xFF0C;&#x548C;&#x53C3;&#x8207;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x793E;&#x7FA4;&#x53CA;&#x8B1B;&#x5EA7;&#xFF0C;&#x4F8B;&#x5982;&#x4E4B;&#x524D;&#x53C3;&#x52A0;Mopcon&#x64D4;&#x4EFB;&#x6703;&#x773E;&#xFF0C;&#x9664;&#x4E86;&#x5438;&#x6536;&#x5230;&#x8A31;&#x591A;&#x524D;&#x7AEF;&#x7684;&#x5404;&#x7A2E;&#x65B0;&#x7A4E;&#x7684;&#x6280;&#x8853;&#xFF0C;&#x4E5F;&#x5C0D;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x672A;&#x4F86;&#x7684;&#x5C55;&#x671B;&#x6709;&#x66F4;&#x6DF1;&#x7684;&#x8A8D;&#x77E5;&#x548C;&#x60F3;&#x50CF;&#xFF1B;&#x6211;&#x4E5F;&#x559C;&#x6B61;&#x548C;&#x4E0D;&#x540C;&#x7684;&#x4EBA;&#x63A5;&#x89F8;&#x3001;&#x4EA4;&#x6D41;&#x60F3;&#x6CD5;&#x3001;&#x8868;&#x73FE;&#x81EA;&#x5DF1;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x5B78;&#x6821;&#x6642;&#xFF0C;&#x6211;&#x6709;&#x8A31;&#x591A;&#x64D4;&#x4EFB;&#x5927;&#x578B;&#x6D3B;&#x52D5;&#x4E3B;&#x6301;&#x7684;&#x7D93;&#x9A57;&#xFF08;&#x6821;&#x5712;&#x5712;&#x904A;&#x6703;&#x3001;&#x661F;&#x5149;&#x6BD4;&#x8CFD;&#xFF09;&#xFF0C;&#x8A13;&#x7DF4;&#x6211;&#x767C;&#x8868;&#x7684;&#x908F;&#x8F2F;&#x53EF;&#x4EE5;&#x66F4;&#x6E05;&#x6670;&#x3001;&#x9084;&#x6709;&#x9762;&#x5C0D;&#x7FA4;&#x773E;&#x8868;&#x73FE;&#x7684;&#x81BD;&#x91CF;&#x3002;&#x672A;&#x4F86;&#x671F;&#x8A31;&#x81EA;&#x5DF1;&#x66F4;&#x5145;&#x5BE6;&#x80FD;&#x529B;&#x3001;&#x4FDD;&#x6301;&#x5C0D;&#x751F;&#x6D3B;&#x7684;&#x71B1;&#x5FF1;&#x3001;&#x6709;&#x80FD;&#x529B;&#x5E0C;&#x671B;&#x80FD;&#x5920;&#x56DE;&#x994B;&#x5BB6;&#x5EAD;&#x548C;&#x793E;&#x6703;&#x3001;&#x4E26;&#x4E14;&#x4EAB;&#x53D7;&#x6BCF;&#x4E00;&#x5929;&#xFF01;
   </h5>  
 </div>
 <div class="col-12 col-sm-9 introCard" id="experience">
-    <h1>&#x7D93;&#x6B77;</h1>
+    <h1><img src="../images/dot.png" height="48px" class="">&#x7D93;&#x6B77; <div>Experience</div></h1>
   <ul class="timeline">
     <li>
       <p class="timeline-date">2017/07 - 08</p>
@@ -184,7 +205,7 @@
   </ul>
 </div>
 <div class="col-12 col-sm-9 introCard" id="skill">
-    <h1>&#x6280;&#x80FD;</h1>
+    <h1><img src="../images/dot.png" height="48px" class="">&#x6280;&#x80FD; <div>Skills</div></h1>
     <div class="d-flex flex-wrap mt-4">
       <span><p class="skill-90">Sketch</p></span>
       <span><p class="skill-90">Illustrator</p></span>
@@ -381,11 +402,15 @@ $('.btn_more').click(function() {
   var link = clicked_content.data('link');
   
   if(src1 !== 'none' && src2 !== 'none'){
-    console.log('src1&src2!==none');
+    $('#expGallery').css('display','flex');
+    $('#expArticle').css('width','50%');
     $('#expGalleryImg-1').attr('src',src1);
     $('#expGalleryImg-2').attr('src',src2);
   }else if(src1 !== 'none' && src2 == 'none'){
-    $('#expGalleryImg-2').parent('.carousel-item').css('display','none');
+    $('#expGallery').css('display','flex');
+    $('#expArticle').css('width','50%');
+    $('#expGalleryImg-1').attr('src',src1);
+    $('#expGalleryImg-2').attr('src',src1);
   }else if(src1 == 'none' && src2 == 'none'){
     $('#expGallery').css('display','none');
     $('#expArticle').css('width','100%');
