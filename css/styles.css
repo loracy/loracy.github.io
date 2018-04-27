@@ -101,12 +101,6 @@ textarea:focus {
     outline: none;
 }
 
-.portfolioSection::before{
-    content: '';
-    display: inline-flex;
-    background-image: url("../images/dot.png") no-repeat;
-    /* WIP */
-}
 
 .portfolioSection {
     line-height: 2;
@@ -1013,9 +1007,6 @@ span {
     position: relative;
     overflow: hidden;
 
-}
-
-#test{
 }
 
 .mask-top{
