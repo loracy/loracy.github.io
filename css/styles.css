@@ -982,7 +982,7 @@ span {
     transition: all .8s;
 }
 
-#outro a{
+#outro a, #download{
     color: #797979;
     font-weight: 300;
     text-decoration: none;
@@ -994,13 +994,13 @@ span {
     transition: all 1s;    
 }
 
-#outro a:hover{
+#outro a:hover,
+#download:hover{
     color: #000000;
     text-decoration: none;
     box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
     transition: all 1s;
 }
-
 
 #main{
     width: 100%;
