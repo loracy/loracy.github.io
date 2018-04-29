@@ -361,12 +361,15 @@ span {
 /* -----close-tag----- */
 .close-tag {
     position: absolute;
-    right: -40px;
-    top: 20px;
-    width: 20px;
-    height: 20px;
-    border: none;
+    right: -50px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;    
+    background: rgba(255, 255, 255, 0.3);
+    border: rgba(255, 255, 255, 0.6) 4px solid;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.2);
     -webkit-transition: all 1s;
     -ms-transition: all 1s;
     -moz-transition: all 1s;
@@ -377,7 +380,7 @@ span {
 .close-tag:after {
     content: '';
     position: absolute;
-    background-color: #ffffff;
+    background-color: rgb(39, 39, 39);
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -386,14 +389,14 @@ span {
 }
 .close-tag:before {
     left: 45%;
-    top: -10%;
+    top: 10%;
     width: 10%;
-    height: 120%;
+    height: 80%;
 }
 .close-tag:after {
     top: 45%;
-    left: -10%;
-    width: 120%;
+    left: 10%;
+    width: 80%;
     height: 10%;
 }
 
