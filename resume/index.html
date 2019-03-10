@@ -107,6 +107,10 @@
         </li>
       
         <li class="nav-item">
+          <a class="nav-link" href="/resume">Resume</a>
+        </li>
+      
+        <li class="nav-item">
           <a class="nav-link" href="mailto:lora860227@gmail.com">Contact</a>
         </li>
       
@@ -223,12 +227,17 @@ function showActive() {
       $('.js-scroll-trigger').css('color','#595959');
       $('#aboutTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
       $('#aboutTarget').css('color','#050505');
-    }else if(sideBar.offset().top+22 >= 540 && sideBar.offset().top+22 < 1090){
+    }else if(sideBar.offset().top+22 >= 540 && sideBar.offset().top+22 < 1180){
       $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');      
       $('#experienceTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
       $('#experienceTarget').css('color','#050505');
-    }else if(sideBar.offset().top+22 >= 1090){
+    }else if(sideBar.offset().top+22 >= 1180 && sideBar.offset().top+22 < 1680){
+      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#awardTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#awardTarget').css('color','#050505');
+    }else if(sideBar.offset().top+22 >= 1680){
       $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');      
       $('#skillTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');

@@ -782,7 +782,37 @@ span {
     /* content: '，'; */
 }
 
+.aboutSubtitle::before{
+    content: '';
+}
+
+.aboutSubtitle > .underline-1{
+    display: flex;
+    height: 6px;
+    width: 54%;
+    margin: -12px 0 0 0;
+    background: rgba(256,256,256,.95);
+}
+
+.aboutSubtitle > .underline-2{
+    display: flex;
+    height: 6px;
+    width: 81%;
+    margin: -12px 0 0 0;
+    background: rgba(256,256,256,.95);
+}
+
+.aboutSubtitle{
+    color: #8AA1B1;
+    font-weight: bold;
+    text-align: left;
+    line-height: 2.8rem;
+    letter-spacing: 0.08rem;
+    margin: 0;
+}
+
 .aboutContent{
+    text-align: left;
     font-size: 1em;
     line-height: 2.1rem;
     margin: 2.2rem 0 0 0;
