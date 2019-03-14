@@ -69,9 +69,10 @@
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Loracy</a> -->
   <a class="navbar-brand ml-2" href="/">
+    <!-- <img src="/images/logo.svg" height="48px" class="logo" /> -->
     <img src="/images/logo.png" height="48px" class="logo" />
     <img src="/images/oracy.png" height="48px" class="oracy" />
-    <script>
+    <!-- <script>
         $('.logo').mouseenter(function(){
           $(this).attr('src','/images/logo-hover.png')
         });
@@ -90,7 +91,7 @@
         $('.oracy').mouseup(function(){
           $(this).attr('src','/images/oracy.png')
         });
-    </script>
+    </script> -->
   </a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -121,7 +122,153 @@
 
       
   		<div class="row maxWidth">
-  			
+  			<div class="intro">
+    <div class="col-12 justify-content-center mt-5 mb-5">
+        <p>熱愛設計、喜歡大笑、享受每一天 🌝</p>
+        <h1>I'm a UI/UX Designer</h1>
+    </div>
+    <div class="col-12 d-flex justify-content-center mt-5">
+        <div class="button-container button-flip3d-vertical2">
+            <div class="flipper flipper-flip3d-vertical2">
+                <div class="button front">
+                    <a class="btn-explore" role="button">探索我的作品</a>
+                </div>
+                <div class="button button-3d back">
+                    <a class="btn-explore" href="#goToWorks" role="button" onclick="console.log('test')">按下去吧 👇</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    console.log('' + this.hash + '=' + target.offset().top);
+    if (target.length) {
+        $('html, body').animate(
+            {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");
+        return false;
+      }
+    }
+  });
+</script>
+<style>
+
+.intro{
+    width: 100%;
+    height: 70vh;
+}
+
+.intro h1{
+    font-family: inherit!important;
+    font-size: 68px;
+    font-weight: 900;
+    text-shadow: 0px 2px 14px rgba(60, 60, 60, .15);
+}
+.intro p{
+    font-size: 1.2rem;
+    color: #373737;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.btn-explore, .btn-explore:hover, .btn-explore:visited, .btn-explore:focus{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.button-flip3d-vertical2 .flipper-flip3d-vertical2 {
+  transform-origin: 100% 28px;
+}
+
+.button-flip3d-vertical2 .front {
+  transform: translateZ(28px);
+  /* background-image: linear-gradient(90deg, #6A39D7, #8656EF); */
+  /* background-image: linear-gradient(90deg, #496F85, #40657B); */
+  /* background: #E6868A; */
+  background: #496F85;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+  height: 56px;
+  color: #fff;
+}
+
+.button-flip3d-vertical2 .back {
+  -webkit-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
+  -ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
+  transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
+  /* background-image: linear-gradient(90deg, #5A30B9, #794BDA); */
+  /* background: #E6868A; */
+  background: #40657B;
+  text-align: center;
+  height: 56px;
+}
+
+.button-flip3d-vertical2:hover .flipper-flip3d-vertical2 {
+  transform: rotateX(90deg);
+}
+
+.button-container {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  height: 56px;
+  width: 248px;
+  -webkit-perspective: 700;
+  -ms-perspective: 700;
+  perspective: 700; 
+}
+
+.button-container .flipper {
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.button-container .button {
+    width: 248px;
+  height: 56px;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
+  box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
+  
+}
+
+.button-container .button.front {
+  z-index: 10;
+}
+
+.button-container .button.back {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.button a, .button a:hover {
+  color: #ffffff;
+}
+
+</style>
+
+
 
     
 
@@ -135,7 +282,7 @@
 
 
 
-        <div class="col-md-6 col-12 mb-4">
+        <div class="col-md-6 col-12 mb-4" id="goToWorks">
   <div class="workCard" onclick="javascript:window.location = '/cgu/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/cgu/cover.png" alt="肺癌照護APP">
@@ -165,7 +312,7 @@
 </div>
   
 
-        <div class="col-md-6 col-12 mb-4">
+        <div class="col-md-6 col-12 mb-4" id="goToWorks">
   <div class="workCard" onclick="javascript:window.location = '/comingweb/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/coming/cover.png" alt="形象網站">
@@ -195,7 +342,7 @@
 </div>
   
 
-        <div class="col-md-6 col-12 mb-4">
+        <div class="col-md-6 col-12 mb-4" id="goToWorks">
   <div class="workCard" onclick="javascript:window.location = '/go-hiking/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/go-hiking/cover.png" alt="台灣步道">
@@ -225,7 +372,7 @@
 </div>
   
 
-        <div class="col-md-6 col-12 mb-4">
+        <div class="col-md-6 col-12 mb-4" id="goToWorks">
   <div class="workCard" onclick="javascript:window.location = '/meracle/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/meracle/cover.png" alt="憶想奇機 Meracle">
@@ -261,7 +408,7 @@
 </div>
   
 
-        <div class="col-md-6 col-12 mb-4">
+        <div class="col-md-6 col-12 mb-4" id="goToWorks">
   <div class="workCard" onclick="javascript:window.location = '/other/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/ppt/cover.jpg" alt="其他設計作品">

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="264" height="324" viewBox="0 0 264 324">
+  <g fill="none" fill-rule="evenodd">
+    <g fill="#C23C57" transform="translate(0 19)">
+      <polygon points="132 0 0 76 132 152 264 76"/>
+      <polygon points="264 228 132 305 132 152 264 76"/>
+      <polygon points="0 230 0 76 132 152 132 305"/>
+    </g>
+    <polygon fill="#A63249" points="231 125 198 144 198 57 231 38"/>
+    <polygon fill="#0B2A4D" points="264 247 132 324 132 248 198 209.5 198 133 264 95"/>
+    <g transform="translate(66 95)">
+      <polygon fill="#134680" points="66 76.5 0 114.5 66 153 132 114.5"/>
+      <polygon fill="#0B2A4D" points="66 76.5 0 115 0 38 66 0"/>
+      <polygon fill="#0E345E" points="66 76.5 66 0 132 38 132 114.5"/>
+    </g>
+    <g transform="translate(0 95)">
+      <polygon fill="#962D42" points="198 190.5 132 229 132 153 198 114.5"/>
+      <polygon fill="#AB334D" points="0 154 0 0 66 38 66 114.5 132 153 132 229"/>
+    </g>
+    <path fill="#CC3D5C" d="M198,57 L264,95 L198,133 L132,95 L66,133 L0,95 L132,19 L165,-1.42108547e-14 L231,38 L198,57 Z"/>
+  </g>
+</svg>

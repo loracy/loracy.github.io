@@ -5,6 +5,14 @@
     font-style: normal;
     src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2) format("woff2"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff) format("woff"), url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf) format("opentype");
 }
+::selection {
+	background: #496F85;
+	color: rgb(244, 244, 244);
+}
+::-moz-selection {
+	background: #496F85;
+	color: rgb(244, 244, 244);
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
