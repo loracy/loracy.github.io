@@ -22,6 +22,7 @@
 
   <!--Favicon-->
   <link rel="icon" href="/favicon/favicon.ico">
+  <!-- <link rel="icon" href="/favicon/logo.svg"> -->
   <!-- <link rel="icon" href="favicon/icon.svg"> -->
   <!-- <link rel="shortcut icon" type="image/png" href="favicon/icon.svg"/> -->
 
@@ -68,30 +69,56 @@
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Loracy</a> -->
-  <a class="navbar-brand ml-2" href="/">
-    <!-- <img src="/images/logo.svg" height="48px" class="logo" /> -->
+  <a class="navbar-brand ml-2 d-flex flex-column" href="/">
     <img src="/images/logo.png" height="48px" class="logo" />
-    <img src="/images/oracy.png" height="48px" class="oracy" />
-    <!-- <script>
+    <img src="/images/oracy.png" height="20px" class="oracy" />
+    <style>
+      .lora-o{
+        transition: all .5s;
+        margin-top: -28px;
+        z-index: -1;
+      }
+      .lora-r{
+        transition: all .5s;
+        margin-top: -36px;
+        z-index: -2;
+      }
+      .lora-a{
+        transition: all .5s;
+        margin-top: -36px;
+        z-index: -3;
+      }
+      .lora-hover{
+        transition: all .5s;
+        margin-top: 0!important;
+      }
+    </style>
+    <script>
         $('.logo').mouseenter(function(){
-          $(this).attr('src','/images/logo-hover.png')
+          $(this).attr('src','/images/logo-hover.png');
+          $('.lora-o').addClass('lora-hover');
+          $('.lora-r').addClass('lora-hover');
+          $('.lora-a').addClass('lora-hover');
         });
         $('.logo').mouseleave(function(){
-          $(this).attr('src','/images/logo.png')
+          $(this).attr('src','/images/logo.png');
+          $('.lora-o').removeClass('lora-hover');
+          $('.lora-r').removeClass('lora-hover');
+          $('.lora-a').removeClass('lora-hover');
         });
         $('.oracy').mouseenter(function(){
-          $(this).attr('src','/images/oracy-hover.png')
+          $(this).attr('src','/images/oracy-hover.png');
         });
         $('.oracy').mouseleave(function(){
-          $(this).attr('src','/images/oracy.png')
+          $(this).attr('src','/images/oracy.png');
         });
         $('.oracy').mousedown(function(){
-          $(this).attr('src','/images/oracy.png')
+          $(this).attr('src','/images/oracy.png');
         });
         $('.oracy').mouseup(function(){
-          $(this).attr('src','/images/oracy.png')
+          $(this).attr('src','/images/oracy.png');
         });
-    </script> -->
+    </script>
   </a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -100,7 +127,7 @@
     <ul class="navbar-nav ml-auto my-auto">
       
         <li class="nav-item">
-          <a class="nav-link" href="/categories/works/">Works</a>
+          <a class="nav-link" href="#goToWorks">Works</a>
         </li>
       
         <li class="nav-item">
@@ -124,8 +151,8 @@
   		<div class="row maxWidth">
   			<div class="intro">
     <div class="col-12 justify-content-center mt-5 mb-5">
-        <p>熱愛設計、喜歡大笑、享受每一天 🌝</p>
-        <h1>I'm a UI/UX Designer</h1>
+        <h4 id="sayHello">Hello～<span></span>, I'm Lora Lin,  </h4>
+        <h1>A UI<span>/</span>UX Designer. </h1>
     </div>
     <div class="col-12 d-flex justify-content-center mt-5">
         <div class="button-container button-flip3d-vertical2">
@@ -134,7 +161,7 @@
                     <a class="btn-explore" role="button">探索我的作品</a>
                 </div>
                 <div class="button button-3d back">
-                    <a class="btn-explore" href="#goToWorks" role="button" onclick="console.log('test')">按下去吧 👇</a>
+                    <a class="btn-explore" href="#goToWorks" role="button" onclick="">按下去吧 👇</a>
                 </div>
             </div>
         </div>
@@ -142,141 +169,35 @@
 </div>
 
 <script>
+    if(window.location.hash){
+        $('#sayHello span').append(window.location.hash.slice(1));
+    }else{
+        $('#sayHello span').append('nice to see you');
+    }
+
     $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    
-  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    console.log('' + this.hash + '=' + target.offset().top);
-    if (target.length) {
-        $('html, body').animate(
-            {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");
-        return false;
-      }
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        console.log('' + this.hash + '=' + target.offset().top);
+        if (target.length) {
+            $('html, body').animate(
+                {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");
+            return false;
+        }
     }
   });
 </script>
-<style>
-
-.intro{
-    width: 100%;
-    height: 70vh;
-}
-
-.intro h1{
-    font-family: inherit!important;
-    font-size: 68px;
-    font-weight: 900;
-    text-shadow: 0px 2px 14px rgba(60, 60, 60, .15);
-}
-.intro p{
-    font-size: 1.2rem;
-    color: #373737;
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
-
-.btn-explore, .btn-explore:hover, .btn-explore:visited, .btn-explore:focus{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.button-flip3d-vertical2 .flipper-flip3d-vertical2 {
-  transform-origin: 100% 28px;
-}
-
-.button-flip3d-vertical2 .front {
-  transform: translateZ(28px);
-  /* background-image: linear-gradient(90deg, #6A39D7, #8656EF); */
-  /* background-image: linear-gradient(90deg, #496F85, #40657B); */
-  /* background: #E6868A; */
-  background: #496F85;
-  font-size: 16px;
-  text-align: center;
-  font-weight: 700;
-  height: 56px;
-  color: #fff;
-}
-
-.button-flip3d-vertical2 .back {
-  -webkit-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
-  -ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
-  transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
-  /* background-image: linear-gradient(90deg, #5A30B9, #794BDA); */
-  /* background: #E6868A; */
-  background: #40657B;
-  text-align: center;
-  height: 56px;
-}
-
-.button-flip3d-vertical2:hover .flipper-flip3d-vertical2 {
-  transform: rotateX(90deg);
-}
-
-.button-container {
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 500;
-  letter-spacing: 1px;
-  height: 56px;
-  width: 248px;
-  -webkit-perspective: 700;
-  -ms-perspective: 700;
-  perspective: 700; 
-}
-
-.button-container .flipper {
-  transition: all 0.3s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-.button-container .button {
-    width: 248px;
-  height: 56px;
-  border-radius: 3px;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  -webkit-box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
-  box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
-  
-}
-
-.button-container .button.front {
-  z-index: 10;
-}
-
-.button-container .button.back {
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.button a, .button a:hover {
-  color: #ffffff;
-}
-
-</style>
-
-
-
+<div id="goToWorks" class="row py-4">
+    
+    
+        
+    
+        
     
 
     
-
-
-
-        <div class="col-md-6 col-12 mb-4" id="goToWorks">
+            <div class="col-md-6 col-12 mb-4">
   <div class="workCard" onclick="javascript:window.location = '/cgu/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/cgu/cover.png" alt="肺癌照護APP">
@@ -305,8 +226,8 @@
   </div>
 </div>
   
-
-        <div class="col-md-6 col-12 mb-4" id="goToWorks">
+    
+            <div class="col-md-6 col-12 mb-4">
   <div class="workCard" onclick="javascript:window.location = '/go-hiking/'">
     <div>
       <img class="img-fluid portfolio-img" src="/images/go-hiking/cover.png" alt="台灣步道">
@@ -335,7 +256,8 @@
   </div>
 </div>
   
-
+    
+</div>
 
       </div>
       

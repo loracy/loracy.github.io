@@ -67,6 +67,141 @@ ul{
     justify-content: center;
 }
 
+/* ------------intro------------ */
+#sayHello span{
+    font-family: inherit;
+}
+
+.intro{
+    width: 100%;
+    height: 70vh;
+}
+
+.intro h1{
+    font-family: inherit!important;
+    font-size: 46px;
+    font-weight: 900;
+    text-shadow: 0px 2px 14px rgba(60, 60, 60, .2);
+}
+
+.intro h1 span{
+    font-family: inherit!important;
+    font-size: 32px;
+    font-weight: 500;
+    color: #292B2C;
+    text-shadow: 0px 2px 14px rgba(60, 60, 60, .3);
+    margin: 0 8px;
+    letter-spacing: 0.1rem;
+}
+
+.intro h4{
+    font-family: inherit!important;
+    font-weight: 600;
+    color: #404345;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    letter-spacing: .02rem;
+}
+
+.intro h4 span{
+    font-family: inherit!important;
+    font-weight: 600;
+    color: #404345;
+    letter-spacing: .02rem;
+    margin: 0 4px;
+}
+
+/* ---------------intro button start---------------- */
+.btn-explore, 
+.btn-explore:hover, 
+.btn-explore:visited, 
+.btn-explore:focus {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.button-flip3d-vertical2 .flipper-flip3d-vertical2 {
+    transform-origin: 100% 28px;
+}
+
+.button-flip3d-vertical2 .front {
+    transform: translateZ(28px);
+    background: #496F85;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 700;
+    height: 56px;
+    color: #fff;
+}
+
+.button-flip3d-vertical2 .back {
+    -webkit-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
+    -ms-transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
+    transform: rotateX(90deg) rotateZ(180deg) rotateY(180deg) translateZ(28px);
+    background: #40657B;
+    text-align: center;
+    height: 56px;
+}
+
+.button-flip3d-vertical2:hover .flipper-flip3d-vertical2 {
+    transform: rotateX(90deg);
+}
+
+.button-container {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+    height: 56px;
+    width: 248px;
+    -webkit-perspective: 700;
+    -ms-perspective: 700;
+    perspective: 700;
+}
+
+.button-container .flipper {
+    transition: all 0.3s ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.button-container .button {
+    width: 248px;
+    height: 56px;
+    border-radius: 3px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
+    box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
+}
+
+.button-container .button.front {
+    z-index: 10;
+}
+
+.button-container .button.back {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.button a, .button a:hover {
+    color: #ffffff;
+}
+
+/* ---------------intro button end---------------- */
+
 .portfolioList li{
     padding: 15px;
     background-color: rgba(256,256,256,.2);
@@ -811,12 +946,15 @@ span {
 }
 
 .aboutSubtitle{
-    color: #8AA1B1;
-    font-weight: bold;
+    font-family: inherit!important;
+    font-size: 22px;
+    font-weight: 600;
     text-align: left;
     line-height: 2.8rem;
     letter-spacing: 0.08rem;
-    margin: 0;
+    color: #292B2C;
+    text-shadow: 0px 2px 14px rgba(60, 60, 60, .2);
+    margin: 0;    
 }
 
 .aboutContent{
@@ -826,7 +964,6 @@ span {
     margin: 2.2rem 0 0 0;
     opacity: .9;
 }
-
 
 /* ------timeline----- */
 

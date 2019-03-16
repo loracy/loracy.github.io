@@ -22,6 +22,7 @@
 
   <!--Favicon-->
   <link rel="icon" href="/favicon/favicon.ico">
+  <!-- <link rel="icon" href="/favicon/logo.svg"> -->
   <!-- <link rel="icon" href="favicon/icon.svg"> -->
   <!-- <link rel="shortcut icon" type="image/png" href="favicon/icon.svg"/> -->
 
@@ -68,30 +69,56 @@
       <!-- Header -->
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Loracy</a> -->
-  <a class="navbar-brand ml-2" href="/">
-    <!-- <img src="/images/logo.svg" height="48px" class="logo" /> -->
+  <a class="navbar-brand ml-2 d-flex flex-column" href="/">
     <img src="/images/logo.png" height="48px" class="logo" />
-    <img src="/images/oracy.png" height="48px" class="oracy" />
-    <!-- <script>
+    <img src="/images/oracy.png" height="20px" class="oracy" />
+    <style>
+      .lora-o{
+        transition: all .5s;
+        margin-top: -28px;
+        z-index: -1;
+      }
+      .lora-r{
+        transition: all .5s;
+        margin-top: -36px;
+        z-index: -2;
+      }
+      .lora-a{
+        transition: all .5s;
+        margin-top: -36px;
+        z-index: -3;
+      }
+      .lora-hover{
+        transition: all .5s;
+        margin-top: 0!important;
+      }
+    </style>
+    <script>
         $('.logo').mouseenter(function(){
-          $(this).attr('src','/images/logo-hover.png')
+          $(this).attr('src','/images/logo-hover.png');
+          $('.lora-o').addClass('lora-hover');
+          $('.lora-r').addClass('lora-hover');
+          $('.lora-a').addClass('lora-hover');
         });
         $('.logo').mouseleave(function(){
-          $(this).attr('src','/images/logo.png')
+          $(this).attr('src','/images/logo.png');
+          $('.lora-o').removeClass('lora-hover');
+          $('.lora-r').removeClass('lora-hover');
+          $('.lora-a').removeClass('lora-hover');
         });
         $('.oracy').mouseenter(function(){
-          $(this).attr('src','/images/oracy-hover.png')
+          $(this).attr('src','/images/oracy-hover.png');
         });
         $('.oracy').mouseleave(function(){
-          $(this).attr('src','/images/oracy.png')
+          $(this).attr('src','/images/oracy.png');
         });
         $('.oracy').mousedown(function(){
-          $(this).attr('src','/images/oracy.png')
+          $(this).attr('src','/images/oracy.png');
         });
         $('.oracy').mouseup(function(){
-          $(this).attr('src','/images/oracy.png')
+          $(this).attr('src','/images/oracy.png');
         });
-    </script> -->
+    </script>
   </a>
   <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -100,7 +127,7 @@
     <ul class="navbar-nav ml-auto my-auto">
       
         <li class="nav-item">
-          <a class="nav-link" href="/categories/works/">Works</a>
+          <a class="nav-link" href="#goToWorks">Works</a>
         </li>
       
         <li class="nav-item">
