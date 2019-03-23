@@ -18,7 +18,7 @@
 
   <!-- Title -->
   
-  <title>Loracy</title>
+  <title>angular-conf - Loracy</title>
 
   <!--Favicon-->
   <link rel="icon" href="/favicon/favicon.ico">
@@ -149,123 +149,136 @@
 
       
   		<div class="row maxWidth">
-  			<div class="intro">
-    <div class="col-12 justify-content-center mt-5 mb-5">
-        <h4 id="sayHello">Hello～<span></span>, I'm Lora Lin,  </h4>
-        <h1>A UI<span>/</span>UX Designer. </h1>
-    </div>
-    <div class="col-12 d-flex justify-content-center mt-5">
-        <div class="button-container button-flip3d-vertical2">
-            <div class="flipper flipper-flip3d-vertical2">
-                <div class="button front">
-                    <a class="btn-explore" role="button">探索我的作品</a>
-                </div>
-                <div class="button button-3d back">
-                    <a class="btn-explore" href="#goToWorks" role="button" onclick="">按下去吧 👇</a>
-                </div>
-            </div>
-        </div>
-    </div>
+  			<div class="col-12 mb-4">
+  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="angular-conf">
 </div>
+      
+<div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
+  <h1>angular-conf</h1>
+  
+  </div><!-- titleSection -->
 
-<script>
-    //讓首頁的slogan可以客製化
-    if(window.location.hash){
-        $('#sayHello span').append(window.location.hash.slice(1));
-    }else{
-        $('#sayHello span').append('nice to meet you');
-    }
 
-    //點擊CTA的button
-    $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        //滑下去作品集的動畫
-        if (target.length) {
-            $('html, body').animate(
-                {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");
-            return false;
-        }
-    }
-  });
+  <div class="col-12 col-lg-3 pt-lg-3 mb-4 portfolioSidebar">
+    <div class="portfolioSidebar-container portfolioSidebar-relative d-flex flex-row justify-content-end">
+      <div class="portfolioSidebar-h3list d-flex flex-column">
+      </div>
+      <div class="portfolioSidebar-progress">
+      </div>
+    </div>
+  </div><!-- portfolioSidebar -->
+  <div class="col-12 col-lg-7 pt-lg-3 mb-4 portfolioSection">
+    <html><head><script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></head><body></body></html>
+  </div><!-- portfolioSection -->
+
+
+<script> 
+$('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
+
+
+var obj = $('.portfolioSection h3');
+console.log(obj);
+$.each( obj, function( key, value ) {
+  console.log(value.offsetTop);
+  $('.portfolioSidebar-h3list')
+  .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+});
+
+//點擊progress的item，會滑到該項目的文章
+$('.portfolioSidebar-Item').click(function() {
+  var target = $(this).index();
+  $('html, body').animate(
+    {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
+
+});
+
+$(window).scroll(function(){
+
+  fixPortfolioSidebar();
+  progessBar();
+
+});
+
+// fix the side bar beside the article
+
+function fixPortfolioSidebar(){
+  var addSticky = $('.titleSection').offset().top + 100;
+  // if( deviceWidth > smSize ){
+  //     if (window.pageYOffset >= stickySM) {
+  //       $('.sideBar').addClass('portfolioSidebar-sticky');
+  //     } else {
+  //       $('.sideBar').removeClass('portfolioSidebar-sticky'); 
+  //     }
+  //   }else{
+      if (window.pageYOffset >= addSticky) {
+        $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
+        $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
+      } else {
+        $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
+        $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
+      }
+    // }
+}
+
+// calculate the progress length in the side bar
+
+function progessBar(){
+  var totalHeight = $(document).height() - window.innerHeight; //整個頁面的長度扣掉使用者瀏覽器的高度
+  var currentHeight = window.pageYOffset;
+  // console.log(currentHeight/totalHeight);
+  $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
+
+}
 </script>
-<div id="goToWorks" class="row py-4">
-    
-    
-        
-    
-        
-    
 
+<div class="col-12 col-sm-4 offset-sm-4 col-lg-2 offset-lg-5 d-flex flex-column thankSection">
+    <a class="text-center d-flex flex-column" role="button" id="gotoTop">
+      <span>感謝你的觀看：）</span>
+        回到最上面
+    </a>
+</div><!-- thankSection -->
+<div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
     
-            <div class="col-md-6 col-12 mb-4">
-  <div class="workCard" onclick="javascript:window.location = '/comingweb/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/coming/cover.png" alt="形象網站">
-      <div class="overlay"></div>
-      <p class="product-title">形象網站</p>
-    </div>
-    
-    <div class="tags-container">
-      
-        
-         
-          <span class="tag">
-              WEB
-          </span>
-          
-        
-         
-          <span class="tag">
-              RWD
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
-</div>
+    <a class="d-flex align-items-center" href="#"></a>
   
-    
-            <div class="col-md-6 col-12 mb-4">
-  <div class="workCard" onclick="javascript:window.location = '/meracle/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/meracle/cover.png" alt="憶想奇機 Meracle">
-      <div class="overlay"></div>
-      <p class="product-title">憶想奇機 Meracle</p>
-    </div>
-    
-    <div class="tags-container">
       
-        
-         
-          <span class="tag">
-              APP
-          </span>
-          
-        
-         
-          <span class="tag">
-              WEB
-          </span>
-          
-        
-         
-          <span class="tag">
-              Android
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
-</div>
   
-    
+    <a class="d-flex align-items-center" href="../../../../cgu/index.html">
+      <p class="d-flex flex-column align-items-end mb-0 mr-md-3">
+        <span>下一篇</span>
+        肺癌照護APP
+      </p>
+      <img src="/images/svg/arrow-right.svg"/>
+    </a>
+  
+</div><!-- navigateSection -->
+
+<div class="window">
+    <div class="close-tag"></div>
+    <img src=""/>
 </div>
+<!-- popup modal js -->
+<script>
+    $('.demoImg').click(function(){
+        console.log('demoImg is clicked');
+        var src = this.src;
+        $('.window img').attr('src',src);
+        $('.window').addClass('window-show');
+    });
+
+    $('.close-tag').click(function(){
+        console.log('close-tag clicked');
+        $('.window').removeClass('window-show');
+    });
+
+    $(document).keyup(function(e){
+        var keyWhich =  e.which;
+        var keyCode =  e.keyCode;
+        if(keyWhich == 27 || keyCode == 27){
+            $('.window').removeClass('window-show');
+        }
+    });        
+</script>
 
       </div>
       
