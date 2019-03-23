@@ -181,8 +181,18 @@
     </div>
     
   </div><!-- titleSection -->
-<div class="col-12 col-lg-8 offset-lg-2 pt-lg-3 mb-4 portfolioSection">
-  <html><head></head><body><h3>&#x5275;&#x4F5C;&#x52D5;&#x6A5F;&#x8207;&#x76EE;&#x6A19;</h3>
+
+
+  <div class="col-12 col-lg-3 pt-lg-3 mb-4 portfolioSidebar">
+    <div class="portfolioSidebar-container portfolioSidebar-relative d-flex flex-row justify-content-end">
+      <div class="portfolioSidebar-h3list d-flex flex-column">
+      </div>
+      <div class="portfolioSidebar-progress">
+      </div>
+    </div>
+  </div><!-- portfolioSidebar -->
+  <div class="col-12 col-lg-7 pt-lg-3 mb-4 portfolioSection">
+    <html><head></head><body><h3>&#x5275;&#x4F5C;&#x52D5;&#x6A5F;&#x8207;&#x76EE;&#x6A19;</h3>
 <p>&#x56E0;&#x8FD1;&#x5E74;&#x4F86;&#x5BB6;&#x9577;&#x66F4;&#x70BA;&#x91CD;&#x8996;&#x5B69;&#x7AE5;&#x5F9E;&#x5C0F;&#x7684;&#x6210;&#x9577;&#x3001;&#x6559;&#x80B2;&#x7B49;&#x7B49;&#xFF0C;<br>&#x800C;&#x6211;&#x5011;&#x90FD;&#x77E5;&#x9053;&#xFF0C;&#x597D;&#x7684;&#x5DE5;&#x4F5C;&#x8A18;&#x61B6;&#x529B;&#x4E0D;&#x50C5;&#x53EF;&#x4EE5;&#x63D0;&#x9AD8;&#x5C08;&#x6CE8;&#x5EA6;&#xFF0C;<br>&#x5728;&#x5B78;&#x7FD2;&#x65B0;&#x7684;&#x4E8B;&#x7269;&#x4E0A;&#x7684;&#x901F;&#x5EA6;&#x53CA;&#x7D44;&#x7E54;&#x3001;&#x6578;&#x7406;&#x8655;&#x7406;&#x80FD;&#x529B;&#xFF0C;&#x90FD;&#x6709;&#x986F;&#x8457;&#x7684;&#x76CA;&#x8655;&#xFF01;<br>&#x56E0;&#x6B64;&#x6211;&#x5011;&#x5E0C;&#x671B;&#x80FD;&#x5275;&#x4F5C;&#x4E00;&#x500B;<br><span class="biggerText">&#x65E2;&#x80FD;&#x63D0;&#x9AD8;&#x5B69;&#x7AE5;&#x8A18;&#x61B6;&#x529B;&#xFF0C;&#x540C;&#x6642;&#x4E5F;&#x80FD;&#x958B;&#x5FC3;&#x73A9;&#x6A02;&#x7684;&#x7522;&#x54C1;</span><br>&#x5E0C;&#x671B;&#x9054;&#x5230;&#x4F7F;&#x5BB6;&#x9577;&#x80FD;&#x653E;&#x5FC3;&#x7684;&#x8B93;&#x5B69;&#x7AE5;&#x73A9;&#x6A02;&#x3001;&#x4EA6;&#x80FD;&#x65B9;&#x4FBF;&#x67E5;&#x770B;&#x7684;&#x7684;&#x76EE;&#x6A19;&#x3002;</p>
 <h3>&#x64D4;&#x4EFB;&#x8077;&#x4F4D;</h3>
 <p>web &amp; app UI/UX design</p>
@@ -307,11 +317,69 @@
 <ul>
 <li>&#x7DB2;&#x7AD9;: <a href="http://www.meracle.me/" target="_blank" rel="noopener">www.meracle.me/</a></li>
 </ul>
-<script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>  
-</div><!-- portfolioSection -->
+<script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+  </div><!-- portfolioSection -->
+
+
 <script> 
-$('.portfolioSection h3').prepend('<img src="../images/dot.png" height="48px" class="" />');
+$('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
+
+
+var obj = $('.portfolioSection h3');
+console.log(obj);
+$.each( obj, function( key, value ) {
+  console.log(value.offsetTop);
+  $('.portfolioSidebar-h3list')
+  .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+});
+
+//點擊progress的item，會滑到該項目的文章
+$('.portfolioSidebar-Item').click(function() {
+  var target = $(this).index();
+  $('html, body').animate(
+    {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
+
+});
+
+$(window).scroll(function(){
+
+  fixPortfolioSidebar();
+  progessBar();
+
+});
+
+// fix the side bar beside the article
+
+function fixPortfolioSidebar(){
+  var addSticky = $('.titleSection').offset().top + 100;
+  // if( deviceWidth > smSize ){
+  //     if (window.pageYOffset >= stickySM) {
+  //       $('.sideBar').addClass('portfolioSidebar-sticky');
+  //     } else {
+  //       $('.sideBar').removeClass('portfolioSidebar-sticky'); 
+  //     }
+  //   }else{
+      if (window.pageYOffset >= addSticky) {
+        $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
+        $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
+      } else {
+        $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
+        $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
+      }
+    // }
+}
+
+// calculate the progress length in the side bar
+
+function progessBar(){
+  var totalHeight = $(document).height() - window.innerHeight; //整個頁面的長度扣掉使用者瀏覽器的高度
+  var currentHeight = window.pageYOffset;
+  // console.log(currentHeight/totalHeight);
+  $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
+
+}
 </script>
+
 <div class="col-12 col-sm-4 offset-sm-4 col-lg-2 offset-lg-5 d-flex flex-column thankSection">
     <a class="text-center d-flex flex-column" role="button" id="gotoTop">
       <span>感謝你的觀看：）</span>
@@ -330,13 +398,7 @@ $('.portfolioSection h3').prepend('<img src="../images/dot.png" height="48px" cl
   
       
   
-    <a class="d-flex align-items-center" href="../../../../other/index.html">
-      <p class="d-flex flex-column align-items-end mb-0 mr-md-3">
-        <span>下一篇</span>
-        其他設計作品
-      </p>
-      <img src="/images/svg/arrow-right.svg"/>
-    </a>
+    <a class="d-flex align-items-center" href="#"></a>
   
 </div><!-- navigateSection -->
 

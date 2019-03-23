@@ -53,11 +53,13 @@ p{
 }
 
 p .biggerText{
-    font-style: italic;
-    font-size: 1.6rem;
-    font-weight: inherit;
-    text-align: center;
+    /* font-style: italic; */
+    font-size: 1.1rem;
+    font-weight: 500;
+    /* text-align: center; */
     line-height: 2.4em;
+    color: hsl(0, 0%, 20%);
+    margin: 0;
 }
 
 ul{
@@ -244,10 +246,86 @@ textarea:focus {
     outline: none;
 }
 
+.portfolioSidebar-relative{
+    position: relative;
+}
+
+.portfolioSidebar-sticky{
+    position: fixed;
+    top: 4%;
+    left: 9.2%;
+}
+
+.portfolioSidebar-container{
+    margin-right: 48px;
+    margin-top: 48px;
+}
+
+.portfolioSidebar-progress{
+    position: absolute;
+    width: 5px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.15);
+    transition: all 0.5s;
+
+}
+
+.portfolioSidebar-Item{
+    font-size: .88rem;
+    letter-spacing: 0.08rem;
+    font-weight: 300;
+    text-decoration: none;
+    text-align: right;
+    color: rgb(89, 89, 89);    
+    padding: 16px 32px 16px 0;
+    border-right: rgba(0, 0, 0, 0.05) 5px solid;
+    transition: all 0.5s;
+}
+
+.portfolioSidebar-Item:hover{
+    /* color: rgb(5, 5, 5); */
+    text-decoration: none;
+    color: rgb(89, 89, 89);    
+    background: rgba(256,256,256,.15);
+    transition: all 0.5s;
+}
+
+.portfolioSidebar-Item:visited, 
+.portfolioSidebar-Item:focus{
+    text-decoration: none;
+    
+}
 
 .portfolioSection {
-    line-height: 2;
+    /* line-height: 2; */
     color: #555555;
+}
+
+.portfolioSection h3{
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.12rem;
+    color: rgba(0,0,0, 0.6);
+    background: rgba(256, 256, 256, 0.2);
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.portfolioSection p{
+    text-align: left;
+    line-height: 1.9;
+    padding-left: 8px;
+}
+
+.portfolioSection p span.strenthen{
+    font-family: inherit;
+    font-size: inherit;
+    display: inline-block;
+    border-bottom: 1.5px dashed rgba(0, 0, 0, 0.4);
+    padding-bottom: 0.5px;
+    margin: 0 0 5px 0;
 }
 
 .portfolioSection a{
@@ -504,13 +582,13 @@ span {
 /* -----close-tag----- */
 .close-tag {
     position: absolute;
-    right: -50px;
-    top: 0px;
-    width: 40px;
-    height: 40px;
+    right: 12px;
+    top: 12px;
+    width: 32px;
+    height: 32px;
     cursor: pointer;    
-    background: rgba(255, 255, 255, 0.3);
-    border: rgba(255, 255, 255, 0.6) 4px solid;
+    background: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.1) 2px solid;
     border-radius: 4px;
     box-shadow: 0px 2px 6px rgba(0,0,0,.2);
     -webkit-transition: all 1s;
@@ -518,12 +596,13 @@ span {
     -moz-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s;
+    z-index: 100;
 }
 .close-tag:before,
 .close-tag:after {
     content: '';
     position: absolute;
-    background-color: rgb(39, 39, 39);
+    background-color: rgba(255, 255, 255, 0.9);
     transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -551,7 +630,7 @@ span {
     border-radius: 4px;
     box-shadow: 0px 2px 6px rgba(0,0,0,.2);    
     position: fixed;
-    height: 80%;
+    height: 90%;
     left: 50%;
     top: 50%;
     visibility: hidden;
@@ -567,10 +646,11 @@ span {
 }
 
 #expGallery{
-    width: 50%;
+    width: 100%;
     overflow: hidden;  
     display: flex;
-    align-items: center;  
+    align-items: center;
+    height: 600px;
 }
 
 #expGallery img{
@@ -581,23 +661,38 @@ span {
 }
 
 #expArticle{
-    width: 50%;
+    width: 100%;
     overflow: scroll;
 }
 
-#expArticle h5,
+#expArticle h5{
+    text-align: left;
+    padding: 2px 8px;
+    margin-bottom: .2em;
+    margin-top: 16px;
+}
+
 #expArticle p{
+    padding: 2px 8px;
     text-align: left;
     margin-bottom: .2em;
 }
 
-#expArticle p:last-of-type{
-    padding: .4em;
-    line-height: 1.8em;
+#expArticle p span{
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #404345;
+    margin: 12px 0 4px 0;
+    line-height: 2.6rem;
+    border-left: 6px solid #5d6164;
+    padding-left: 8px;
+
 }
 
-#expArticle>p:first-of-type{
-
+#expArticle p:last-of-type{
+    padding: 8px;
+    line-height: 1.8em;
 }
 
 #expArticle>p:last-of-type{
@@ -999,14 +1094,14 @@ span {
     width: 70%;
     float: left;
     border-left: 3px #e5e5d1 solid;
-    padding: 1rem 0 1rem 2.6rem;
+    padding: 20px 8px 16px 32px;
     position: relative;
     transition: all .4s;
     -webkit-transition: all .4s;
 }
 
 .timeline-content:hover {
-    background-color:  rgba(0,0,0,.01);
+    background-color:  rgba(0,0,0,.02);
     transition: all .6s;
     -webkit-transition: all .6s;
 }
@@ -1044,24 +1139,24 @@ span {
 .btn_more{
     display: flex;
     justify-content: center;
-    width: 64px;
-    color: #797979;
+    width: auto;
+    color: #496F85;
     font-size: .4em;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
-    background: rgba(256,256,256, .4);
-    padding: 10px 18px;
+    background: rgba(256,256,256, .7);
+    /* background: #496F85; */
+    padding: 8px 16px;
     margin: 0 8px;
-    border-radius: 100px;
-    box-shadow: 0px 1px 2px rgba(0,0,0,.02);    
-    transition: all 1s; 
+    border-radius: 4px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.05);    
+    transition: all 0.6s; 
 }
 
 .btn_more:hover{
-    color: #000000;
     text-decoration: none;
-    box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
-    transition: all 1s;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.25);    
+    transition: all 0.6s;
 }
 
 @media screen and (max-width: 768px) {

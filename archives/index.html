@@ -169,17 +169,19 @@
 </div>
 
 <script>
+    //讓首頁的slogan可以客製化
     if(window.location.hash){
         $('#sayHello span').append(window.location.hash.slice(1));
     }else{
-        $('#sayHello span').append('nice to see you');
+        $('#sayHello span').append('nice to meet you');
     }
 
+    //點擊CTA的button
     $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        console.log('' + this.hash + '=' + target.offset().top);
+        //滑下去作品集的動畫
         if (target.length) {
             $('html, body').animate(
                 {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");
@@ -190,8 +192,6 @@
 </script>
 <div id="goToWorks" class="row py-4">
     
-    
-        
     
         
     
@@ -319,36 +319,6 @@
          
           <span class="tag">
               Android
-          </span>
-          
-        
-      
-    </div>
-    
-  </div>
-</div>
-  
-    
-            <div class="col-md-6 col-12 mb-4">
-  <div class="workCard" onclick="javascript:window.location = '/other/'">
-    <div>
-      <img class="img-fluid portfolio-img" src="/images/ppt/cover.jpg" alt="其他設計作品">
-      <div class="overlay"></div>
-      <p class="product-title">其他設計作品</p>
-    </div>
-    
-    <div class="tags-container">
-      
-        
-         
-          <span class="tag">
-              Banner
-          </span>
-          
-        
-         
-          <span class="tag">
-              PPT
           </span>
           
         

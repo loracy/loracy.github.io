@@ -169,17 +169,19 @@
 </div>
 
 <script>
+    //讓首頁的slogan可以客製化
     if(window.location.hash){
         $('#sayHello span').append(window.location.hash.slice(1));
     }else{
-        $('#sayHello span').append('nice to see you');
+        $('#sayHello span').append('nice to meet you');
     }
 
+    //點擊CTA的button
     $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        console.log('' + this.hash + '=' + target.offset().top);
+        //滑下去作品集的動畫
         if (target.length) {
             $('html, body').animate(
                 {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");

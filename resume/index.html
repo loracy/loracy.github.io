@@ -179,7 +179,7 @@
 </style>
 <script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
 </div>
-<div class="expWindow d-flex">
+<div class="expWindow d-flex flex-column">
   <div class="close-tag"></div>
   <div id="expGallery" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -203,7 +203,7 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-  
+
   <div id="expArticle" class="">
       <h5></h5>
       <p></p>
@@ -336,7 +336,17 @@ $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
   }
 });
 
-// $('.timeline-content:not(.now)').click(function() {
+$('.timeline-content').mouseenter(function() {
+  $(this).children('div').children('.btn_more').css('background','#496F85');
+  $(this).children('div').children('.btn_more').css('color','#FFFFFF');
+})
+
+$('.timeline-content').mouseleave(function() {
+  $(this).children('div').children('.btn_more').css('background','rgba(256,256,256, .7)');
+  $(this).children('div').children('.btn_more').css('color','#496F85');
+})
+
+// About page Popup Modal Start
 $('.btn_more').click(function() {
   var clicked_content = $(this).parent('div').parent('.timeline-content');
 
@@ -350,12 +360,12 @@ $('.btn_more').click(function() {
   
   if(src1 !== 'none' && src2 !== 'none'){
     $('#expGallery').css('display','flex');
-    $('#expArticle').css('width','50%');
+    // $('#expArticle').css('width','50%');
     $('#expGalleryImg-1').attr('src',src1);
     $('#expGalleryImg-2').attr('src',src2);
   }else if(src1 !== 'none' && src2 == 'none'){
     $('#expGallery').css('display','flex');
-    $('#expArticle').css('width','50%');
+    // $('#expArticle').css('width','50%');
     $('#expGalleryImg-1').attr('src',src1);
     $('#expGalleryImg-2').attr('src',src1);
   }else if(src1 == 'none' && src2 == 'none'){
@@ -377,9 +387,7 @@ $('.btn_more').click(function() {
 $('.close-tag').click(function(){
   console.log('close-tag clicked');
   $('.expWindow').removeClass('window-show');
-});
-
-    
+}); 
 
 $(document).keyup(function(e){
   var keyWhich =  e.which;
@@ -388,6 +396,8 @@ $(document).keyup(function(e){
       $('.expWindow').removeClass('window-show');
   }
 });
+// about page popup modal End
+
 
 //複製我的資料
 function copyInfo(id) {

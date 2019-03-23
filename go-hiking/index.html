@@ -175,8 +175,18 @@
     </div>
     
   </div><!-- titleSection -->
-<div class="col-12 col-lg-8 offset-lg-2 pt-lg-3 mb-4 portfolioSection">
-  <!-- ![go-hiking_img-login](https://loracy.github.io/images/go-hiking/login.png) --><html><head></head><body><h3>&#x5275;&#x4F5C;&#x76EE;&#x7684;</h3>
+
+
+  <div class="col-12 col-lg-3 pt-lg-3 mb-4 portfolioSidebar">
+    <div class="portfolioSidebar-container portfolioSidebar-relative d-flex flex-row justify-content-end">
+      <div class="portfolioSidebar-h3list d-flex flex-column">
+      </div>
+      <div class="portfolioSidebar-progress">
+      </div>
+    </div>
+  </div><!-- portfolioSidebar -->
+  <div class="col-12 col-lg-7 pt-lg-3 mb-4 portfolioSection">
+    <!-- ![go-hiking_img-login](https://loracy.github.io/images/go-hiking/login.png) --><html><head></head><body><h3>&#x5275;&#x4F5C;&#x76EE;&#x7684;</h3>
 <p>&#x8B93;&#x611B;&#x597D;&#x767B;&#x5C71;&#x904B;&#x52D5;&#x7684;&#x670B;&#x53CB;&#xFF0C;&#x5B8C;&#x6574;&#x6536;&#x7D0D;&#x5168;&#x53F0;&#x7684;&#x6B65;&#x9053;&#xFF0C;<br>&#x7D50;&#x5408;&#x904A;&#x6232;&#x5316;&#x548C;&#x5546;&#x696D;&#x6A21;&#x5F0F;&#xFF0C;&#x5438;&#x5F15;&#x66F4;&#x591A;&#x7528;&#x6236;&#x7684;&#x5C55;&#x958B;&#x5065;&#x5EB7;&#x6B65;&#x9053;&#x751F;&#x6D3B;&#xFF0C;<br>&#x66F4;&#x53EF;&#x4EE5;&#x8A8D;&#x8B58;&#x5FD7;&#x540C;&#x9053;&#x5408;&#x7684;&#x597D;&#x670B;&#x53CB;&#x3002;</p>
 <h3>&#x529F;&#x80FD;&#x767C;&#x60F3;</h3>
 <ul class="row portfolioList">
@@ -271,11 +281,69 @@
 <p><a href="https://marvelapp.com/j1bg9b6/" target="_blank" rel="noopener">https://marvelapp.com/j1bg9b6/</a></p>
 <div class="col-12 d-flex justify-content-center">
     <iframe src="https://marvelapp.com/j1bg9b6?emb=1&amp;iosapp=false&amp;frameless=false" width="226" height="450.5" allowtransparency="true" frameborder="0"></iframe>
-</div><script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>  
-</div><!-- portfolioSection -->
+</div><script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+  </div><!-- portfolioSection -->
+
+
 <script> 
-$('.portfolioSection h3').prepend('<img src="../images/dot.png" height="48px" class="" />');
+$('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
+
+
+var obj = $('.portfolioSection h3');
+console.log(obj);
+$.each( obj, function( key, value ) {
+  console.log(value.offsetTop);
+  $('.portfolioSidebar-h3list')
+  .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+});
+
+//點擊progress的item，會滑到該項目的文章
+$('.portfolioSidebar-Item').click(function() {
+  var target = $(this).index();
+  $('html, body').animate(
+    {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
+
+});
+
+$(window).scroll(function(){
+
+  fixPortfolioSidebar();
+  progessBar();
+
+});
+
+// fix the side bar beside the article
+
+function fixPortfolioSidebar(){
+  var addSticky = $('.titleSection').offset().top + 100;
+  // if( deviceWidth > smSize ){
+  //     if (window.pageYOffset >= stickySM) {
+  //       $('.sideBar').addClass('portfolioSidebar-sticky');
+  //     } else {
+  //       $('.sideBar').removeClass('portfolioSidebar-sticky'); 
+  //     }
+  //   }else{
+      if (window.pageYOffset >= addSticky) {
+        $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
+        $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
+      } else {
+        $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
+        $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
+      }
+    // }
+}
+
+// calculate the progress length in the side bar
+
+function progessBar(){
+  var totalHeight = $(document).height() - window.innerHeight; //整個頁面的長度扣掉使用者瀏覽器的高度
+  var currentHeight = window.pageYOffset;
+  // console.log(currentHeight/totalHeight);
+  $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
+
+}
 </script>
+
 <div class="col-12 col-sm-4 offset-sm-4 col-lg-2 offset-lg-5 d-flex flex-column thankSection">
     <a class="text-center d-flex flex-column" role="button" id="gotoTop">
       <span>感謝你的觀看：）</span>
