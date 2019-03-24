@@ -251,9 +251,10 @@ textarea:focus {
 }
 
 .portfolioSidebar-sticky{
+    min-width: 210px;
     position: fixed;
     top: 4%;
-    left: 9.2%;
+    left: 5.8%;
 }
 
 .portfolioSidebar-container{
@@ -395,18 +396,17 @@ textarea:focus {
     float: left;
     overflow: hidden;
     position: relative;
-    padding: 24px;
+    padding-bottom: 16px;
     background: #fff;
-    border: 1px solid hsl(0, 0%, 98%);
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.03), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 20px 24px -10px rgba(0, 0, 0, 0.18);
     border-radius: .4rem;
-    transition: all .4s;
+    transition: all .35s;
 }
 
 .workCard:hover {
-    box-shadow: 0 6px 14px 1px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.10);
+    box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     cursor: pointer;
-    transition: all .4s;    
+    transition: all .35s;    
 }
 
 .workCard .overlay {
@@ -421,11 +421,13 @@ textarea:focus {
 }
 
 .workCard .product-title {
-    top: 24px;
+    top: 20px;
+    left: 16px;
     font-weight: 500;
     text-decoration: none !important;
-    font-size: 20px;
-    color: #284247;
+    font-size: 16px;
+    color: #292b2c;
+    /* color: #284247; */
     letter-spacing: 1px;
     line-height: 24px;
     text-align: left;
@@ -451,13 +453,13 @@ textarea:focus {
     transition: opacity 0.35s, transform 0.35s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: .4rem;    
+    /* border-radius: .4rem; */
 }
 
 /* ------tags------ */
 
 .tags-container {
-    margin-top: 48px;
+    margin-top: 20px;
 }
 
 .titleSection .tags-container{
@@ -467,17 +469,15 @@ textarea:focus {
 }
 
 .tags-container .tag {
-    background: #CFD9DF;
-    border-radius: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
     font-size: 14px;
-    color: #FFFFFF;
+    color: #CFD9DF;
     letter-spacing: 0.8px;
     line-height: 16px;
     padding: 4px 16px;
     float: left;
     margin-left: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
     
 }
 
@@ -535,9 +535,16 @@ span {
     border: rgba(255, 255, 255, 0.4) 5px solid;
     cursor: pointer;
     border-radius: 4px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,.05);
-    max-height: 216px;
-    width: auto;
+    box-shadow: 0px 3px 9px rgba(0,0,0,.05);
+    max-height: 280px;
+    transition: all 0.5s;
+    margin-left: 8px;
+}
+
+.demoImg:hover{
+    border: rgba(255, 255, 255, 0.2) 5px solid;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.05);
+    transition: all 0.5s;
 }
 
 .noShowImg{
@@ -743,24 +750,28 @@ span {
 }
 
 .thankSection a{
-    color: #797979!important;
-    font-weight: 300;
     text-decoration: none;
-    background: rgba(256,256,256, .2);
-    padding: 10px;
-    border-radius: 100px;
-    box-shadow: 0px 1px 2px rgba(0,0,0,.02);
-    transition: all 1s;
-    -webkit-transition: all 1s;
+    color: #545454!important;
+    font-size: 12px;
+    font-weight: bold;
+    background: rgba(256, 256, 256, .5) !important;
+    border: 1px solid #CFD9DF !important;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, .1) !important;
+    padding: 12px 32px;
+    max-width: 240px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 
 .thankSection a:hover{
-    color: #000000!important;
     text-decoration: none;
-    box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
-    transition: all 1s;
-    -webkit-transition: all 1s;    
+    color: #000000!important;
+    background: rgba(256, 256, 256, .7) !important;
+    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, .05) !important;    
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
 }
 
 .thankSection a span{
