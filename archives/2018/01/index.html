@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html class="myWeb" lang="en">
-  <!-- Head tag -->
-  <head>
+<!DOCTYPE html><html class="myWeb" lang="en"><!-- Head tag --><head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116007084-1"></script>
     <script>
@@ -28,7 +25,7 @@
 
   <!--Description-->
   
-      <meta name="description" content="Lora&#39;s portfolio.">
+      <meta name="description" content="Lora's portfolio.">
   
 
   <!--Author-->
@@ -56,10 +53,16 @@
   <!-- jquery   -->
   <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 <!-- <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script> -->
 <!-- <script src="script.js"></script> -->
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+<!-- Other -->
+<!-- Fix Safari Problems -->
+<script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.global.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 </head>
 
 
@@ -70,8 +73,8 @@
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Lora | portfolio</a> -->
   <a class="navbar-brand ml-2 d-flex flex-column align-items-center" href="/">
-    <img src="/images/logo.png" width="48px" height="48px" class="logo" />
-    <img src="/images/oracy.png" width="48px" height="20px" class="oracy" />
+    <img src="/images/logo.png" width="48px" height="48px" class="logo">
+    <img src="/images/oracy.png" width="48px" height="20px" class="oracy">
     <style>
       .lora-o{
         transition: all .5s;
@@ -143,7 +146,7 @@
         </li>
       
     </ul>
-    <hr class="hidden-md-up" />
+    <hr class="hidden-md-up">
   </div>
 </nav>
 
@@ -216,6 +219,12 @@
           </span>
           
         
+         
+          <span class="tag">
+              test
+          </span>
+          
+        
       
     </div>
     
@@ -233,6 +242,12 @@
     
     <div class="tags-container">
       
+        
+         
+          <span class="tag">
+              test
+          </span>
+          
         
          
           <span class="tag">
@@ -256,7 +271,7 @@
     <!-- After footer scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script>
@@ -273,7 +288,15 @@ $('#gotoTop').click(function() {
 //intro animation
 $(document).ready(function(){
 });
+
+//Fix Safari Problems
+
+// IntersectionObserver.prototype._rootContainsTarget = function(target) {
+//   return (this.root || docElement).contains(target);
+// };
 </script>
 
-  </body>
-</html>
+
+  
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

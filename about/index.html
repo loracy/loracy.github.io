@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html class="myWeb" lang="en">
-  <!-- Head tag -->
-  <head>
+<!DOCTYPE html><html class="myWeb" lang="en"><!-- Head tag --><head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116007084-1"></script>
     <script>
@@ -28,7 +25,7 @@
 
   <!--Description-->
   
-      <meta name="description" content="Lora&#39;s portfolio.">
+      <meta name="description" content="Lora's portfolio.">
   
 
   <!--Author-->
@@ -56,10 +53,16 @@
   <!-- jquery   -->
   <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 <!-- <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script> -->
 <!-- <script src="script.js"></script> -->
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+<!-- Other -->
+<!-- Fix Safari Problems -->
+<script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.global.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 </head>
 
 
@@ -70,8 +73,8 @@
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Lora | portfolio</a> -->
   <a class="navbar-brand ml-2 d-flex flex-column align-items-center" href="/">
-    <img src="/images/logo.png" width="48px" height="48px" class="logo" />
-    <img src="/images/oracy.png" width="48px" height="20px" class="oracy" />
+    <img src="/images/logo.png" width="48px" height="48px" class="logo">
+    <img src="/images/oracy.png" width="48px" height="20px" class="oracy">
     <style>
       .lora-o{
         transition: all .5s;
@@ -143,7 +146,7 @@
         </li>
       
     </ul>
-    <hr class="hidden-md-up" />
+    <hr class="hidden-md-up">
   </div>
 </nav>
 
@@ -151,18 +154,18 @@
   		<div class="row maxWidth">
   			
 <div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-sm-end">
-  <html><head></head><body><div class="col-12 col-sm-2 sideBar">
+  <div class="col-12 col-sm-2 sideBar">
   <div class="mb-sm-3 sideBarAvatar">
     <img src="./assets/avatar.jpg">
-    <h1>&#x6797;&#x4E9E;&#x5112;</h1>
+    <h1>林亞儒</h1>
     <h3>Lora Lin</h3>
   </div>
   <div class="mb-sm-3 sideBarContact">
-    <a id="phone" onclick="copyInfo(&apos;#phone&apos;)">
+    <a id="phone" onclick="copyInfo('#phone')">
       <span class="d-none">0983816167</span>
       <i data-feather="phone"></i>
     </a>
-    <a id="email" onclick="copyInfo(&apos;#email&apos;)">
+    <a id="email" onclick="copyInfo('#email')">
       <span class="d-none">lora860227@gmail.com</span>
       <i data-feather="mail"></i>
     </a>
@@ -172,96 +175,96 @@
     <div class="popup"></div>
   </div>
   <div class="d-flex flex-row flex-sm-column sideBarContent">
-    <a href="#about" class="js-scroll-trigger" id="aboutTarget">&#x95DC;&#x65BC;&#x6211;</a>
-    <a href="#experience" class="js-scroll-trigger" id="experienceTarget">&#x5B78;&#x7D93;&#x6B77;</a>
-    <a href="#award" class="js-scroll-trigger d-sm-block d-none" id="awardTarget">&#x6BD4;&#x8CFD;&#x734E;&#x9805;</a>
-    <a href="#award" class="js-scroll-trigger d-sm-none d-flex" id="awardTarget">&#x6BD4;&#x8CFD;</a>
-    <a href="#skill" class="js-scroll-trigger" id="skillTarget">&#x6280;&#x80FD;</a>    
+    <a href="#about" class="js-scroll-trigger" id="aboutTarget">關於我</a>
+    <a href="#experience" class="js-scroll-trigger" id="experienceTarget">學經歷</a>
+    <a href="#award" class="js-scroll-trigger d-sm-block d-none" id="awardTarget">比賽獎項</a>
+    <a href="#award" class="js-scroll-trigger d-sm-none d-flex" id="awardTarget">比賽</a>
+    <a href="#skill" class="js-scroll-trigger" id="skillTarget">技能</a>    
   </div>
 </div>
 <div class="col-12 col-sm-9 introCard" id="about">
-  <h1><img src="../images/dot.png" height="48px" class="">&#x95DC;&#x65BC;&#x6211; <div>About Me</div></h1>
+  <h1><img src="../images/dot.png" height="48px" class="">關於我 <div>About Me</div></h1>
   <!-- <h5 class="aboutContent">
       Hello～我是來自台中的林亞儒，是一名大三的學生，目前就讀於 國立臺北教育大學的數位科技設計學系，主要專長為 App/Web 的 UI Design、前端開發、多媒體設計，對於設計出體驗良好的產品有很大的熱情和執著，希望可以讓我的感動透過產品傳達給更多人！ 平時喜歡關注數位產品的相關話題和趨勢，也樂於參與各式各樣的社群及講座，例如之前參加 Mopcon 擔任會眾，看到了許多前輩和大神，除了吸收到許多前端的各種新穎的技術，也對介面設計未來的展望有更深的認知和想像，希望我也可以挑戰更多裝置上的介面設計！ 我也喜歡和不同的人接觸、交流想法、表現自己，例如在學校時，我有許多擔任大型活動主持的經驗，例如像校園園遊會、一年一度的校園星光比賽，訓練我發表的邏輯可以更清晰、還有面對群眾表現的膽量。現在在系上除了擔任系網團隊的開發成員，學習更多開發網站的介面設計和技術能力，還有參加系上 UI/UX Sketch 的讀書會，希望可以跟前輩多多學習、並且不斷加強我不足的地方。未來期許自己更充實能力、保持對生活的熱忱、有能力希望能夠回饋家庭和社會、並且享受每一天！
   </h5>   -->
   <h4 class="aboutSubtitle">
-    Be Unrestrained Seeking Solutions, <br>
+    Be unrestrained seeking solutions, <br>
     <span class="underline-1"></span>
-    Stay Thoughtful Within Constraints When Designing. <br>
+    Stay thoughtful within constraints when designing. <br>
     <span class="underline-2"></span>
   </h4>
   <h5 class="aboutContent">
-      Hello&#xFF5E;&#x6211;&#x76EE;&#x524D;&#x662F;&#x5C31;&#x8B80;&#x65BC; &#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; &#x6578;&#x4F4D;&#x79D1;&#x6280;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB; &#x7684;&#x5927;&#x56DB;&#x751F;&#xFF0C;&#x4E3B;&#x8981;&#x5C08;&#x9577;&#x70BA; App/Web &#x7684; UI/UX Design&#x3002;&#x63A5;&#x89F8;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x548C;&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x8A2D;&#x8A08;&#x7684;&#x7D93;&#x9A57;&#x7D04;&#x4E00;&#x5E74;&#x534A;&#x3002;<br>
-      &#x4E00;&#x5E74;&#x534A;&#x524D;&#x671F;&#x8A31;&#x81EA;&#x5DF1;&#x53EF;&#x4EE5;&#x5C07;&#x6240;&#x5B78;&#x505A;&#x61C9;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x5927;&#x4E8C;&#x6691;&#x5047;&#x52A0;&#x5165;&#x63A5;&#x6848;&#x578B;&#x7684;&#x65B0;&#x5275;&#x516C;&#x53F8;&#xFF0C;&#x64D4;&#x4EFB;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x5BE6;&#x7FD2;&#x751F;&#xFF0C;&#x77AD;&#x89E3;&#x5230;&#x8A2D;&#x8A08;&#x7522;&#x54C1;&#x61C9;&#x8A72;&#x8981;&#x8003;&#x616E;&#x7684;&#x7D30;&#x7BC0;&#x9060;&#x8D85;&#x51FA;&#x60F3;&#x50CF;&#xFF0C;&#x66F4;&#x5B78;&#x7FD2;&#x5230;&#x8EDF;&#x9AD4;&#x958B;&#x767C;&#x7684;&#x6D41;&#x7A0B;&#x3002;&#x96D6;&#x7136;&#x56E0;&#x6B64;&#x610F;&#x8B58;&#x5230;&#x81EA;&#x5DF1;&#x6709;&#x8A31;&#x591A;&#x4E0D;&#x8DB3;&#xFF0C;&#x4F46;&#x4E5F;&#x8B93;&#x6211;&#x66F4;&#x7A4D;&#x6975;&#x5730;&#x7D2F;&#x7A4D;&#x5BE6;&#x52D9;&#x7D93;&#x9A57;&#x548C;&#x4F5C;&#x54C1;&#xFF0C;&#x56E0;&#x6B64;&#x904E;&#x53BB;&#x4E00;&#x5E74;&#x8DDF;&#x8457;&#x524D;&#x8F29;&#x53C3;&#x8207;&#x4E86;&#x8A31;&#x591A;&#x5C08;&#x6848;&#xFF0C;&#x6210;&#x529F;&#x5E6B;&#x52A9;&#x5BA2;&#x6236;&#x89E3;&#x6C7A;&#x554F;&#x984C;&#x8207;&#x9054;&#x6210;&#x76EE;&#x6A19;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4E5F;&#x7A4D;&#x6975;&#x53C3;&#x52A0;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x793E;&#x7FA4;&#x548C;&#x8B1B;&#x5EA7;&#xFF0C;&#x9664;&#x4E86;&#x80FD;&#x66F4;&#x958B;&#x62D3;&#x5C0D;&#x8A2D;&#x8A08;&#x9818;&#x57DF;&#x7684;&#x8996;&#x91CE;&#xFF0C;&#x4E5F;&#x78BA;&#x7ACB;&#x4E86;&#x6211;&#x5C0D;&#x8A2D;&#x8A08;&#x7684;&#x71B1;&#x5FF1;&#x548C;&#x5805;&#x6301;&#x3002;<br>
-      &#x70BA;&#x4E86;&#x6301;&#x7E8C;&#x5728;&#x8A2D;&#x8A08;&#x9019;&#x9805;&#x5C08;&#x696D;&#x7CBE;&#x9032;&#x81EA;&#x5DF1;&#xFF0C;&#x56E0;&#x6B64;&#x5927;&#x4E09;&#x7684;&#x6691;&#x5047;&#x52A0;&#x5165;&#x8DA8;&#x52E2;&#x79D1;&#x6280;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x8A2D;&#x8A08;&#x90E8;&#x9580;(Human Interface Engineering)&#x5BE6;&#x7FD2;&#xFF0C;&#x76EE;&#x6A19;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x63A5;&#x89F8;&#x5230;&#x66F4;&#x591A;&#x8A2D;&#x8A08;&#x8CC7;&#x6E90;&#x3001;&#x4E26;&#x4E14;&#x66F4;&#x719F;&#x6089;&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x7814;&#x7A76;&#x7684;&#x6D41;&#x7A0B;&#x548C;&#x65B9;&#x6CD5;&#x3002;&#x5BE6;&#x7FD2;&#x671F;&#x9593;&#x5728;&#x5C0E;&#x5E2B;&#x7684;&#x5E36;&#x9818;&#x4E0B;&#xFF0C;&#x6211;&#x4E3B;&#x8981;&#x8CA0;&#x8CAC;&#x5169;&#x500B;&#x7522;&#x54C1;&#xFF0C;&#x4E26;&#x4E14;&#x5FC5;&#x9808;&#x548C;&#x5176;&#x4ED6;&#x8A2D;&#x8A08;&#x5E2B;&#x4E00;&#x8D77;&#x6E9D;&#x901A;&#x8207;&#x5408;&#x4F5C;&#xFF0C;&#x5118;&#x7BA1;&#x8A2D;&#x8A08;&#x7522;&#x54C1;&#x6703;&#x9047;&#x5230;&#x8A31;&#x591A;&#x9650;&#x5236;&#x548C;&#x56F0;&#x96E3;&#xFF0C;&#x4F46;&#x6211;&#x4E0D;&#x65B7;&#x6FC0;&#x52F5;&#x81EA;&#x5DF1;&#x9762;&#x5C0D;&#x554F;&#x984C;&#x8981;&#x66F4;&#x5927;&#x81BD;&#x7684;&#x60F3;&#x50CF;&#x5404;&#x7A2E;&#x89E3;&#x6CD5;&#xFF0C;&#x5728;&#x8A2D;&#x8A08;&#x6642;&#x5247;&#x8981;&#x66F4;&#x8B39;&#x614E;&#x7684;&#x5C0D;&#x5F85;&#x6BCF;&#x500B;&#x7D30;&#x7BC0;&#x3002;&#x7D93;&#x904E;&#x6301;&#x7E8C;&#x7684;&#x4FEE;&#x6539;&#x8207;&#x512A;&#x5316;&#xFF0C;&#x6211;&#x5F9E;&#x524D;&#x8F29;&#x8EAB;&#x4E0A;&#x5B78;&#x7FD2;&#x5230;&#x8A31;&#x591A;&#x8A2D;&#x8A08;&#x5C08;&#x696D;&#x8207;&#x6E9D;&#x901A;&#x6280;&#x5DE7;&#xFF0C;&#x4E5F;&#x66F4;&#x719F;&#x6089;&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x8A2D;&#x8A08;&#x7684;&#x6D41;&#x7A0B;&#x3002;&#x4E26;&#x4E14;&#x4E5F;&#x5728;&#x6700;&#x5F8C;&#x7D50;&#x8A13;&#x5B8C;&#x6210;&#x4E00;&#x5834;15&#x5206;&#x9418;&#x5168;&#x82F1;&#x6587;&#x7684;&#x7C21;&#x5831;&#xFF0C;&#x52A0;&#x5F37;&#x4E86;&#x81EA;&#x5DF1;&#x8868;&#x9054;&#x548C;&#x7C21;&#x5831;&#x7684;&#x80FD;&#x529B;&#x3002;<br>
-      &#x73FE;&#x5728;&#x6211;&#x6301;&#x7E8C;&#x8207;&#x56FA;&#x5B9A;&#x7684;&#x696D;&#x4E3B;&#x5408;&#x4F5C;&#xFF0C;&#x8CA0;&#x8CAC;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x8207;&#x6D41;&#x7A0B;&#x898F;&#x5283;&#xFF0C;&#x8A13;&#x7DF4;&#x81EA;&#x5DF1;&#x900F;&#x904E;&#x8A2D;&#x8A08;&#x624B;&#x6CD5;&#x548C;&#x7C21;&#x5831;&#x80FD;&#x529B;&#x4F86;&#x8AAA;&#x670D;&#x5BA2;&#x6236;&#xFF0C;&#x4EA6;&#x80FD;&#x4FDD;&#x6301;&#x5C0D;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x6700;&#x65B0;&#x8DA8;&#x52E2;&#x7684;&#x654F;&#x92B3;&#x5EA6;&#x3002;<br>
-      &#x672A;&#x4F86;&#x6211;&#x671F;&#x8A31;&#x81EA;&#x5DF1;&#x4FDD;&#x6301;&#x5C0D;&#x8A2D;&#x8A08;&#x7684;&#x71B1;&#x5FF1;&#x3001;&#x548C;&#x9031;&#x906D;&#x4EBA;&#x4E8B;&#x7269;&#x7684;&#x597D;&#x5947;&#x5FC3;&#xFF0C;&#x4E26;&#x66F4;&#x5C08;&#x6CE8;&#x65BC;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x4EE5;&#x4F7F;&#x7528;&#x8005;&#x70BA;&#x4E2D;&#x5FC3;&#x70BA;&#x601D;&#x8003;&#x3001;&#x6253;&#x9020;&#x6700;&#x7B26;&#x5408;&#x9700;&#x6C42;&#x7684;&#x8A2D;&#x8A08;&#x3002;
+      Hello～我目前是就讀於 國立臺北教育大學 數位科技設計學系 的大四生，主要專長為 App/Web 的 UI/UX Design。接觸介面設計和使用者經驗設計的經驗約一年半。<br>
+      一年半前期許自己可以將所學做應用，因此大二暑假加入接案型的新創公司，擔任介面設計實習生，瞭解到設計產品應該要考慮的細節遠超出想像，更學習到軟體開發的流程。雖然因此意識到自己有許多不足，但也讓我更積極地累積實務經驗和作品，因此過去一年跟著前輩參與了許多專案，成功幫助客戶解決問題與達成目標。除此之外，我也積極參加各式各樣的社群和講座，除了能更開拓對設計領域的視野，也確立了我對設計的熱忱和堅持。<br>
+      為了持續在設計這項專業精進自己，因此大三的暑假加入趨勢科技的使用者經驗設計部門(Human Interface Engineering)實習，目標希望可以接觸到更多設計資源、並且更熟悉使用者經驗研究的流程和方法。實習期間在導師的帶領下，我主要負責兩個產品，並且必須和其他設計師一起溝通與合作，儘管設計產品會遇到許多限制和困難，但我不斷激勵自己面對問題要更大膽的想像各種解法，在設計時則要更謹慎的對待每個細節。經過持續的修改與優化，我從前輩身上學習到許多設計專業與溝通技巧，也更熟悉使用者經驗設計的流程。並且也在最後結訓完成一場15分鐘全英文的簡報，加強了自己表達和簡報的能力。<br>
+      現在我持續與固定的業主合作，負責介面設計與流程規劃，訓練自己透過設計手法和簡報能力來說服客戶，亦能保持對介面設計最新趨勢的敏銳度。<br>
+      未來我期許自己保持對設計的熱忱、和週遭人事物的好奇心，並更專注於使用者的需求，以使用者為中心為思考、打造最符合需求的設計。
   </h5>
 </div>
 <div class="col-12 col-sm-9 introCard" id="experience">
-    <h1><img src="../images/dot.png" height="48px" class="">&#x5B78;&#x7D93;&#x6B77; <div>Education &amp; Experience</div></h1>
+    <h1><img src="../images/dot.png" height="48px" class="">學經歷 <div>Education & Experience</div></h1>
   <ul class="timeline">
     <li>
       <p class="timeline-date">2018 / 07 - 08</p>
-      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg" data-title="&#x8DA8;&#x52E2;&#x79D1;&#x6280; Trend Micro" data-subtitle="HIE (&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x8A2D;&#x8A08;&#x90E8;&#x9580;)&#xFF0D;Visual Designer Intern" data-des="&#x6211;&#x5728;&#x8DA8;&#x52E2;&#x79D1;&#x6280;&#x7684;&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x8A2D;&#x8A08;&#x90E8;&#x9580;&#x4E2D;&#x64D4;&#x4EFB;&#x8996;&#x89BA;&#x8A2D;&#x8A08;&#x7684;&#x6691;&#x671F;&#x5BE6;&#x7FD2;&#x751F;&#xFF0C;&#x8CA0;&#x8CAC;&#x4E86;&#x4EE5;&#x4E0B;&#x5C08;&#x6848;&#xFF1A;
-      &lt;br/&gt;&lt;span&gt;TMRM&lt;/span&gt;
-      &lt;br/&gt;TMRM&#x662F;&#x4E00;&#x500B;&#x7D66;&#x5BA2;&#x6236;&#x8FFD;&#x8E64;&#x672B;&#x7AEF;&#x96FB;&#x8166;&#x7684;&#x7522;&#x54C1;&#xFF0C;&#x4E26;&#x4E14;&#x6703;&#x7522;&#x51FA;&#x6BCF;&#x6708;&#x7684;&#x5831;&#x8868;&#x7D66;&#x5BA2;&#x6236;&#xFF0C;&#x56DE;&#x5831;&#x5075;&#x6E2C;&#x5230;&#x7684;&#x7570;&#x72C0;&#x6216;&#x8B8A;&#x5316;&#x3002;&#x6211;&#x8CA0;&#x8CAC;&#x8A2D;&#x8A08;&#x5176;&#x4E2D;&#x6BCF;&#x6708;&#x5831;&#x544A;&#x7684;&#x8996;&#x89BA;&#x7A3F;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x8A31;&#x591A;&#x5716;&#x8868;&#x548C;&#x8868;&#x683C;&#x7684;&#x8996;&#x89BA;&#x5316;&#xFF0C;&#x9996;&#x73FE;&#x6211;&#x5148;&#x719F;&#x6089;&#x7531; UID &#x8A2D;&#x8A08;&#x7684; wireframe &#x7684;&#x8CC7;&#x8A0A;&#x548C;&#x5C64;&#x7D1A;&#x95DC;&#x4FC2;&#xFF0C;&#x77AD;&#x89E3;&#x9700;&#x6C42;&#x5F8C;&#xFF0C;&#x518D;&#x53C3;&#x8003;&#x8A31;&#x591A;&#x8CC7;&#x8A0A;&#x8996;&#x89BA;&#x5316;&#x7684;&#x8A2D;&#x8A08;&#x624B;&#x6CD5;&#xFF0C;&#x63A5;&#x8457;&#x5FC5;&#x9808;&#x5728;&#x8A31;&#x591A;&#x9650;&#x5236;&#x5167;&#xFF0C;&#x5617;&#x8A66;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x8A2D;&#x8A08;&#x624B;&#x6CD5;&#x512A;&#x5316;&#x8CC7;&#x8A0A;&#xFF0C;&#x4E26;&#x7B26;&#x5408;&#x9700;&#x6C42;&#x3002;
-      &lt;br/&gt;&#x900F;&#x904E;&#x9019;&#x500B;&#x5C08;&#x6848;&#xFF0C;&#x6211;&#x66F4;&#x6DF1;&#x5165;&#x719F;&#x6089;&#x8CC7;&#x8A0A;&#x8996;&#x89BA;&#x5316;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E5F;&#x80FD;&#x638C;&#x63E1;&#x66F4;&#x7A2E;&#x5716;&#x8868;&#x7684;&#x4F7F;&#x7528;&#x60C5;&#x5883;&#x548C;&#x7528;&#x9014;&#x3002;&#x4E5F;&#x56E0;&#x70BA;&#x8981;&#x5728;&#x8A31;&#x591A;&#x9650;&#x5236;&#x4E2D;&#x5B8C;&#x6210;&#x9019;&#x6B21;&#x8A2D;&#x8A08;&#xFF0C;&#x4E5F;&#x8A13;&#x7DF4;&#x81EA;&#x5DF1;&#x8981;&#x66F4;&#x8B39;&#x614E;&#x7D30;&#x5FC3;&#x7684;&#x5BE9;&#x8996;&#x81EA;&#x5DF1;&#x7684;&#x8A2D;&#x8A08;&#x3002;
-      &lt;br/&gt;&lt;span&gt;UXer at Trend&lt;/span&gt;
-      &lt;br/&gt;&#x6211;&#x5728;&#x9019;&#x500B;&#x5C08;&#x6848;&#x4E2D;&#x8CA0;&#x8CAC;&#x5C07;&#x201C;UX in the Jungle&#x201D;&#x9019;&#x500B;&#x684C;&#x904A;&#x91CD;&#x65B0;&#x8A2D;&#x8A08;&#xFF0C;&#x76EE;&#x6A19;&#x8981;&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x66F4;&#x4E86;&#x5E7E;&#x8DA8;&#x52E2;&#x79D1;&#x6280;&#x5404;&#x5F0F;&#x5404;&#x6A23;&#x7684;&#x7522;&#x54C1;&#x3002;&#x900F;&#x904E;&#x9019;&#x500B;&#x5C08;&#x6848;&#xFF0C;&#x5B78;&#x7FD2;&#x5230;&#x7522;&#x54C1;&#x8A2D;&#x8A08;&#x7684;&#x7406;&#x8AD6;&#x8207;&#x6A21;&#x578B;&#xFF0C;&#x900F;&#x904E;&#x904A;&#x6232;&#x7684;&#x898F;&#x5247;&#x548C;&#x4E92;&#x52D5;&#xFF0C;&#x8981;&#x5982;&#x4F55;&#x5438;&#x5F15;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x540C;&#x6642;&#x4E5F;&#x80FD;&#x7559;&#x4F4F;&#x4F7F;&#x7528;&#x8005;&#x3002;
+      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg" data-title="趨勢科技 Trend Micro" data-subtitle="HIE (使用者經驗設計部門)－Visual Designer Intern" data-des="我在趨勢科技的使用者經驗設計部門中擔任視覺設計的暑期實習生，負責了以下專案：
+      <br/><span>TMRM</span>
+      <br/>TMRM是一個給客戶追蹤末端電腦的產品，並且會產出每月的報表給客戶，回報偵測到的異狀或變化。我負責設計其中每月報告的視覺稿，其中包含許多圖表和表格的視覺化，首現我先熟悉由 UID 設計的 wireframe 的資訊和層級關係，瞭解需求後，再參考許多資訊視覺化的設計手法，接著必須在許多限制內，嘗試用不同的設計手法優化資訊，並符合需求。
+      <br/>透過這個專案，我更深入熟悉資訊視覺化的方法，也能掌握更種圖表的使用情境和用途。也因為要在許多限制中完成這次設計，也訓練自己要更謹慎細心的審視自己的設計。
+      <br/><span>UXer at Trend</span>
+      <br/>我在這個專案中負責將“UX in the Jungle”這個桌遊重新設計，目標要讓使用者更了幾趨勢科技各式各樣的產品。透過這個專案，學習到產品設計的理論與模型，透過遊戲的規則和互動，要如何吸引使用者的同時也能留住使用者。
       " data-haslink="none" data-link="">
         <div class="d-flex flex-column">
-          <h5>&#x8DA8;&#x52E2;&#x79D1;&#x6280; Trend Micro</h5>
-          <p>HIE (&#x4F7F;&#x7528;&#x8005;&#x7D93;&#x9A57;&#x8A2D;&#x8A08;&#x90E8;&#x9580;) &#xFF0D; Visual Designer Intern</p>
+          <h5>趨勢科技 Trend Micro</h5>
+          <p>HIE (使用者經驗設計部門) － Visual Designer Intern</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button">&#x77AD;&#x89E3;&#x66F4;&#x591A;</a>
+          <a id="" class="btn_more" role="button">瞭解更多</a>
         </div>
       </div>
     </li>
     <li>
       <p class="timeline-date">2018 / 01 - 06</p>
-      <div class="timeline-content  d-flex justify-content-between" data-src1="./assets/experience-microsoft-1.png" data-src2="./assets/experience-microsoft-1.png" data-title="&#x53F0;&#x7063;&#x5FAE;&#x8EDF; &#x7B2C;14&#x5C46; &#x672A;&#x4F86;&#x751F;&#x6DAF;&#x9AD4;&#x9A57;&#x8A08;&#x5283;" data-subtitle="RDAA Intern" data-des="&#x6211;&#x5728;&#x5FAE;&#x8EDF;&#x7684;Service&#x90E8;&#x9580;&#x7576;&#x4E2D;&#x64D4;&#x4EFB;&#x524D;&#x7AEF;&#x958B;&#x767C;&#x7684;&#x5BE6;&#x7FD2;&#x751F;&#xFF0C;&#x8CA0;&#x8CAC;&#x4FEE;&#x6539;&#x548C;&#x8A2D;&#x8A08;&#x7DB2;&#x7AD9;&#x7684;&#x7684;Layout&#xFF0C;&#x4EE5;&#x4E0B;&#x662F;&#x6211;&#x5728;&#x5BE6;&#x7FD2;&#x671F;&#x9593;&#x53C3;&#x8207;&#x7684;&#x5C08;&#x6848;&#x8207;&#x4E8B;&#x9805;&#xFF1A;
-      &lt;br/&gt;&lt;span&gt;&#x4EAC;&#x57CE;&#x9280;&#x884C;&#xFF0D;&#x500B;&#x4EBA;&#x7DB2;&#x8DEF;&#x9280;&#x884C;&lt;/span&gt;
-      &lt;br/&gt;&#x6211;&#x5728;&#x5C08;&#x6848;&#x4E2D;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;HTML&#x548C;CSS&#x548C;Angular.js&#xFF0C;&#x8A2D;&#x8A08;&#x8207;&#x958B;&#x767C;&#x7B26;&#x5408;&#x300C;&#x4EAC;&#x57CE;&#x9280;&#x884C;&#x300D;&#x5F62;&#x8C61;&#x548C;&#x8272;&#x5F69;&#x898F;&#x5283;&#x7684;&#x5143;&#x4EF6;&#xFF0C;&#x4E5F;&#x8CA0;&#x8CAC;&#x7DB2;&#x7AD9;&#x524D;&#x7AEF;&#x7248;&#x9762;&#x7684;&#x5207;&#x7248;&#x3002;
-      &lt;br/&gt;&#x85C9;&#x8457;&#x5718;&#x968A;&#x5354;&#x4F5C;&#x548C;&#x5C08;&#x6848;&#x958B;&#x767C;&#xFF0C;&#x719F;&#x6089;&#x4E86;&#x654F;&#x6377;&#x5F0F;&#x958B;&#x767C;(Scrum)&#x7684;&#x6D41;&#x7A0B;&#x8207;&#x5408;&#x4F5C;&#x6A21;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#x50CF;&#x6BCF;&#x65E5;&#x7684;&#x7AD9;&#x7ACB;&#x6703;&#x8B70;&#x53EF;&#x4EE5;&#x8B93;&#x5718;&#x968A;&#x9593;&#x66F4;&#x9806;&#x5229;&#x7684;&#x6E9D;&#x901A;&#x8207;&#x5408;&#x4F5C;&#xFF0C;&#x6BCF;&#x671F;&#x4E00;&#x6B21;&#x7684;Spring&#x6703;&#x8B70;&#x4E5F;&#x80FD;&#x5920;&#x7D71;&#x6574;&#x5C08;&#x6848;&#x9054;&#x6210;&#x7684;&#x76EE;&#x6A19;&#x548C;&#x53EF;&#x4EE5;&#x6539;&#x5584;&#x7684;&#x90E8;&#x5206;&#x3002;
-      &lt;br/&gt;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4E5F;&#x66F4;&#x719F;&#x7DF4;Bootstrap&#x7684;&#x898F;&#x7BC4;&#x548C;&#x61C9;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;&#x9664;&#x4E86;&#x63D0;&#x5347;&#x81EA;&#x5DF1;&#x8A2D;&#x8A08;&#x8207;&#x958B;&#x767C;&#x97FF;&#x61C9;&#x5F0F;&#x7DB2;&#x9801;(RWD)&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x4E26;&#x80FD;&#x8A13;&#x7DF4;&#x81EA;&#x5DF1;&#x7167;&#x9867;&#x5230;&#x5143;&#x4EF6;&#x7684;&#x7D71;&#x4E00;&#x6027;&#x3002;
-      &lt;br/&gt;&#x85C9;&#x7531;&#x4EAC;&#x57CE;&#x9280;&#x884C;&#x7684;&#x5C08;&#x6848;&#xFF0C;&#x4E5F;&#x8B93;&#x6211;&#x521D;&#x6B65;&#x8A8D;&#x8B58;&#x4E86;&#x958B;&#x767C;&#x9280;&#x884C;&#x7DB2;&#x7AD9;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x9700;&#x6C42;&#x8207;&#x6A21;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#x50CF;&#xFF1A;&#x5927;&#x91CF;&#x7684;&#x8868;&#x55AE;&#x586B;&#x5BEB;&#x8207;&#x8A8D;&#x8B49;&#x3001;&#x9F90;&#x5927;&#x7684;&#x8CC7;&#x8A0A;&#x67B6;&#x69CB;...&#xFF0C;&#x6210;&#x529F;&#x7CBE;&#x9032;&#x81EA;&#x5DF1;&#x5C0D;&#x5927;&#x578B;&#x7DB2;&#x7AD9;&#x7684;&#x958B;&#x767C;&#x8207;&#x8A2D;&#x8A08;&#x80FD;&#x529B;&#x3002;" data-haslink="none" data-link="">
+      <div class="timeline-content  d-flex justify-content-between" data-src1="./assets/experience-microsoft-1.png" data-src2="./assets/experience-microsoft-1.png" data-title="台灣微軟 第14屆 未來生涯體驗計劃" data-subtitle="RDAA Intern" data-des="我在微軟的Service部門當中擔任前端開發的實習生，負責修改和設計網站的的Layout，以下是我在實習期間參與的專案與事項：
+      <br/><span>京城銀行－個人網路銀行</span>
+      <br/>我在專案中需要使用到HTML和CSS和Angular.js，設計與開發符合「京城銀行」形象和色彩規劃的元件，也負責網站前端版面的切版。
+      <br/>藉著團隊協作和專案開發，熟悉了敏捷式開發(Scrum)的流程與合作模式，例如像每日的站立會議可以讓團隊間更順利的溝通與合作，每期一次的Spring會議也能夠統整專案達成的目標和可以改善的部分。
+      <br/>除此之外，我也更熟練Bootstrap的規範和應用方式，除了提升自己設計與開發響應式網頁(RWD)的能力，並能訓練自己照顧到元件的統一性。
+      <br/>藉由京城銀行的專案，也讓我初步認識了開發銀行網站的一些基本需求與模式，例如像：大量的表單填寫與認證、龐大的資訊架構...，成功精進自己對大型網站的開發與設計能力。" data-haslink="none" data-link="">
         <div class="d-flex flex-column">            
-          <h5>&#x53F0;&#x7063;&#x5FAE;&#x8EDF; &#x7B2C;14&#x5C46; &#x672A;&#x4F86;&#x751F;&#x6DAF;&#x9AD4;&#x9A57;&#x8A08;&#x5283;</h5>
+          <h5>台灣微軟 第14屆 未來生涯體驗計劃</h5>
           <p>RDAA Intern</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button" onclick="console.log(&apos;more.....&apos;)">&#x77AD;&#x89E3;&#x66F4;&#x591A;</a>
+          <a id="" class="btn_more" role="button" onclick="console.log('more.....')">瞭解更多</a>
         </div>
       </div>
     </li>
     <li>
       <p class="timeline-date">2017 / 07 - 08</p>
-      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trunk-1.jpg" data-src2="./assets/experience-trunk-2.jpg" data-title="&#x5275;&#x79D1;&#x8CC7;&#x8A0A; Trunk Studio" data-subtitle="UI Designer Intern" data-des="&#x6211;&#x5728;&#x5275;&#x79D1;&#x8CC7;&#x8A0A;&#x4E2D;&#x55AE;&#x4EFB;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x5BE6;&#x7FD2;&#x751F;&#x4E00;&#x8077;&#xFF0C;&#x8CA0;&#x8CAC;&#x6216;&#x63A5;&#x89F8;&#x904E;&#x4EE5;&#x4E0B;&#x5C08;&#x6848;&#xFF1A;
-      &lt;br/&gt;&lt;span&gt;&#x53F0;&#x7063;&#x6B65;&#x9053;App (GoHiking)&lt;/span&gt;&lt;br/&gt;
-      &#x6211;&#x8CA0;&#x8CAC;&#x512A;&#x5316;&#x3001;redesign&#x6574;&#x500B;App&#x7684;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x3001;&#x8CC7;&#x8A0A;&#x67B6;&#x69CB;&#x3001;&#x6D41;&#x7A0B;&#x898F;&#x5283;&#xFF0C;&#x77AD;&#x89E3;&#x5230;&#x7522;&#x54C1;&#x7684;&#x904A;&#x6232;&#x5316;&#xFF0C;&#x548C;&#x5546;&#x696D;&#x6A21;&#x5F0F;&#x7684;&#x91CD;&#x8981;&#x6027;&#xFF0C;&#x4EE5;&#x53CA;&#x793E;&#x7FA4;&#x4E92;&#x52D5;&#x80FD;&#x5E36;&#x7D66;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x6B63;&#x9762;&#x6548;&#x679C;&#xFF0C;&#x66F4;&#x5E6B;&#x52A9;...&#x3002;
-      &lt;br/&gt;&lt;span&gt;VIPT&#x6771;&#x5357;&#x4E9E;&#x6C42;&#x8077;&#x5E73;&#x53F0;&lt;/span&gt;&lt;br/&gt;
-      VIPT&#x662F;&#x4E00;&#x500B;&#x5E6B;&#x52A9;&#x53F0;&#x7063;&#x4F01;&#x696D;&#x548C;&#x79FB;&#x5DE5;&#x5A92;&#x5408;&#x5DE5;&#x4F5C;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x6211;&#x5E6B;&#x52A9;&#x8A2D;&#x8A08;&#x5176;&#x4E2D;&#x7684;&#x300C;&#x4F01;&#x696D;&#x300D;Landing page&#x7684;&#x7DB2;&#x9801;&#x8A2D;&#x8A08;&#x3002;
-      &lt;br/&gt;&lt;span&gt;LFP&#x9999;&#x6C34;&#x5BE6;&#x9A57;&#x5BA4;&lt;/span&gt;&lt;br/&gt;
-      &#x6211;&#x8CA0;&#x8CAC;&#x8A2D;&#x8A08;LFP&#x9999;&#x6C34;&#x5BE6;&#x9A57;&#x5BA4;&#x7DB2;&#x7AD9;&#x5176;&#x4E2D;&#x7684;&#x6D3B;&#x52D5;&#x9801;&#xFF0C;&#x4E26;&#x8207;&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5BE6;&#x7FD2;&#x751F;&#x5171;&#x540C;&#x5408;&#x4F5C;&#x958B;&#x767C;&#xFF0C;&#x900F;&#x904E;&#x6B64;&#x6B21;&#x7D93;&#x9A57;&#x6211;&#x66F4;&#x80FD;&#x719F;&#x6089;&#x8207;&#x524D;&#x7AEF;&#x5354;&#x4F5C;&#x7684;&#x6D41;&#x7A0B;&#x548C;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x7D30;&#x7BC0;&#x3002;
-      &lt;br/&gt;&lt;span&gt;ADMS&lt;/span&gt;&lt;br/&gt;
-      &#x900F;&#x904E;&#x8A2D;&#x8A08;ADMS&#x5EE3;&#x544A;&#x76E3;&#x6E2C;&#x5F8C;&#x53F0;&#x7684;&#x7DB2;&#x7AD9;&#x4ECB;&#x9762;&#xFF0C;&#x6211;&#x63A5;&#x89F8;&#x5230;dashboard&#x7684;&#x8A2D;&#x8A08;&#x6A21;&#x5F0F;&#xFF0C;&#x66F4;&#x63D0;&#x5347;&#x8CC7;&#x8A0A;&#x8A2D;&#x8A08;&#x7684;&#x80FD;&#x529B;&#x3002;" data-desold="&#x5728;&#x5275;&#x79D1;&#x8CC7;&#x8A0A;&#x4E2D;&#x6211;&#x64D4;&#x4EFB;&#x4ECB;&#x9762;&#x8A2D;&#x8A08;&#x6691;&#x671F;&#x5BE6;&#x7FD2;&#x751F;&#xFF0C;&#x5176;&#x4E2D;&#x8CA0;&#x8CAC;&#x5E6B;&#x52A9;&#x512A;&#x5316;&#x53F0;&#x7063;&#x6B65;&#x9053;&#x7684;App&#x4ECB;&#x9762;&#x3001;&#x898F;&#x5283;&#x529F;&#x80FD;&#x548C;&#x6D41;&#x7A0B;&#xFF0C;&#x9664;&#x4E86;&#x66F4;&#x719F;&#x6089;Sketch&#x4E4B;&#x5916;&#xFF0C;&#x5B78;&#x7FD2;&#x5230;&#x5C07;&#x904A;&#x6232;&#x5316;&#x3001;&#x5546;&#x696D;&#x6A21;&#x5F0F;&#x3001;&#x793E;&#x7FA4;&#x4E92;&#x52D5;&#x7B49;&#x7B49;&#xFF0C;&#x8003;&#x616E;&#x9032;&#x8A2D;&#x8A08;&#x601D;&#x8003;&#x88E1;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x4E5F;&#x5E6B;&#x5FD9;&#x5176;&#x4ED6;&#x5C08;&#x6848;&#x8A2D;&#x8A08;&#x7DB2;&#x7AD9;&#x7684;&#x4ECB;&#x9762;&#xFF0C;&#x518D;&#x5C07;&#x8A2D;&#x8A08;&#x7A3F;&#x8F38;&#x51FA;&#x7D66;&#x5DE5;&#x7A0B;&#x5E2B;&#x5BE6;&#x4F5C;&#xFF0C;&#x5B78;&#x7FD2;&#x5230;&#x4E00;&#x4E9B;&#x65B9;&#x4FBF;&#x7684;&#x5354;&#x4F5C;&#x5DE5;&#x5177;&#xFF0C;&#x5229;&#x7528;&#x5DE5;&#x7A0B;&#x5E2B;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x6709;&#x6548;&#x7387;&#x7684;&#x6E9D;&#x901A;&#xFF0C;&#x5229;&#x7528;&#x5916;&#x639B;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5B8C;&#x6210;&#x8A2D;&#x8A08;&#x898F;&#x7BC4;&#xFF0C;&#x4EA6;&#x53EF;&#x4EE5;&#x8B93;&#x958B;&#x767C;&#x6E1B;&#x5C11;&#x8CA0;&#x64D4;&#x3002;&#x6691;&#x5047;&#x7684;&#x5169;&#x500B;&#x6708;&#x4E5F;&#x5F88;&#x69AE;&#x5E78;&#x53EF;&#x4EE5;&#x53C3;&#x8207;&#x6691;&#x671F;&#x5B78;&#x7FD2;&#x7684;&#x524D;&#x7AEF;&#x8AB2;&#x7A0B;&#xFF0C;&#x8B93;&#x6211;&#x5B78;&#x7FD2;&#x5230;&#x66F4;&#x591A;&#x77E5;&#x8B58;&#x548C;&#x6280;&#x8853;&#xFF0C;&#x4E5F;&#x5C0D;&#x6578;&#x4F4D;&#x7522;&#x54C1;&#x9818;&#x57DF;&#x6709;&#x66F4;&#x6DF1;&#x7684;&#x71B1;&#x60C5;&#xFF01;" data-haslink="none" data-link="">
+      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trunk-1.jpg" data-src2="./assets/experience-trunk-2.jpg" data-title="創科資訊 Trunk Studio" data-subtitle="UI Designer Intern" data-des="我在創科資訊中單任介面設計實習生一職，負責或接觸過以下專案：
+      <br/><span>台灣步道App (GoHiking)</span><br/>
+      我負責優化、redesign整個App的介面設計、資訊架構、流程規劃，瞭解到產品的遊戲化，和商業模式的重要性，以及社群互動能帶給使用者的正面效果，更幫助...。
+      <br/><span>VIPT東南亞求職平台</span><br/>
+      VIPT是一個幫助台灣企業和移工媒合工作的平台，我幫助設計其中的「企業」Landing page的網頁設計。
+      <br/><span>LFP香水實驗室</span><br/>
+      我負責設計LFP香水實驗室網站其中的活動頁，並與前端工程實習生共同合作開發，透過此次經驗我更能熟悉與前端協作的流程和要注意的細節。
+      <br/><span>ADMS</span><br/>
+      透過設計ADMS廣告監測後台的網站介面，我接觸到dashboard的設計模式，更提升資訊設計的能力。" data-desold="在創科資訊中我擔任介面設計暑期實習生，其中負責幫助優化台灣步道的App介面、規劃功能和流程，除了更熟悉Sketch之外，學習到將遊戲化、商業模式、社群互動等等，考慮進設計思考裡。除此之外也幫忙其他專案設計網站的介面，再將設計稿輸出給工程師實作，學習到一些方便的協作工具，利用工程師容易理解的描述，可以更有效率的溝通，利用外掛可以快速完成設計規範，亦可以讓開發減少負擔。暑假的兩個月也很榮幸可以參與暑期學習的前端課程，讓我學習到更多知識和技術，也對數位產品領域有更深的熱情！" data-haslink="none" data-link="">
         <div class="d-flex flex-column">
-          <h5>&#x5275;&#x79D1;&#x8CC7;&#x8A0A; Trunk Studio</h5>
+          <h5>創科資訊 Trunk Studio</h5>
           <p>UI Designer Intern</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button">&#x77AD;&#x89E3;&#x66F4;&#x591A;</a>
+          <a id="" class="btn_more" role="button">瞭解更多</a>
         </div>
       </div>
     </li>
     <li>
       <p class="timeline-date">2015 / 09 - 2019 / 06</p>
-      <div class="timeline-content  d-flex justify-content-between" data-src1="none" data-src2="none" data-title="&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; NTUE" data-subtitle="&#x6578;&#x4F4D;&#x79D1;&#x6280;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;" data-des="Iwewfonslcmsa;:)" data-haslink="none" data-link="">
+      <div class="timeline-content  d-flex justify-content-between" data-src1="none" data-src2="none" data-title="國立臺北教育大學 NTUE" data-subtitle="數位科技設計學系" data-des="Iwewfonslcmsa;:)" data-haslink="none" data-link="">
         <div class="d-flex flex-column">            
-          <h5>&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; NTUE</h5>
-          <p>&#x6578;&#x4F4D;&#x79D1;&#x6280;&#x8A2D;&#x8A08;&#x5B78;&#x7CFB;</p>
+          <h5>國立臺北教育大學 NTUE</h5>
+          <p>數位科技設計學系</p>
         </div>
         <div class="d-flex align-items-center">
         </div>
@@ -270,14 +273,14 @@
   </ul>
 </div>
 <div class="col-12 col-sm-9 introCard" id="award">
-    <h1><img src="../images/dot.png" height="48px" class="">&#x6BD4;&#x8CFD;&#x734E;&#x9805; <div>Competition Awards</div></h1>
+    <h1><img src="../images/dot.png" height="48px" class="">比賽獎項 <div>Competition Awards</div></h1>
     <ul class="timeline">
       <li>
         <p class="timeline-date">2018 / 10 - now</p>
-        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-3-1.jpg" data-src2="none" data-title="&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; Web &amp; App &#x5275;&#x4F5C;&#x7AF6;&#x8CFD;" data-subtitle="&#x6821;App &#x4F01;&#x5283;&#x7D44;+&#x6210;&#x54C1;&#x5BE6;&#x4F5C;&#x7D44; &#x7B2C;&#x4E8C;&#x540D;" data-des="&#x6211;&#x8DDF;&#x670B;&#x53CB;&#x5011;&#x4E00;&#x8D77;&#x505A;&#x7684;&#x5C08;&#x984C;&#xFF0C;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x548C;&#x85CD;&#x82BD;&#x8033;&#x6A5F;&#x9023;&#x7DDA;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6E2C;&#x91CF;&#x5B78;&#x7AE5;&#x7684;&#x8166;&#x6CE2;&#xFF0C;&#x9032;&#x800C;&#x589E;&#x52A0;&#x5B78;&#x7AE5;&#x7684;&#x8A18;&#x61B6;&#x529B;&#xFF0C;&#x53C3;&#x8207;&#x9019;&#x6B21;&#x5C08;&#x6848;&#x8B93;&#x6211;&#x5B78;&#x7FD2;&#x5230;&#x8981;&#x600E;&#x9EBC;&#x5C07;&#x9023;&#x7DDA;&#x5916;&#x90E8;&#x88DD;&#x7F6E;&#x7684;&#x6D41;&#x7A0B;&#x8A2D;&#x8A08;&#x7684;&#x66F4;&#x9806;&#x66A2;&#x3001;&#x66F4;&#x8CBC;&#x5FC3;&#xFF0C;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x4E5F;&#x5B78;&#x7FD2;&#x5230;&#x8A2D;&#x8A08;&#x4E0D;&#x540C;&#x7A2E;&#x985E;&#x7684;&#x5206;&#x6790;&#x6578;&#x64DA;&#x61C9;&#x8A72;&#x600E;&#x9EBC;&#x8868;&#x73FE;&#xFF0C;&#x53EF;&#x4EE5;&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x6700;&#x5FEB;&#x7406;&#x89E3;&#x5176;&#x4E2D;&#x7684;&#x8CC7;&#x8A0A;&#xFF0C;&#x900F;&#x904E;&#x6BD4;&#x8CFD;&#x66F4;&#x770B;&#x5230;&#x4F86;&#x81EA;&#x5168;&#x570B;&#x7684;&#x5145;&#x6EFF;&#x5275;&#x610F;&#x53C8;&#x5BE6;&#x7528;&#x7684;&#x9EDE;&#x5B50;&#xFF0C;&#x5E0C;&#x671B;&#x81EA;&#x5DF1;&#x4E5F;&#x80FD;&#x4E0D;&#x6BB5;&#x52AA;&#x529B;&#xFF0C;&#x671F;&#x8A31;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x6BD4;&#x8CFD;&#x6210;&#x7E3E;&#x80FD;&#x66F4;&#x52A0;&#x9032;&#x6B65;&#x3002;" data-haslink="yes" data-link="../meracle/">
+        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-3-1.jpg" data-src2="none" data-title="國立臺北教育大學 Web & App 創作競賽" data-subtitle="校App 企劃組+成品實作組 第二名" data-des="我跟朋友們一起做的專題，可以透過和藍芽耳機連線的方式，測量學童的腦波，進而增加學童的記憶力，參與這次專案讓我學習到要怎麼將連線外部裝置的流程設計的更順暢、更貼心，另一方面也學習到設計不同種類的分析數據應該怎麼表現，可以讓使用者最快理解其中的資訊，透過比賽更看到來自全國的充滿創意又實用的點子，希望自己也能不段努力，期許在下一次比賽成績能更加進步。" data-haslink="yes" data-link="../meracle/">
           <div class="d-flex flex-column">      
-            <h5>&#x8DE8;&#x754C;&#x8D85;&#x8D8A;&#x7AF6;&#x8CFD; Trans Action Award</h5>
-            <p>&#x9032;&#x5165;&#x6C7A;&#x8CFD;</p>
+            <h5>跨界超越競賽 Trans Action Award</h5>
+            <p>進入決賽</p>
           </div>
           <div class="d-flex align-items-center">
             <!-- <a id="" class="btn_more" role="button">瞭解更多</a> -->
@@ -286,10 +289,10 @@
       </li>
       <li>
         <p class="timeline-date">2017 / 11 / 23</p>
-        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-3-1.jpg" data-src2="none" data-title="&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; Web &amp; App &#x5275;&#x4F5C;&#x7AF6;&#x8CFD;" data-subtitle="&#x6821;App &#x4F01;&#x5283;&#x7D44;+&#x6210;&#x54C1;&#x5BE6;&#x4F5C;&#x7D44; &#x7B2C;&#x4E8C;&#x540D;" data-des="&#x6211;&#x8DDF;&#x670B;&#x53CB;&#x5011;&#x4E00;&#x8D77;&#x505A;&#x7684;&#x5C08;&#x984C;&#xFF0C;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x548C;&#x85CD;&#x82BD;&#x8033;&#x6A5F;&#x9023;&#x7DDA;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6E2C;&#x91CF;&#x5B78;&#x7AE5;&#x7684;&#x8166;&#x6CE2;&#xFF0C;&#x9032;&#x800C;&#x589E;&#x52A0;&#x5B78;&#x7AE5;&#x7684;&#x8A18;&#x61B6;&#x529B;&#xFF0C;&#x53C3;&#x8207;&#x9019;&#x6B21;&#x5C08;&#x6848;&#x8B93;&#x6211;&#x5B78;&#x7FD2;&#x5230;&#x8981;&#x600E;&#x9EBC;&#x5C07;&#x9023;&#x7DDA;&#x5916;&#x90E8;&#x88DD;&#x7F6E;&#x7684;&#x6D41;&#x7A0B;&#x8A2D;&#x8A08;&#x7684;&#x66F4;&#x9806;&#x66A2;&#x3001;&#x66F4;&#x8CBC;&#x5FC3;&#xFF0C;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x4E5F;&#x5B78;&#x7FD2;&#x5230;&#x8A2D;&#x8A08;&#x4E0D;&#x540C;&#x7A2E;&#x985E;&#x7684;&#x5206;&#x6790;&#x6578;&#x64DA;&#x61C9;&#x8A72;&#x600E;&#x9EBC;&#x8868;&#x73FE;&#xFF0C;&#x53EF;&#x4EE5;&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x6700;&#x5FEB;&#x7406;&#x89E3;&#x5176;&#x4E2D;&#x7684;&#x8CC7;&#x8A0A;&#xFF0C;&#x900F;&#x904E;&#x6BD4;&#x8CFD;&#x66F4;&#x770B;&#x5230;&#x4F86;&#x81EA;&#x5168;&#x570B;&#x7684;&#x5145;&#x6EFF;&#x5275;&#x610F;&#x53C8;&#x5BE6;&#x7528;&#x7684;&#x9EDE;&#x5B50;&#xFF0C;&#x5E0C;&#x671B;&#x81EA;&#x5DF1;&#x4E5F;&#x80FD;&#x4E0D;&#x6BB5;&#x52AA;&#x529B;&#xFF0C;&#x671F;&#x8A31;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x6BD4;&#x8CFD;&#x6210;&#x7E3E;&#x80FD;&#x66F4;&#x52A0;&#x9032;&#x6B65;&#x3002;" data-haslink="yes" data-link="../meracle/">
+        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-3-1.jpg" data-src2="none" data-title="國立臺北教育大學 Web & App 創作競賽" data-subtitle="校App 企劃組+成品實作組 第二名" data-des="我跟朋友們一起做的專題，可以透過和藍芽耳機連線的方式，測量學童的腦波，進而增加學童的記憶力，參與這次專案讓我學習到要怎麼將連線外部裝置的流程設計的更順暢、更貼心，另一方面也學習到設計不同種類的分析數據應該怎麼表現，可以讓使用者最快理解其中的資訊，透過比賽更看到來自全國的充滿創意又實用的點子，希望自己也能不段努力，期許在下一次比賽成績能更加進步。" data-haslink="yes" data-link="../meracle/">
           <div class="d-flex flex-column">      
-            <h5>&#x570B;&#x7ACB;&#x81FA;&#x5317;&#x6559;&#x80B2;&#x5927;&#x5B78; Web &amp; App &#x5275;&#x4F5C;&#x7AF6;&#x8CFD;</h5>
-            <p>App &#x4F01;&#x5283;&#x7D44;+&#x6210;&#x54C1;&#x5BE6;&#x4F5C;&#x7D44; &#x7B2C;&#x4E8C;&#x540D;</p>
+            <h5>國立臺北教育大學 Web & App 創作競賽</h5>
+            <p>App 企劃組+成品實作組 第二名</p>
           </div>
           <div class="d-flex align-items-center">
             <!-- <a id="" class="btn_more" role="button">瞭解更多</a> -->
@@ -298,10 +301,10 @@
       </li>
       <li>
         <p class="timeline-date">2017 / 11 / 04</p>
-        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-2-1.jpg" data-src2="./assets/exp-2-2.jpg" data-title="22&#x5C46;&#x5168;&#x570B;&#x5927;&#x5C08;&#x9662;&#x6821;&#x8CC7;&#x8A0A;&#x61C9;&#x7528;&#x670D;&#x52D9;&#x5275;&#x65B0;&#x7AF6;&#x8CFD;" data-subtitle="&#x6821;&#x5712;4G&#x884C;&#x52D5;&#x61C9;&#x7528;&#x670D;&#x52D9; &#x4F73;&#x4F5C; &amp; &#x9226;&#x5766;&#x654F;&#x6377;&#x958B;&#x767C;&#x7279;&#x5225;&#x734E; &#x7B2C;&#x4E09;&#x540D;" data-des="&#x6211;&#x8DDF;&#x670B;&#x53CB;&#x5011;&#x4E00;&#x8D77;&#x505A;&#x7684;&#x5C08;&#x984C;&#xFF0C;&#x53EF;&#x4EE5;&#x900F;&#x904E;&#x548C;&#x85CD;&#x82BD;&#x8033;&#x6A5F;&#x9023;&#x7DDA;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x6E2C;&#x91CF;&#x5B78;&#x7AE5;&#x7684;&#x8166;&#x6CE2;&#xFF0C;&#x9032;&#x800C;&#x589E;&#x52A0;&#x5B78;&#x7AE5;&#x7684;&#x8A18;&#x61B6;&#x529B;&#xFF0C;&#x53C3;&#x8207;&#x9019;&#x6B21;&#x5C08;&#x6848;&#x8B93;&#x6211;&#x5B78;&#x7FD2;&#x5230;&#x8981;&#x600E;&#x9EBC;&#x5C07;&#x9023;&#x7DDA;&#x5916;&#x90E8;&#x88DD;&#x7F6E;&#x7684;&#x6D41;&#x7A0B;&#x8A2D;&#x8A08;&#x7684;&#x66F4;&#x9806;&#x66A2;&#x3001;&#x66F4;&#x8CBC;&#x5FC3;&#xFF0C;&#x53E6;&#x4E00;&#x65B9;&#x9762;&#x4E5F;&#x5B78;&#x7FD2;&#x5230;&#x8A2D;&#x8A08;&#x4E0D;&#x540C;&#x7A2E;&#x985E;&#x7684;&#x5206;&#x6790;&#x6578;&#x64DA;&#x61C9;&#x8A72;&#x600E;&#x9EBC;&#x8868;&#x73FE;&#xFF0C;&#x53EF;&#x4EE5;&#x8B93;&#x4F7F;&#x7528;&#x8005;&#x6700;&#x5FEB;&#x7406;&#x89E3;&#x5176;&#x4E2D;&#x7684;&#x8CC7;&#x8A0A;&#xFF0C;&#x900F;&#x904E;&#x6BD4;&#x8CFD;&#x66F4;&#x770B;&#x5230;&#x4F86;&#x81EA;&#x5168;&#x570B;&#x7684;&#x5145;&#x6EFF;&#x5275;&#x610F;&#x53C8;&#x5BE6;&#x7528;&#x7684;&#x9EDE;&#x5B50;&#xFF0C;&#x5E0C;&#x671B;&#x81EA;&#x5DF1;&#x4E5F;&#x80FD;&#x4E0D;&#x6BB5;&#x52AA;&#x529B;&#xFF0C;&#x671F;&#x8A31;&#x5728;&#x4E0B;&#x4E00;&#x6B21;&#x6BD4;&#x8CFD;&#x6210;&#x7E3E;&#x80FD;&#x66F4;&#x52A0;&#x9032;&#x6B65;&#x3002;" data-haslink="yes" data-link="../meracle/">
+        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-2-1.jpg" data-src2="./assets/exp-2-2.jpg" data-title="22屆全國大專院校資訊應用服務創新競賽" data-subtitle="校園4G行動應用服務 佳作 & 鈦坦敏捷開發特別獎 第三名" data-des="我跟朋友們一起做的專題，可以透過和藍芽耳機連線的方式，測量學童的腦波，進而增加學童的記憶力，參與這次專案讓我學習到要怎麼將連線外部裝置的流程設計的更順暢、更貼心，另一方面也學習到設計不同種類的分析數據應該怎麼表現，可以讓使用者最快理解其中的資訊，透過比賽更看到來自全國的充滿創意又實用的點子，希望自己也能不段努力，期許在下一次比賽成績能更加進步。" data-haslink="yes" data-link="../meracle/">
           <div class="d-flex flex-column">
-            <h5>22&#x5C46;&#x5168;&#x570B;&#x8CC7;&#x8A0A;&#x61C9;&#x7528;&#x670D;&#x52D9;&#x5275;&#x65B0;&#x7AF6;&#x8CFD;</h5>
-            <p>&#x6821;&#x5712;4G&#x884C;&#x52D5;&#x61C9;&#x7528;&#x670D;&#x52D9; &#x4F73;&#x4F5C; &amp; &#x9226;&#x5766;&#x654F;&#x6377;&#x958B;&#x767C;&#x7279;&#x5225;&#x734E; &#x7B2C;&#x4E09;&#x540D;</p>
+            <h5>22屆全國資訊應用服務創新競賽</h5>
+            <p>校園4G行動應用服務 佳作 & 鈦坦敏捷開發特別獎 第三名</p>
           </div>
           <div class="d-flex align-items-center">
             <!-- <a id="" class="btn_more" role="button">瞭解更多</a> -->
@@ -311,7 +314,7 @@
     </ul>
 </div>
 <div class="col-12 col-sm-9 introCard" id="skill">
-    <h1><img src="../images/dot.png" height="48px" class="">&#x6280;&#x80FD; <div>Professional Skills</div></h1>
+    <h1><img src="../images/dot.png" height="48px" class="">技能 <div>Professional Skills</div></h1>
     <div class="d-flex flex-wrap mt-4">
       <span><p class="skill-90">Sketch</p></span>
       <span><p class="skill-90">Principle</p></span>
@@ -332,7 +335,7 @@
     </div>
 </div>
 <div class="col-12 col-sm-9 d-flex flex-column align-items-center" id="outro">
-    <h5>&#x611F;&#x8B1D;&#x4F60;&#x7684;&#x89C0;&#x770B;:)</h5>
+    <h5>感謝你的觀看:)</h5>
     <!-- <div class="d-flex flex-row justfy-content-center">
       <a class="text-center" role="button" id="">
           取得我的簡歷 
@@ -340,14 +343,14 @@
     </div> -->
     <div class="d-flex flex-row justfy-content-center">
       <a class="text-center" role="button" id="gotoTop">
-          &#x56DE;&#x5230;&#x4E0A;&#x9762; 
+          回到上面 
       </a>
       <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_self">
-          &#x806F;&#x7D61;&#x6211;
+          聯絡我
       </a>
     </div>
 </div>
-<script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
+
 </div>
 <div class="expWindow d-flex flex-column">
   <div class="close-tag"></div>
@@ -607,7 +610,7 @@ function popUpDialog(content){
     <!-- After footer scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script>
@@ -624,7 +627,15 @@ $('#gotoTop').click(function() {
 //intro animation
 $(document).ready(function(){
 });
+
+//Fix Safari Problems
+
+// IntersectionObserver.prototype._rootContainsTarget = function(target) {
+//   return (this.root || docElement).contains(target);
+// };
 </script>
 
-  </body>
-</html>
+
+  
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

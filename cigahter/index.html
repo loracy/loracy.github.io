@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html class="myWeb" lang="en">
-  <!-- Head tag -->
-  <head>
+<!DOCTYPE html><html class="myWeb" lang="en"><!-- Head tag --><head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116007084-1"></script>
     <script>
@@ -28,7 +25,7 @@
 
   <!--Description-->
   
-      <meta name="description" content="Lora&#39;s portfolio.">
+      <meta name="description" content="Lora's portfolio.">
   
 
   <!--Author-->
@@ -56,10 +53,16 @@
   <!-- jquery   -->
   <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 <!-- <script src="//cdn.jsdelivr.net/velocity/1.1.0/velocity.min.js"></script> -->
 <!-- <script src="script.js"></script> -->
 <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+
+<!-- Other -->
+<!-- Fix Safari Problems -->
+<script src="https://unpkg.com/event-target@latest/min.js"></script>
+<script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.global.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
 </head>
 
 
@@ -70,8 +73,8 @@
       <nav class="navbar navbar-toggleable-sm navbar-light px-1 py-3 my-3 mb-sm-4">
   <!-- <a class="navbar-brand ml-2" href="/">Lora | portfolio</a> -->
   <a class="navbar-brand ml-2 d-flex flex-column align-items-center" href="/">
-    <img src="/images/logo.png" width="48px" height="48px" class="logo" />
-    <img src="/images/oracy.png" width="48px" height="20px" class="oracy" />
+    <img src="/images/logo.png" width="48px" height="48px" class="logo">
+    <img src="/images/oracy.png" width="48px" height="20px" class="oracy">
     <style>
       .lora-o{
         transition: all .5s;
@@ -143,7 +146,7 @@
         </li>
       
     </ul>
-    <hr class="hidden-md-up" />
+    <hr class="hidden-md-up">
   </div>
 </nav>
 
@@ -167,7 +170,33 @@
 </div><!-- portfolioSidebar -->
 
 <div class="col-12 col-lg-7 pt-lg-3 mb-4 portfolioSection">
-  <html><head><script src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></head><body></body></html>
+  <h3>設計題目</h3>
+<p><span class="strenthen">菸蒂不落地</span><br>
+吸菸者隨意丟棄菸蒂是存在已久的環境問題，<br>
+儘管各國政府有針對亂丟菸蒂制定相關懲處的政策，<br>
+但是在台灣，菸蒂被亂丟在路邊或是⽔溝裡的數量還是相當多，<br>
+菸蒂除了會破壞市容，還會嚴重污染⽔路系統，並且帶給生態環境許多負面影響。</p>
+<h3>研究方向</h3>
+<p>為了減少菸蒂被亂丟的數量，<br>
+政府和許多戒菸團體都會透過減少抽菸人口或是設立相關檢舉條款，<br>
+達成以上目的。</p>
+<p>但是我們瞭解到，戒菸對吸菸者來說是痛苦、難以忍受的，<br>
+所以我們決定去深入研究 <span class="strenthen">為什麼吸菸者習慣亂丟菸蒂</span> 背後的原因。<br>
+希望透過我們的設計，帶給使用者正面的回饋的同時，成功改善吸菸者亂丟菸蒂的問題。</p>
+<h3>需求研究</h3>
+<p>為了找出吸菸者習慣亂丟菸蒂背後的原因，我們透過場域調查(Field study)觀察使⽤者的抽菸習慣以及和場域的互動，並且透過關聯圖表(Affinity Diagram)歸納出不同特性的使⽤者，最後定義出⼈物誌(Persona)和<br>
+使⽤者經驗旅程(Customer Journey Map)讓團隊對目標使⽤者有更清晰的想像和痛點分析。<br>
+<br>【 場域調查 Field study 】</p>
+<img src="/images/meracle/animation-web-overview.gif" class="demoImg mt-lg-1 mb-lg-2">
+<p>為了觀察大量的吸菸者，我們選擇熱鬧的商業區作為我們觀察的主要場域，因為該地區有許多商業辦公⼤樓和便利商店，也因此會有更多聚集抽菸的吸菸者。</p>
+<p>根據我們的觀察，我們發現吸菸者的行爲可以分成兩種：<br>
+<span class="strenthen">1.站在垃圾桶或菸灰缸旁邊抽菸</span><br>
+這些吸菸者通常會先找到垃圾桶或菸灰缸後，才開始抽菸，等到抽完菸之後，就會很自然的將菸蒂丟進垃圾桶。</p>
+<p><span class="strenthen">2.在沒有垃圾桶或菸灰缸的旁邊抽菸</span><br>
+大部分的吸菸者並不會特別找尋垃圾桶才開始抽菸，因此抽完菸後則會把菸頭扔在附近地上或⽔溝裡。</p>
+<p><br>此外我們也觀察到，由於室內禁⽌吸菸，想抽菸的⼈必須移到室外，⽽當他們抽完菸之後欲回到室內時，因為沒有⾜夠時間和⼼⼒找到垃圾桶所以便順⼿亂丟菸蒂，因此在室內和室外的過渡區域也有許多被丟棄的菸蒂，例如：⼈⾏道。</p>
+<h3>使用者洞察</h3>
+
 </div><!-- portfolioSection -->
 
 
@@ -245,7 +274,7 @@ function progessBar(){
 <div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
     
     <a class="d-flex align-items-center" href="../../../../meracle/index.html">
-      <img src="/images/svg/arrow-left.svg"/>      
+      <img src="/images/svg/arrow-left.svg">      
       <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
         <span>上一篇</span>
         憶想奇機 Meracle
@@ -260,7 +289,7 @@ function progessBar(){
 
 <div class="window">
     <div class="close-tag"></div>
-    <img src=""/>
+    <img src="">
 </div>
 <!-- popup modal js -->
 <script>
@@ -292,7 +321,7 @@ function progessBar(){
     <!-- After footer scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script>
@@ -309,7 +338,15 @@ $('#gotoTop').click(function() {
 //intro animation
 $(document).ready(function(){
 });
+
+//Fix Safari Problems
+
+// IntersectionObserver.prototype._rootContainsTarget = function(target) {
+//   return (this.root || docElement).contains(target);
+// };
 </script>
 
-  </body>
-</html>
+
+  
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
