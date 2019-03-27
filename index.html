@@ -174,7 +174,12 @@
 <script>
     //讓首頁的slogan可以客製化
     if(window.location.hash){
-        $('#sayHello span').append(window.location.hash.slice(1));
+        console.log(window.location.hash);
+        if(window.location.hash === '#goToWorks'){
+            $('#sayHello span').append('nice to meet you');
+        }else{
+            $('#sayHello span').append(window.location.hash.slice(1));
+        }
     }else{
         $('#sayHello span').append('nice to meet you');
     }
