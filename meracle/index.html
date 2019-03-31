@@ -246,82 +246,15 @@
 
 </div><!-- portfolioSection -->
 
-
-<script> 
-$('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
-
-//得到作品集裡面所有的大標題
-var obj = $('.portfolioSection h3');
-
-//把作品集裡所有的大標題，弄成旁邊進度條的可點擊之Menu
-$.each( obj, function( key, value ) {
-  console.log(value.offsetTop);
-  $('.portfolioSidebar-h3list')
-  .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
-});
-
-//點擊progress的item，會滑到該項目的文章
-$('.portfolioSidebar-Item').click(function() {
-  var target = $(this).index();
-  console.log(obj[target].offsetTop);
-  $('html, body').animate(
-    {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
-});
-
-$(window).scroll(function(){
-  fixPortfolioSidebar();
-  progessBar();
-  
-  //＝＝＝＝＝＝＝＝＝＝＝＝＝debug用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-  // console.log('Window Offset = ' + window.pageYOffset);
-  // console.log('h3[3] = ' + obj[0].offsetTop);
-  // console.log('h3[3] = ' + obj[1].offsetTop);
-  // console.log('h3[3] = ' + obj[2].offsetTop);
-  // console.log('h3[3] = ' + obj[3].offsetTop);
-  //＝＝＝＝＝＝＝＝＝＝＝＝＝debug用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-});
-
-// fix the side bar beside the article
-
-function fixPortfolioSidebar(){
-  var addSticky = $('.titleSection').offset().top + 100;
-  // if( deviceWidth > smSize ){
-  //     if (window.pageYOffset >= stickySM) {
-  //       $('.sideBar').addClass('portfolioSidebar-sticky');
-  //     } else {
-  //       $('.sideBar').removeClass('portfolioSidebar-sticky'); 
-  //     }
-  //   }else{
-      if (window.pageYOffset >= addSticky) {
-        $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
-        $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
-      } else {
-        $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
-        $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
-      }
-    // }
-}
-
-//計算progress bar的長度，依照抵達的頁面高度而變化
-function progessBar(){
-  var totalHeight = $(document).height() - window.innerHeight; //整個頁面的長度 扣掉 使用者瀏覽器的高度
-  var currentHeight = window.pageYOffset;
-  $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
-
-}
-</script>
-
 <div class="col-12 d-flex flex-column align-items-center thankSection">
-  <p>感謝你的觀看：）</p>
-  <a class="text-center" role="button" id="gotoTop">
-        回到最上面
-    </a>
+  <p><span></span>感謝你的觀看：）</p>
+  <a class="text-center" role="button" id="gotoTop">回到最上面</a>
 </div><!-- thankSection -->
+
 <div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
     
-    <a class="d-flex align-items-center" href="../../../../cgu/index.html">
-      <img src="/images/svg/arrow-left.svg">      
+    <a class="d-flex align-items-center link-prevPage" href="" data-link="cgu/">
+      <img src="/images/svg/arrow-left.svg">
       <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
         <span>上一篇</span>
         肺癌照護APP
@@ -330,7 +263,7 @@ function progessBar(){
   
       
   
-    <a class="d-flex align-items-center" href="../../../../cigather/index.html">
+    <a class="d-flex align-items-center link-nextPage" href="" data-link="cigather/">
       <p class="d-flex flex-column align-items-end mb-0 mr-md-3">
         <span>下一篇</span>
         Cigather
@@ -339,6 +272,84 @@ function progessBar(){
     </a>
   
 </div><!-- navigateSection -->
+
+
+<script>
+    //讓大標題前面有方塊圖案
+    $('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
+    
+    //讓文章底下感謝區域，顯示來客名字
+    var guestName = window.location.hash;
+    if(guestName){
+      $('.thankSection p span').append( decodeURI(guestName).slice(1) + '，');
+    }
+    //把來客名字傳到下一頁
+    var nextLink = $('.link-nextPage').data('link');
+    var prevLink = $('.link-prevPage').data('link');
+    $('.link-nextPage').attr('href', '../../' + nextLink + guestName);
+    $('.link-prevPage').attr('href', '../../' + prevLink + guestName);
+    
+    //＝＝＝＝＝＝＝＝＝＝＝＝有關作品集旁邊的sidebar＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+    //得到作品集裡面所有的大標題
+    var obj = $('.portfolioSection h3');
+    
+    //把作品集裡所有的大標題，弄成旁邊進度條的可點擊之Menu
+    $.each( obj, function( key, value ) {
+      console.log(value.offsetTop);
+      $('.portfolioSidebar-h3list')
+      .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+    });
+    
+    //點擊progress的item，會滑到該項目的文章
+    $('.portfolioSidebar-Item').click(function() {
+      var target = $(this).index();
+      console.log(obj[target].offsetTop);
+      $('html, body').animate(
+        {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
+    });
+    
+    $(window).scroll(function(){
+      fixPortfolioSidebar();
+      progessBar();
+      
+      //＝＝＝＝＝＝＝＝＝＝＝＝＝debug用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+      // console.log('Window Offset = ' + window.pageYOffset);
+      // console.log('h3[3] = ' + obj[0].offsetTop);
+      // console.log('h3[3] = ' + obj[1].offsetTop);
+      // console.log('h3[3] = ' + obj[2].offsetTop);
+      // console.log('h3[3] = ' + obj[3].offsetTop);
+      //＝＝＝＝＝＝＝＝＝＝＝＝＝debug用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+    
+    });
+    
+    // fix the side bar beside the article
+    function fixPortfolioSidebar(){
+      var addSticky = $('.titleSection').offset().top + 100;
+      // if( deviceWidth > smSize ){
+      //     if (window.pageYOffset >= stickySM) {
+      //       $('.sideBar').addClass('portfolioSidebar-sticky');
+      //     } else {
+      //       $('.sideBar').removeClass('portfolioSidebar-sticky'); 
+      //     }
+      //   }else{
+          if (window.pageYOffset >= addSticky) {
+            $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
+            $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
+          } else {
+            $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
+            $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
+          }
+        // }
+    }
+    
+    //計算progress bar的長度，依照抵達的頁面高度而變化
+    function progessBar(){
+      var totalHeight = $(document).height() - window.innerHeight; //整個頁面的長度 扣掉 使用者瀏覽器的高度
+      var currentHeight = window.pageYOffset;
+      $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
+    }
+    </script>
 
 <div class="window">
     <div class="close-tag"></div>

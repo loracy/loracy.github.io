@@ -16,7 +16,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    /* font-family: 'Noto Sans TC'; */
+    /* font-family: 'Noto Sans TC', sans-serif; */
     background-image: linear-gradient(0deg, #CFD9DF 0%, #E2EBF0 100%);
 }
 
@@ -747,6 +747,12 @@ span {
 
 .navigateSection a p span{
     font-size: 0.7em;
+    margin: 0;
+}
+
+.thankSection p span{
+    font-family: inherit;
+    font-size: inherit;
     margin: 0;
 }
 
