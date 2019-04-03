@@ -275,7 +275,7 @@
     
     //讓文章底下感謝區域，顯示來客名字
     var guestName = window.location.hash;
-    if(guestName){
+    if(guestName && guestName != '#goToWorks'){
       $('.thankSection p span').append( decodeURI(guestName).slice(1) + '，');
     }
     //把來客名字傳到下一頁
