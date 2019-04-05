@@ -95,6 +95,16 @@ ul{
     margin: 0 8px;
     letter-spacing: 0.1rem;
 }
+@media screen and (max-width: 575.98px) {
+    .intro h1{
+        font-size: 24px;
+    }
+
+    .intro h1 span{
+        margin: 0 3px;
+        font-size: 20px;
+    }
+}
 
 .intro h4{
     font-family: inherit!important;
@@ -111,6 +121,18 @@ ul{
     color: #404345;
     letter-spacing: .02rem;
     margin: 0 4px;
+}
+
+@media screen and (max-width: 575.98px) {
+    .intro h4{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        margin-bottom: 12px;
+    }
+    .intro h4 span{
+        font-size: 1.3rem;
+    }
+
 }
 
 /* ---------------intro button start---------------- */
@@ -164,6 +186,12 @@ ul{
     perspective: 700;
 }
 
+@media screen and (max-width: 575.98px) {
+    .button-container {
+        width: 80%;
+    }
+}
+
 .button-container .flipper {
     transition: all 0.3s ease-in-out;
     -webkit-transform-style: preserve-3d;
@@ -185,6 +213,13 @@ ul{
     justify-content: center;
     -webkit-box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
     box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.2);
+}
+
+@media screen and (max-width: 575.98px) {
+    .button-container .button {
+        width: 100%;
+        box-shadow: 0px 12px 24px -5px rgba(60, 60, 60, 0.3);
+    }
 }
 
 .button-container .button.front {
@@ -246,6 +281,12 @@ textarea:focus {
     outline: none;
 }
 
+@media screen and (max-width: 575.98px) {
+    .portfolioSidebar{
+        height: 0;        
+    }
+}
+
 .portfolioSidebar-relative{
     position: relative;
 }
@@ -256,10 +297,37 @@ textarea:focus {
     top: 4%;
     left: 5.8%;
 }
+@media screen and (max-width: 1024px) {
+    .portfolioSidebar-sticky{
+        min-width: 160px;
+        top: 0%;
+        left: 4%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .portfolioSidebar-sticky{
+        min-width: auto;
+        right: 0;
+        top: 60vh;
+    }
+}
+
 
 .portfolioSidebar-container{
     margin-right: 48px;
     margin-top: 48px;
+    transition: 0.5s all;
+}
+
+@media screen and (max-width: 767px) {
+    .portfolioSidebar-container{
+        opacity: 0;
+        z-index: 100;
+        margin-right: 4%;
+        margin-top: 0px;
+        margin-left: 80%;
+    }
 }
 
 .portfolioSidebar-progress{
@@ -268,7 +336,24 @@ textarea:focus {
     height: 10px;
     background: rgba(0, 0, 0, 0.15);
     transition: all 0.5s;
+}
 
+@media screen and (max-width: 767px) {
+    .portfolioSidebar-progress{
+        width: 36px;
+        background: rgba(256, 256, 256, 0.5);
+        z-index: -1;
+    }
+}
+
+.portfolioSidebar-h3list{
+    
+}
+
+@media screen and (max-width: 767px) {
+    .portfolioSidebar-h3list{
+        box-shadow: 0px 10px 23px -6px rgba(0,0,0,.15);
+    }
 }
 
 .portfolioSidebar-Item{
@@ -284,7 +369,6 @@ textarea:focus {
 }
 
 .portfolioSidebar-Item:hover{
-    /* color: rgb(5, 5, 5); */
     cursor: pointer;
     text-decoration: none;
     color: rgb(89, 89, 89);    
@@ -298,9 +382,30 @@ textarea:focus {
     
 }
 
+@media screen and (max-width: 1024px) {
+    .portfolioSidebar-Item{
+        font-size: 0.6rem;
+        padding: 12px 12px 12px 0;
+    }
+
+}
+@media screen and (max-width: 767px) {
+    .portfolioSidebar-Item{
+        width: 36px;
+        font-size: .5rem;
+        font-weight: 900;
+        text-align: center;
+        color: #555555!important;
+        padding: 12px;
+        border-right: none;
+        border-bottom: 1.5px solid rgba(256, 256, 256, 0.8);
+        background: rgba(256, 256, 256, 0.25);
+    }
+}
+
 .portfolioSection {
-    /* line-height: 2; */
     color: #555555;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .portfolioSection h3{
@@ -356,6 +461,14 @@ textarea:focus {
     transition: all 1s; 
 }
 
+.collapse{
+    display: block;
+}
+
+.collapse > ul.navbar-nav{
+    flex-direction: row;
+}
+
 .navbar {
     text-transform: uppercase;
 }
@@ -366,10 +479,29 @@ textarea:focus {
     letter-spacing: 1.5px;
     padding: 10px;
 }
+@media screen and (max-width: 575.98px) {
+    .nav-item {
+        font-size: 0.7rem;
+        font-weight: bolder;
+        letter-spacing: 1.2px;
+        padding: 16px 8px;
+    }
+}
+
+.nav-item a.nav-link{
+    /* color: #496F85; */
+    color: #40657B;
+}
+
+.hidden-md-up{
+    display: none;
+}
+
 
 
 .navbar-toggler {
     border: 0;
+    display: none!important; /* 不顯示漢堡選單 */
 }
 
 .navbar-toggler-right {
@@ -455,6 +587,17 @@ textarea:focus {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     /* border-radius: .4rem; */
+}
+
+/* ------portfolio title------ */
+@media screen and (max-width: 575.98px) {
+    .titleSection h1{
+        font-size: 1.65rem;
+        font-family: inherit!important;
+        font-weight: bolder;
+        letter-spacing: 1.8px;
+        margin-left: 8px;
+    }
 }
 
 /* ------tags------ */
@@ -548,6 +691,13 @@ span {
     transition: all 0.5s;
 }
 
+@media screen and (max-width: 575.98px) {
+    .demoImg{
+        max-width: 84vw;
+        margin-left: 0;
+    }
+}
+
 .noShowImg{
     border: rgba(255, 255, 255, 0.4) 5px solid;
     border-radius: 4px;
@@ -574,11 +724,32 @@ span {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
 }
 
+@media screen and (max-width: 575.98px) {
+    .window{
+        height: 100%;
+        width: 100%;
+        left: 50%;
+        top: 50%;
+        background: rgba(0,0,0,.2);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+    }
+}
+
 .window img{
     height: 100%;
     border: rgba(255, 255, 255, 0.6) 8px solid;
     border-radius: 4px;
     box-shadow: 0px 2px 6px rgba(0,0,0,.2);
+}
+
+@media screen and (max-width: 575.98px) {
+    .window img{
+        width: 100%;
+        height: auto;
+
+    }
 }
 
 .window-show{

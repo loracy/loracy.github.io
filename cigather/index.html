@@ -15,7 +15,7 @@
 
   <!-- Title -->
   
-  <title>Cigather - Lora | portfolio</title>
+  <title>菸蒂不落地 - Lora | portfolio</title>
 
   <!--Favicon-->
   <link rel="icon" href="/favicon/favicon.ico">
@@ -153,14 +153,14 @@
       
   		<div class="row maxWidth">
   			<div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/cigather/cover.png" alt="Cigather">
+  <img class="img-fluid project-img" src="/images/cigather/cover.png" alt="菸蒂不落地">
 </div>
       
 <div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
-  <h1>Cigather</h1>
+  <h1>菸蒂不落地</h1>
 </div><!-- titleSection -->
 
-<div class="col-12 col-lg-3 pt-lg-3 mb-4 portfolioSidebar">
+<div class="col-1 col-sm-1 col-md-3 col-lg-3 pt-lg-3 mb-0 mb-md-4 portfolioSidebar">
   <div class="portfolioSidebar-container portfolioSidebar-relative d-flex flex-row justify-content-end">
     <div class="portfolioSidebar-h3list d-flex flex-column">
     </div>
@@ -169,7 +169,8 @@
   </div>
 </div><!-- portfolioSidebar -->
 
-<div class="col-12 col-lg-7 pt-lg-3 mb-4 portfolioSection">
+<!-- <div class="col-12 col-md-7 pt-lg-3 mb-4 portfolioSection"> -->
+<div class="col-12 col-sm-9 col-md-8 col-lg-8 pt-lg-3 mb-4 portfolioSection">
   <h3>設計題目</h3>
 <p><span class="strenthen">菸蒂不落地</span><br>
 吸菸者隨意丟棄菸蒂是存在已久的環境問題，<br>
@@ -270,6 +271,11 @@
 
 
 <script>
+    //裝置寬度
+    var deviceWidth = $(window).width();
+    //break point
+    var smSize = 767.9;
+
     //讓大標題前面有方塊圖案
     $('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
     
@@ -292,16 +298,26 @@
     //把作品集裡所有的大標題，弄成旁邊進度條的可點擊之Menu
     $.each( obj, function( key, value ) {
       console.log(value.offsetTop);
-      $('.portfolioSidebar-h3list')
-      .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+      if( deviceWidth > smSize ){
+        $('.portfolioSidebar-h3list')
+        .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+      }else{
+        $('.portfolioSidebar-h3list')
+        .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+(key+1)+'</a>');
+      }
     });
     
     //點擊progress的item，會滑到該項目的文章
     $('.portfolioSidebar-Item').click(function() {
       var target = $(this).index();
       console.log(obj[target].offsetTop);
-      $('html, body').animate(
-        {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
+      if( deviceWidth > smSize ){
+        $('html, body').animate(
+          {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
+      }else{
+        $('html, body').animate(
+          {scrollTop: obj[target].offsetTop + 450}, 1000, "easeInOutExpo");
+      }
     });
     
     $(window).scroll(function(){
@@ -321,13 +337,7 @@
     // fix the side bar beside the article
     function fixPortfolioSidebar(){
       var addSticky = $('.titleSection').offset().top + 100;
-      // if( deviceWidth > smSize ){
-      //     if (window.pageYOffset >= stickySM) {
-      //       $('.sideBar').addClass('portfolioSidebar-sticky');
-      //     } else {
-      //       $('.sideBar').removeClass('portfolioSidebar-sticky'); 
-      //     }
-      //   }else{
+      if( deviceWidth >= smSize ){
           if (window.pageYOffset >= addSticky) {
             $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
             $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
@@ -335,7 +345,18 @@
             $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
             $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
           }
-        // }
+        }else{
+          if (window.pageYOffset >= addSticky-150) {
+            $('.portfolioSidebar-container').css('opacity','1');
+            $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
+            if(window.innerHeight <= 680){
+              $('.portfolioSidebar-sticky').css('top','53vh');
+            }
+          }else{
+            $('.portfolioSidebar-container').css('opacity','0');
+          }
+
+        }
     }
     
     //計算progress bar的長度，依照抵達的頁面高度而變化
