@@ -818,6 +818,16 @@ span {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
 }
 
+@media screen and (max-width: 575.98px) {
+    .expWindow{
+        height: 100vh;
+        width: 100vw;
+        z-index: 200;
+        /* background: rgba(0, 0, 0, .15); */
+
+    }
+}
+
 .window-show{
     visibility: visible;
     opacity: 1;
@@ -830,6 +840,13 @@ span {
     display: flex;
     align-items: center;
     height: 600px;
+}
+
+@media screen and (max-width: 575.98px) {
+    #expGallery{
+        background: rgba(0,0,0,.15);
+        height: 400px;
+    }
 }
 
 #expGallery img{
@@ -971,6 +988,11 @@ span {
 
 /* ------about------ */
 
+
+.sideBar{
+
+}
+
 .sticky{
     position: fixed;
     top: 4%;
@@ -1025,8 +1047,7 @@ span {
 }
 @media screen and (max-width: 575.98px) {
     .sideBar{
-        position: fixed;
-        top: 96px;
+        /* position: fixed; */
         left: 0%;
         width: 100%;
         padding: 15px;
@@ -1164,12 +1185,14 @@ span {
 @media screen and (max-width: 575.98px) {
     .sideBarContent{
         padding: .8rem;
+        padding-left: 1rem;
         width: 80%;   
     }
     .sideBarContent a{
-        width: 30%;
+        font-size: 0.7rem;
+        width: 25%;
         border-bottom: rgba(0, 0, 0, 0.01) 5px solid;
-        padding: .4rem;
+        padding: .3rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1209,6 +1232,20 @@ span {
     /* content: '，'; */
 }
 
+@media screen and (max-width: 575.98px) {
+    .introCard h1{
+        font-size: 1.4rem;
+    }
+    .introCard h1 img{
+        display: none;
+        height: 36px!important;
+        margin-right: 4px;
+    }
+    .introCard h1>div{
+        font-size: .5em;
+    }
+}
+
 .aboutSubtitle::before{
     content: '';
 }
@@ -1241,6 +1278,18 @@ span {
     margin: 0;    
 }
 
+@media screen and (max-width: 575.98px) {
+    .aboutSubtitle{
+        font-size: 14px;
+        line-height: 1.4rem;
+        letter-spacing: 0.04rem;
+    }
+    .aboutSubtitle > .underline-1, 
+    .aboutSubtitle > .underline-2{
+        display: none;
+    }
+}
+
 .aboutContent{
     text-align: left;
     font-size: 1em;
@@ -1248,6 +1297,13 @@ span {
     margin: 2.2rem 0 0 0;
     opacity: .9;
 }
+
+@media screen and (max-width: 575.98px) {
+    .aboutContent{
+        margin: 20px 0 0 0;
+    }
+}
+
 
 /* ------timeline----- */
 
@@ -1268,7 +1324,6 @@ span {
     display: flex;
     /* transition: all .4s; */
     /* -webkit-transition: all .4s; */
-
 }
 
 .timeline-date {
@@ -1364,10 +1419,40 @@ span {
 
 @media screen and (max-width: 575.98px) {
     #about{
-        margin-top: 7rem;
+        /* margin-top: 7rem; */
     }
     .introCard{
-        margin: 0 .6rem 3rem .6rem;
+        padding: 15px;
+        margin: 16px 0 0 0;
+    }
+    .timeline > li {
+        flex-direction: column;
+    }
+    .timeline-date {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+    .timeline-content {
+        flex-direction: column;
+        width: 100%;
+        padding: 16px;
+        border: none;
+
+    }
+    .timeline-content:before{
+        display: none;
+    }
+    .timeline-content h5{
+        padding-left: 8px;    
+        font-weight: bolder;
+    }
+    .timeline-content p{
+        padding-left: 8px;    
+    }
+    .btn_more{
+        width: 98%;
+        margin: auto;
     }
 }
 
@@ -1399,6 +1484,15 @@ span {
     opacity: 1;
     box-shadow: 0px 1px 5px rgba(0,0,0,.08);
     transition: all .4s;
+}
+
+@media screen and (max-width: 575.98px) {
+    #skill span{
+        font-size: 1rem;
+        padding: 8px;
+        margin: 4px;
+        border-radius: 4px;
+    }
 }
 
 .skill-90:after,
@@ -1444,16 +1538,25 @@ span {
     transition: all .8s;
 }
 
+@media screen and (max-width: 575.98px) {
+    #outro{
+        font-size: 12px;
+    }
+}
+
 #outro a{
-    color: #797979;
-    font-weight: 300;
     text-decoration: none;
-    background: rgba(256,256,256, .2);
-    padding: 10px 18px;
+    color: #545454!important;
+    font-weight: bold;
+    background: rgba(256, 256, 256, .5);
+    padding: 12px 32px;
     margin: 0 8px;
-    border-radius: 100px;
-    box-shadow: 0px 1px 2px rgba(0,0,0,.02);    
-    transition: all 1s;    
+    border: 1px solid #CFD9DF !important;
+    border-radius: 8px;
+    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, .1);
+    max-width: 240px;
+    transition: all 1s;
+    -webkit-transition: all 0.5s;
 }
 
 #outro a:hover{
@@ -1461,6 +1564,13 @@ span {
     text-decoration: none;
     box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
     transition: all 1s;
+}
+
+@media screen and (max-width: 575.98px) {
+    #outro {
+        margin-top: 24px;
+    }
+
 }
 
 #main{

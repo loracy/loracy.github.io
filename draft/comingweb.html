@@ -264,7 +264,6 @@ var smSize = 575.98;
 
 
 $(document).ready(function(){
-  console.log('document ready(o)');
   fixSideBar();
 });
 
@@ -302,8 +301,8 @@ function showActive() {
     }else if(sideBar.offset().top+22 >= 1480 && sideBar.offset().top+22 < 1980){
       $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');      
-      $('#awardTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#awardTarget').css('color','#050505');
+      $('#awardTarget-md').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#awardTarget-md').css('color','#050505');
     }else if(sideBar.offset().top+22 >= 1980){
       $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');      
@@ -311,27 +310,56 @@ function showActive() {
       $('#skillTarget').css('color','#050505');
     }
 
-  }else{ //裝置低於575.98px時，顯示active的區域
+  }else if( deviceWidth >= 375 ){ //裝置低於575.98px、大於375px時，顯示active的區域
 
     $('.sideBarContent a').css('border-right','none');//把border-right的樣式取消
 
-    if(window.pageYOffset < 540){
+    if(window.pageYOffset < 1530){
       $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');
       $('#aboutTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
       $('#aboutTarget').css('color','#050505');
-    }else if(window.pageYOffset < 1220){
+    }else if(window.pageYOffset < 2270){
       $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');      
       $('#experienceTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
       $('#experienceTarget').css('color','#050505');
-    }else if(window.pageYOffset >= 1220){
+    }else if(window.pageYOffset < 2840){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#awardTarget-sm').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#awardTarget-sm').css('color','#050505');
+    }else if(window.pageYOffset >= 2840){
       $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
       $('.js-scroll-trigger').css('color','#595959');      
       $('#skillTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
       $('#skillTarget').css('color','#050505');
     }
 
+  }else if( deviceWidth <= 360 ){ //裝置低於360px時，顯示active的區域
+    $('.sideBarContent a').css('border-right','none');//把border-right的樣式取消
+
+    if(window.pageYOffset < 1600){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');
+      $('#aboutTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#aboutTarget').css('color','#050505');
+    }else if(window.pageYOffset < 2340){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#experienceTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#experienceTarget').css('color','#050505');
+    }else if(window.pageYOffset < 2940){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#awardTarget-sm').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#awardTarget-sm').css('color','#050505');
+    }else if(window.pageYOffset >= 2940){
+      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
+      $('.js-scroll-trigger').css('color','#595959');      
+      $('#skillTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
+      $('#skillTarget').css('color','#050505');
+    }
   }
 }
 
@@ -343,7 +371,7 @@ function fixSideBar() {
       $('.sideBar').removeClass('sticky'); 
     }
   }else{
-    if (window.pageYOffset >= 70) {
+    if (window.pageYOffset >= sticky) {
       $('.sideBar').addClass('sticky');
     } else {
       $('.sideBar').removeClass('sticky'); 
