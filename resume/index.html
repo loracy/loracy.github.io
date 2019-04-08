@@ -508,16 +508,10 @@ $('#gotoTop').click(function() {
   });
 
 //intro animation
-$(document).ready(function(){
+$(document).ready(function(){ 
+      return ({Event} === 'gtm.historyChange' && {NewHistoryFragment} ? {PagePath} + '#' + {NewHistoryFragment} : undefined);
 });
-
-//Fix Safari Problems
-
-// IntersectionObserver.prototype._rootContainsTarget = function(target) {
-//   return (this.root || docElement).contains(target);
-// };
 </script>
-
 
   
 
