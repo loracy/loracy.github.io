@@ -166,46 +166,212 @@
   		<div class="row maxWidth">
   			
 <div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-sm-end">
-  <a href="./assets/resume.pdf" download="Resume_LoraLin.pdf" class="downloadResume text-center mb-4 d-flex aign-items-center justify-content-center" role="button" id="download">
-    <i data-feather="download" class="mr-2"></i>
-    PDF
-</a>
-<img class="resumeImage" src="./assets/resume.png">
+  <div class="d-flex">
+    <div class="controlBar">
+        <a href="./assets/2025resume_en.pdf" download="Resume_LoraLin_En.pdf" class="text-center" role="button">
+            <i data-feather="download"></i>
+            下載
+        </a>
+        <a href="./assets/2025resume.pdf" download="Resume_LoraLin.pdf" class="d-none text-center" role="button">
+            <i data-feather="download"></i>
+            下載
+        </a>
+        <a class="text-center" role="button" onclick="enterFullScreen()">
+            <i data-feather="zoom-in"></i>
+            全螢幕
+        </a>
+        <a class="text-center" role="button" id="" target="_blank" href="http://www.linkedin.com/in/lora-lin">
+            <i data-feather="linkedin"></i>
+            LinkedIn
+        </a>
+        <label class="switch-input mt-2" id="lanugaugeSwitch">
+            <input type="checkbox" role="switch" id="lanugaugeSwitchCheckbox" class="visually-hidden" checked="true" onchange="changeLanguage()">
+            <span class="switch-input__thumb" aria-hidden="true"></span>
+            <span class="switch-input__decor" data-switch-input-state="on" aria-hidden="true">
+                中
+            </span>
+            <span class="switch-input__decor" data-switch-input-state="off" aria-hidden="true">
+                En
+            </span>
+        </label>
+    </div>
+    <div class="resumeContainer d-flex justify-content-center">
+        <img class="mx-1 resumeImage d-none" src="./assets/2025resume.png">
+        <img class="mx-1 resumeImage" src="./assets/2025resum_en.png">
+    </div>
+</div>
 <style>
-    nav{
-        /* display: none!important; */
-    }
-    .portfolio-content{
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    img.resumeImage{
-        width: 60vw;
-    }
-    a.downloadResume{
-        position: fixed;
-        bottom: 40px;
-        right: 40px;
-        padding: 12px 24px 12px 22px;
-        margin: 0 8px;
-        color: #545454;
-        font-size: 18px;
-        font-weight: bold;
-        background: rgba(256, 256, 256, .7) !important;
-        border-radius: 8px;
-        box-shadow: 0px 6px 32px -6px rgba(0, 0, 0, .23) !important;
-        border: 1px solid #CFD9DF !important;
-        transition: all 0.5s;
-    }
+:root {
+    --switch-input-thumb-size: 32px;
+    --switch-input-thumb-bg: #ffffff;
+    --switch-input-thumb-stroke: 1px solid grey;
+    --switch-input-bg: #8AA1B1;
+    --switch-input-gutter: 4px;
+    --switch-input-decor-space: var(--switch-input-gutter) 1.25ch;
+    --switch-input-focus-stroke: 2px solid #ff6978;
+    --switch-input-font-family: 'Open Sans', sans-serif;
+    --switch-input-transition: inset 50ms linear;
+}
 
-    a.downloadResume:hover{
-        text-decoration: none;
-        color: #1a1a1a;
-        background: rgba(256, 256, 256, .9) !important;
-        box-shadow: 0px 1px 5px -1px rgba(0, 0, 0, .1)!important;
-        transition: all 0.5s;
-    }
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    display: none;
+}
+
+.switch-input {
+    width: calc((var(--switch-input-thumb-size) * 2) + (var(--switch-input-gutter) * 3));
+    height: calc(var(--switch-input-thumb-size) + (var(--switch-input-gutter) * 2));
+    border-radius: calc(var(--switch-input-thumb-size) + var(--switch-input-gutter));
+    padding: 2px;
+    background: rgba(266, 266, 266, 0.75);
+    color: var(--switch-input-off-text);
+    text-align: left;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    container-type: inline-size;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0 1.5px rgba(139, 161, 177, 0.3);
+}
+
+.switch-input__decor {
+    inset-block: 0;
+    inset-inline-start: 0;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    user-select: none;
+    color: #FFF;
+    margin: 0;
+    justify-content: center;
+    z-index: 1;
+    font-family: var(--switch-input-font-family);
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.switch-input__decor[data-switch-input-state="on"] {
+    color: #FFF;
+}
+
+.switch-input__decor[data-switch-input-state="off"] {
+    color: var(--switch-input-bg);
+}
+
+.switch-input:has(:checked) .switch-input__decor[data-switch-input-state="on"] {
+    color: var(--switch-input-bg);
+}
+
+.switch-input:has(:checked) .switch-input__decor[data-switch-input-state="off"] {
+    color: #FFF;
+}
+
+.switch-input__thumb {
+    display: block;
+    width: var(--switch-input-thumb-size);
+    height: var(--switch-input-thumb-size);
+    border-radius: var(--switch-input-thumb-size);
+    background: var(--switch-input-bg);
+    z-index: 1;
+    position: absolute;
+    inset-block-start: var(--switch-input-gutter);
+    inset-inline-start: var(--switch-input-gutter);
+    transition: var(--switch-input-transition);
+    margin: 0;
+    box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.switch-input:has(:focus) .switch-input__thumb {
+}
+
+.switch-input:has(:focus-visible) .switch-input__thumb {
+}
+
+.switch-input:has(:checked) {
+    
+}
+
+.switch-input:has(:checked) .switch-input__thumb {
+    inset-inline-start: calc(var(--switch-input-thumb-size) + (var(--switch-input-gutter) * 2));
+}
+
+.controlBar {
+    width: 104px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-left: 24px;
+}
+
+.resumeContainer {
+    padding-left: 120px;
+    padding-right: 16px;
+}
+
+img.resumeImage {
+    width: 100%;
+}
+
+.resumeContainer.FullScreen .resumeImage {
+    width: 100%;
+    height: fit-content;
+}
+
+.resumeContainer.FullScreen {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: 500;
+    padding: 0 !important;
+}
+
+.portfolio-content{
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.controlBar a {
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    padding: 8px 4px;
+    color: #545454;
+    font-size: 13px;
+    font-weight: bold;
+    background: rgba(256, 256, 256, .7) !important;
+    border-radius: 8px;
+    border: 1px solid #CFD9DF !important;
+    transition: all 0.1s;
+}
+
+.controlBar a svg {
+    width: 16px;
+    margin-bottom: 4px;
+
+}
+
+.controlBar a:hover {
+    text-decoration: none;
+    color: #1a1a1a;
+    background: rgba(256, 256, 256, .9) !important;
+    transition: all 0.1s;
+}
 </style>
 
 </div>
@@ -474,8 +640,8 @@ function copyInfo(id) {
   }else{
     return;
   }
-
 }
+
 function popUpDialog(content){
   $('.popup').html(content);
   $('.popup').fadeIn(1000,function(){
@@ -483,6 +649,23 @@ function popUpDialog(content){
   });
 }
 
+
+function changeLanguage() {
+  const $hiddenImage = $('.resumeImage.d-none');
+  const $displayedImage = $('.resumeImage:not(.d-none)');
+  const $hiddenBtn = $('.controlBar a[download].d-none');
+  const $displayedBtn = $('.controlBar a[download]:not(.d-none)');
+  
+  $hiddenImage.removeClass('d-none');
+  $displayedImage.addClass('d-none');
+  
+  $hiddenBtn.removeClass('d-none');
+  $displayedBtn.addClass('d-none');
+}
+
+function enterFullScreen(){
+  $('.resumeContainer').addClass('FullScreen');
+}
 </script>
 
 

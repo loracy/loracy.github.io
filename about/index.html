@@ -168,7 +168,7 @@
 <div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-sm-end">
   <div class="col-12 col-sm-2 sideBar">
   <div class="mb-sm-3 sideBarAvatar">
-    <img src="./assets/avatar.jpg">
+    <img src="./assets/avatar.jpeg">
     <h1>林亞儒</h1>
     <h3>Lora Lin</h3>
   </div>
@@ -181,8 +181,8 @@
       <span class="d-none">lora860227@gmail.com</span>
       <i data-feather="mail"></i>
     </a>
-    <a id="facebook" href="https://www.facebook.com/LoracyLin" target="_blank" rel="noopener">
-      <i data-feather="facebook"></i>
+    <a id="linkedin" href="https://www.linkedin.com/in/lora-lin/" target="_blank" rel="noopener">
+      <i data-feather="linkedin"></i>
     </a>
     <div class="popup"></div>
   </div>
@@ -216,6 +216,20 @@
 <div class="col-12 col-sm-9 introCard" id="experience">
     <h1><img src="../images/dot.png" height="48px" class="">學經歷 <div>Education & Experience</div></h1>
   <ul class="timeline">
+    <li>
+      <p class="timeline-date">2019 - </p>
+      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg" data-title="HP（惠普科技）" data-subtitle="UI Designer Engineer" data-des="
+        <br/><span>Pulsar</span>
+        data-haslink=" none"="" data-link="">
+        <div class="d-flex flex-column">
+          <h5>HP（惠普科技）</h5>
+          <p>UI Designer Engineer</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <a id="" class="btn_more" role="button">瞭解更多</a>
+        </div>
+      </div>
+    </li>
     <li>
       <p class="timeline-date">2018 / 07 - 08</p>
       <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg" data-title="趨勢科技 Trend Micro" data-subtitle="HIE (使用者經驗設計部門)－Visual Designer Intern" data-des="我在趨勢科技的使用者經驗設計部門中擔任視覺設計的暑期實習生，負責了以下專案：
@@ -629,8 +643,8 @@ function copyInfo(id) {
   }else{
     return;
   }
-
 }
+
 function popUpDialog(content){
   $('.popup').html(content);
   $('.popup').fadeIn(1000,function(){
@@ -638,6 +652,23 @@ function popUpDialog(content){
   });
 }
 
+
+function changeLanguage() {
+  const $hiddenImage = $('.resumeImage.d-none');
+  const $displayedImage = $('.resumeImage:not(.d-none)');
+  const $hiddenBtn = $('.controlBar a[download].d-none');
+  const $displayedBtn = $('.controlBar a[download]:not(.d-none)');
+  
+  $hiddenImage.removeClass('d-none');
+  $displayedImage.addClass('d-none');
+  
+  $hiddenBtn.removeClass('d-none');
+  $displayedBtn.addClass('d-none');
+}
+
+function enterFullScreen(){
+  $('.resumeContainer').addClass('FullScreen');
+}
 </script>
 
 

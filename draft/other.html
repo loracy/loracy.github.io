@@ -471,8 +471,8 @@ function copyInfo(id) {
   }else{
     return;
   }
-
 }
+
 function popUpDialog(content){
   $('.popup').html(content);
   $('.popup').fadeIn(1000,function(){
@@ -480,6 +480,23 @@ function popUpDialog(content){
   });
 }
 
+
+function changeLanguage() {
+  const $hiddenImage = $('.resumeImage.d-none');
+  const $displayedImage = $('.resumeImage:not(.d-none)');
+  const $hiddenBtn = $('.controlBar a[download].d-none');
+  const $displayedBtn = $('.controlBar a[download]:not(.d-none)');
+  
+  $hiddenImage.removeClass('d-none');
+  $displayedImage.addClass('d-none');
+  
+  $hiddenBtn.removeClass('d-none');
+  $displayedBtn.addClass('d-none');
+}
+
+function enterFullScreen(){
+  $('.resumeContainer').addClass('FullScreen');
+}
 </script>
 
 
