@@ -142,25 +142,67 @@
     <ul class="navbar-nav ml-auto my-auto">
       
         <li class="nav-item">
-          <a class="nav-link" href="/../#goToWorks">Works</a>
+          
+              <a class="nav-link" href="/../#goToWorks">Works</a>
+          
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          
+              <a class="nav-link" href="/about">About</a>
+          
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="/resume">Resume</a>
+          
+              <a class="nav-link" href="/resume">Resume</a>
+          
         </li>
       
         <li class="nav-item">
-          <a class="nav-link" href="mailto:lora860227@gmail.com">Contact</a>
+          
+            <div class="dropdown" id="ContactMenuList">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+                Contact
+              </a>
+              <div class="dropdown-menu">
+                <div id="ContactMenuListEmailArea" class="d-flex flex-column border px-3 pb-3 pt-2">
+                  <p class="d-flex align-items-center py-1">
+                    <i data-feather="mail"></i>
+                    lora860227@gmail.com
+                  </p>
+                  <div class="d-flex mt-1">
+                    <a class="dropdown-item mx-1" id="" href="#" onclick="copyInfo('#clipboard_email')">
+                      <i data-feather="copy"></i>Copy
+                    </a>
+                    <a class="dropdown-item mx-1" target="_blank" href="mailto:lora860227@gmail.com">
+                      <i data-feather="send"></i>Send
+                    </a>
+                  </div>
+                </div>
+                <a class="dropdown-item border-top py-2 px-3" target="_blank" href="https://www.linkedin.com/in/lora-lin/">
+                  <i data-feather="linkedin"></i>
+                  Linkedin
+                </a>
+                <a class="dropdown-item border-top py-2 px-3" href="#" onclick="copyInfo('#clipboard_phone')">
+                  <i data-feather="phone"></i>Phone Number
+                </a>
+              </div>
+            </div>
+          
         </li>
+      
       
     </ul>
     <hr class="hidden-md-up">
   </div>
 </nav>
+<a id="clipboard_phone" class="d-none">
+  <span class="d-none">0983816167</span>
+</a>
+<a id="clipboard_email" class="d-none">
+  <span class="d-none">lora860227@gmail.com</span>
+</a>
 
       
   		<div class="row maxWidth">
@@ -352,6 +394,8 @@
       </div>
       
   	</div>
+<div class="popup"></div>
+
 
     <!-- After footer scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script> -->
@@ -374,6 +418,7 @@ $('#gotoTop').click(function() {
 $(document).ready(function(){ 
       // return ({Event} === 'gtm.historyChange' && {NewHistoryFragment} ? {PagePath} + '#' + {NewHistoryFragment} : undefined);
 });
+
 </script>
 
   

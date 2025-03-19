@@ -69,6 +69,23 @@ ul{
     justify-content: center;
 }
 
+.popup{
+    display: none;
+    width: 280px;
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: .8em;
+    padding: 1.2em 1.6em;
+    background: rgba(256, 256, 256,.9);
+    border: rgba(256, 256, 256, .5) 1px solid;
+    border-radius: 4px;
+    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+
 /* ------------intro------------ */
 #sayHello span{
     font-family: inherit;
@@ -459,10 +476,6 @@ textarea:focus {
 
     text-shadow: .5px .5px #576982;
     transition: all 1s; 
-}
-
-.collapse{
-    display: block;
 }
 
 .collapse > ul.navbar-nav{
@@ -1139,20 +1152,6 @@ span {
     -webkit-transition: all .4s;
 }
 
-.popup{
-    display: none;
-    position: absolute;
-    bottom: 5%;
-    color: rgba(0, 0, 0, 0.4);
-    font-size: .8em;
-    padding: .6em;
-    background: rgba(256,256,256,.9);
-    border: rgba(256,256,256,.5) 1px solid;
-    border-radius: 4px;
-    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.02);
-}
-
-
 .sideBarContent{
     padding: 1rem .7rem 1rem 0;
 }
@@ -1679,3 +1678,76 @@ ellipse,path,circle {
     stroke-dashoffset: 1000; 
     animation: dash 2s linear both ; 
 }  */
+
+#ContactMenuList {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#ContactMenuList .dropdown-toggle {
+    color: rgba(0, 0, 0, .5) !important;
+}
+
+#ContactMenuList .dropdown-toggle:hover,
+#ContactMenuList .dropdown-toggle:focus,
+#ContactMenuList .dropdown-toggle:active {
+    text-decoration: none;
+}
+
+#ContactMenuList .dropdown-menu {
+    box-shadow: 0 2px 12px -1px rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    left: auto;
+    right: 0;
+    border-radius: 12px;
+    padding: 3px;
+    overflow: hidden;
+}
+
+#ContactMenuList .dropdown-menu .border-top {
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#ContactMenuList .dropdown-menu .dropdown-item {
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+
+#ContactMenuList .dropdown-menu .dropdown-item:focus,
+#ContactMenuList .dropdown-menu .dropdown-item:active {
+    background-color:  #E2EBF0; 
+}
+
+#ContactMenuList .dropdown-menu .dropdown-item svg {
+    margin-right: 8px;
+    width: 10px;
+    height: 10px;
+}
+
+#ContactMenuListEmailArea p {
+    padding: 4px;
+    margin: 0px;
+    text-transform: lowercase;
+    font-size: 12px;
+}
+
+#ContactMenuListEmailArea p svg {
+    margin-right: 8px;
+    width: 12px;
+    height: 12px;
+}
+
+#ContactMenuListEmailArea .dropdown-item {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#ContactMenuListEmailArea .dropdown-item:hover {
+    background-color:  #E2EBF0; 
+}
