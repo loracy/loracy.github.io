@@ -228,192 +228,292 @@
     </a>
   </div>
   <div class="d-flex flex-row flex-sm-column sideBarContent">
-    <a href="#about" class="js-scroll-trigger" id="aboutTarget">關於我</a>
-    <a href="#experience" class="js-scroll-trigger" id="experienceTarget">學經歷</a>
-    <a href="#award" class="js-scroll-trigger d-sm-block d-none" id="awardTarget-md">比賽獎項</a>
-    <a href="#award" class="js-scroll-trigger d-sm-none d-flex" id="awardTarget-sm">比賽</a>
-    <a href="#skill" class="js-scroll-trigger" id="skillTarget">技能</a>    
+    <a href="#about" class="js-scroll-trigger" id="aboutTarget">About</a>
+    <a href="#skill" class="js-scroll-trigger" id="skillTarget">Skills</a>    
+    <a href="#experience" class="js-scroll-trigger" id="experienceTarget">Experience</a>
+    <a href="#award" class="js-scroll-trigger" id="awardTarget">Award</a>
   </div>
 </div>
 <div class="col-12 col-sm-9 introCard" id="about">
-  <h1><img src="../images/dot.png" height="48px" class="">關於我 <div>About Me</div></h1>
-  <!-- <h5 class="aboutContent">
-      Hello～我是來自台中的林亞儒，是一名大三的學生，目前就讀於 國立臺北教育大學的數位科技設計學系，主要專長為 App/Web 的 UI Design、前端開發、多媒體設計，對於設計出體驗良好的產品有很大的熱情和執著，希望可以讓我的感動透過產品傳達給更多人！ 平時喜歡關注數位產品的相關話題和趨勢，也樂於參與各式各樣的社群及講座，例如之前參加 Mopcon 擔任會眾，看到了許多前輩和大神，除了吸收到許多前端的各種新穎的技術，也對介面設計未來的展望有更深的認知和想像，希望我也可以挑戰更多裝置上的介面設計！ 我也喜歡和不同的人接觸、交流想法、表現自己，例如在學校時，我有許多擔任大型活動主持的經驗，例如像校園園遊會、一年一度的校園星光比賽，訓練我發表的邏輯可以更清晰、還有面對群眾表現的膽量。現在在系上除了擔任系網團隊的開發成員，學習更多開發網站的介面設計和技術能力，還有參加系上 UI/UX Sketch 的讀書會，希望可以跟前輩多多學習、並且不斷加強我不足的地方。未來期許自己更充實能力、保持對生活的熱忱、有能力希望能夠回饋家庭和社會、並且享受每一天！
-  </h5>   -->
-  <h4 class="aboutSubtitle">
-    Be unrestrained seeking solutions, <br>
-    <span class="underline-1"></span>
-    Stay thoughtful within constraints when designing. <br>
-    <span class="underline-2"></span>
-  </h4>
-  <h5 class="aboutContent">
-      Hello～我目前是就讀於 國立臺北教育大學 數位科技設計學系 的大四生，主要專長為 App/Web 的 UI/UX Design。接觸介面設計和使用者經驗設計的經驗約一年半。<br>
-      一年半前期許自己可以將所學做應用，因此大二暑假加入接案型的新創公司，擔任介面設計實習生，瞭解到設計產品應該要考慮的細節遠超出想像，更學習到軟體開發的流程。雖然因此意識到自己有許多不足，但也讓我更積極地累積實務經驗和作品，因此過去一年跟著前輩參與了許多專案，成功幫助客戶解決問題與達成目標。除此之外，我也積極參加各式各樣的社群和講座，除了能更開拓對設計領域的視野，也確立了我對設計的熱忱和堅持。<br>
-      為了持續在設計這項專業精進自己，因此大三的暑假加入趨勢科技的使用者經驗設計部門(Human Interface Engineering)實習，目標希望可以接觸到更多設計資源、並且更熟悉使用者經驗研究的流程和方法。實習期間在導師的帶領下，我主要負責兩個產品，並且必須和其他設計師一起溝通與合作，儘管設計產品會遇到許多限制和困難，但我不斷激勵自己面對問題要更大膽的想像各種解法，在設計時則要更謹慎的對待每個細節。經過持續的修改與優化，我從前輩身上學習到許多設計專業與溝通技巧，也更熟悉使用者經驗設計的流程。並且也在最後結訓完成一場15分鐘全英文的簡報，加強了自己表達和簡報的能力。<br>
-      現在我持續與固定的業主合作，負責介面設計與流程規劃，訓練自己透過設計手法和簡報能力來說服客戶，亦能保持對介面設計最新趨勢的敏銳度。<br>
-      未來我期許自己保持對設計的熱忱、和週遭人事物的好奇心，並更專注於使用者的需求，以使用者為中心為思考、打造最符合需求的設計。
+  <label class="switch-input mt-2" id="lanugaugeSwitch_about1">
+      <input type="checkbox" role="switch" id="lanugaugeSwitchCheckbox_about1" trigger-target="aboutContent" class="visually-hidden">
+      <span class="switch-input__thumb" aria-hidden="true"></span>
+      <span class="switch-input__decor" data-switch-input-state="on" aria-hidden="true">
+          中
+      </span>
+      <span class="switch-input__decor" data-switch-input-state="off" aria-hidden="true">
+          En
+      </span>
+  </label>
+  <h1>
+    About
+  </h1>
+  <h5 class="aboutContent aboutContent_ch">
+    我擁有約六年的 UI/UX 開發的經驗。
+    曾在 HP Taiwan 服務超過五年，負責企業內部系統的設計與開發。主要任務是將客戶需求轉化為設計提案，並實作成前端介面，與後端工程師緊密協作，共同實現各項功能。
+    更早的時期，我曾在 Trend Micro 和 Microsoft 擔任 UI 設計師實習生，累積了寶貴的介面設計經驗。
+    我的專長涵蓋 PLM、ERP 系統及一般網頁的流程設計、介面設計，並精通網頁前端切版與開發。
+    熟悉的技術包括 HTML、SCSS、JavaScript 等等，並且擁有使用 Sketch、XD、Figma 等設計工具的豐富經驗。
+    此外，我也有許多透過 Git、Scrum 等等的工具或敏捷式軟體開發的方法，與團隊密切配合的經歷。
+  </h5>
+  <h5 class="aboutContent aboutContent_en" style="display: none;">
+  I'm a UI/UX developer that has about six years of experience in software industry, which had been working at HP Inc. for about five years and had two internship experiences at Trend Micro and Microsoft before.
+  <ol>
+    <li>Experience in coding by using HTML, CSS, JavaScript, and so on.</li>
+    <li>Familiarity with Bootstrap and RWD-relevant knowledge.</li>
+    <li>Experience in delivering wireframes, mockups, and prototypes by using Sketch, Figma, XD, Principle, and so on.</li>
+    <li>Experience in delivering design specifications to communicate with teams smoothly, and strong working knowledge of front-end and back-end integration.</li>
+    <li>Strong working knowledge of DevOps adaptation and version control tools with a team by using Git, Azure DevOps Server, and so on.</li>
+    <li>Experience in customizing and deploying interactive visualizations with front-end technologies.</li>
+    <li>Experience in Scrum methodologies and familiarity with Agile tools.</li>
+    <li>Experience in conducting code reviews with peers and code quality maintenance.</li>
+  </ol>
   </h5>
 </div>
+<div class="col-12 col-sm-9 introCard" id="skill">
+    <h1>Skills</h1>
+    <div class="d-flex flex-wrap mt-3">
+      <span class="skillDetail" skill-title="Sketch" skill-description="Advanced level, including deliver specs by Zeplin or other tools." skill-work="https://appar.com.tw/en/case-studies/smart-classroom-solution/"><p>Sketch</p></span>
+      <span class="skillDetail" skill-title="Illustrator" skill-description="Advanced level, expreienced in making Logos and icons." skill-work="https://drive.google.com/file/d/0By3e3rVodyGKV2ZDbEpTaFdTbHc/view?usp=sharing&resourcekey=0-iErrhzM2iz-MerpoiGuZ4A"><p>Illustrator</p></span>
+      <span class="skillDetail" skill-title="Photoshop" skill-description="Proficient level."><p>Photoshop</p></span>
+      <span class="skillDetail" skill-title="Adobe Xd" skill-work="https://fable.com.tw/" skill-description="Advanced level, mainly designed and delivered UI and by XD during the last corporation."><p>Adobe Xd</p></span>
+      <span class="skillDetail" skill-title="Principle" skill-description="Proficient level, to create lively prototype to the customers." skill-work="https://drive.google.com/file/d/1X-2L8PEkul793rAmjfP7pb_OK9F4lx7y/view?usp=sharing"><p>Principle</p></span>
+      <span class="skillDetail" skill-title="Axure" skill-description="Intermediate level, matinly for delivery of wireframe."><p>Axure</p></span>
+      <span class="skillDetail" skill-title="Figma" skill-description="Intermediate level." skill-work="https://appar.com.tw/zh-hant/"><p>Figma</p></span>
+    </div>
+    <div class="d-flex flex-wrap mt-3">
+      <span class="skillDetail" skill-title="HTML" skill-description="Advanced level."><p>HTML</p></span>
+      <span class="skillDetail" skill-title="CSS" skill-description="Advanced level, also including Sass, SCSS, LESS, etc."><p>CSS</p></span>
+      <span class="skillDetail" skill-title="Javascript" skill-description="Advanced level."><p>Javascript</p></span>      
+      <span class="skillDetail" skill-title="Jquery" skill-description="Advanced level."><p>Jquery</p></span>      
+      <span class="skillDetail" skill-title="PHP" skill-description="Proficient level."><p>PHP</p></span>
+      <span class="skillDetail" skill-title="React Native" skill-description="Intermediate level."><p>React Native</p></span>
+      <span class="skillDetail" skill-title="Bootstrap" skill-description="Advanced level."><p>Bootstrap</p></span>
+    </div>
+</div>
 <div class="col-12 col-sm-9 introCard" id="experience">
-    <h1><img src="../images/dot.png" height="48px" class="">學經歷 <div>Education & Experience</div></h1>
+    <h1>Experience</h1>
+    <label class="switch-input mt-2" id="lanugaugeSwitch_experience1">
+      <input type="checkbox" role="switch" id="lanugaugeSwitchCheckbox_experience1" trigger-target="timeline" class="visually-hidden">
+      <span class="switch-input__thumb" aria-hidden="true"></span>
+      <span class="switch-input__decor" data-switch-input-state="on" aria-hidden="true">
+          中
+      </span>
+      <span class="switch-input__decor" data-switch-input-state="off" aria-hidden="true">
+          En
+      </span>
+  </label>
   <ul class="timeline">
-    <li>
-      <p class="timeline-date">2019 - </p>
-      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg" data-title="HP（惠普科技）" data-subtitle="UI Designer Engineer" data-des="
-        <br/><span>Pulsar</span>
-        data-haslink=" none"="" data-link="">
+    <li class="timeline_en" style="display: none;">
+      <p class="timeline-date">2019 - 2025 / 01</p>
+      <div class="timeline-content" data-src1="./assets/experience-hp-1.jpg">
+        <div class="d-flex flex-column">
+          <h5>HP Taiwan</h5>
+          <p>UI Designer Engineer (Constractor)</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <a id="" class="btn_more" role="button">See More</a>
+        </div>
+      </div>
+    </li>
+    <li class="timeline_ch">
+      <p class="timeline-date">2019 - 2025 / 01</p>
+      <div class="timeline-content" data-src1="./assets/experience-hp-1.jpg">
         <div class="d-flex flex-column">
           <h5>HP（惠普科技）</h5>
           <p>UI Designer Engineer</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button">瞭解更多</a>
+          <a id="" class="btn_more" role="button">See More</a>
         </div>
       </div>
     </li>
-    <li>
+    <li class="timeline_en" style="display: none;">
       <p class="timeline-date">2018 / 07 - 08</p>
-      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg" data-title="趨勢科技 Trend Micro" data-subtitle="HIE (使用者經驗設計部門)－Visual Designer Intern" data-des="我在趨勢科技的使用者經驗設計部門中擔任視覺設計的暑期實習生，負責了以下專案：
-      <br/><span>TMRM</span>
-      <br/>TMRM是一個給客戶追蹤末端電腦的產品，並且會產出每月的報表給客戶，回報偵測到的異狀或變化。我負責設計其中每月報告的視覺稿，其中包含許多圖表和表格的視覺化，首現我先熟悉由 UID 設計的 wireframe 的資訊和層級關係，瞭解需求後，再參考許多資訊視覺化的設計手法，接著必須在許多限制內，嘗試用不同的設計手法優化資訊，並符合需求。
-      <br/>透過這個專案，我更深入熟悉資訊視覺化的方法，也能掌握更種圖表的使用情境和用途。也因為要在許多限制中完成這次設計，也訓練自己要更謹慎細心的審視自己的設計。
-      <br/><span>UXer at Trend</span>
-      <br/>我在這個專案中負責將“UX in the Jungle”這個桌遊重新設計，目標要讓使用者更了幾趨勢科技各式各樣的產品。透過這個專案，學習到產品設計的理論與模型，透過遊戲的規則和互動，要如何吸引使用者的同時也能留住使用者。
-      " data-haslink="none" data-link="">
+      <div class="timeline-content" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg">
+        <div class="d-flex flex-column">
+          <h5>Trend Micro</h5>
+          <p>HIE (Human Interaction Experience) － Visual Designer Intern</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <a id="" class="btn_more" role="button">See More</a>
+        </div>
+      </div>
+    </li>
+    <li class="timeline_ch">
+      <p class="timeline-date">2018 / 07 - 08</p>
+      <div class="timeline-content" data-src1="./assets/experience-trend-2.jpg" data-src2="./assets/experience-trend-1.jpg">
         <div class="d-flex flex-column">
           <h5>趨勢科技 Trend Micro</h5>
           <p>HIE (使用者經驗設計部門) － Visual Designer Intern</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button">瞭解更多</a>
+          <a id="" class="btn_more" role="button">See More</a>
         </div>
       </div>
     </li>
-    <li>
+    <li class="timeline_en" style="display: none;">
       <p class="timeline-date">2018 / 01 - 06</p>
-      <div class="timeline-content  d-flex justify-content-between" data-src1="./assets/experience-microsoft-1.png" data-src2="./assets/experience-microsoft-1.png" data-title="台灣微軟 第14屆 未來生涯體驗計劃" data-subtitle="RDAA Intern" data-des="我在微軟的Service部門當中擔任前端開發的實習生，負責修改和設計網站的的Layout，以下是我在實習期間參與的專案與事項：
-      <br/><span>京城銀行－個人網路銀行</span>
-      <br/>我在專案中需要使用到HTML和CSS和Angular.js，設計與開發符合「京城銀行」形象和色彩規劃的元件，也負責網站前端版面的切版。
-      <br/>藉著團隊協作和專案開發，熟悉了敏捷式開發(Scrum)的流程與合作模式，例如像每日的站立會議可以讓團隊間更順利的溝通與合作，每期一次的Spring會議也能夠統整專案達成的目標和可以改善的部分。
-      <br/>除此之外，我也更熟練Bootstrap的規範和應用方式，除了提升自己設計與開發響應式網頁(RWD)的能力，並能訓練自己照顧到元件的統一性。
-      <br/>藉由京城銀行的專案，也讓我初步認識了開發銀行網站的一些基本需求與模式，例如像：大量的表單填寫與認證、龐大的資訊架構...，成功精進自己對大型網站的開發與設計能力。" data-haslink="none" data-link="">
+      <div class="timeline-content" data-src1="./assets/experience-microsoft-1.png">
+        <div class="d-flex flex-column">            
+          <h5>Microsoft Taiwan 14th</h5>
+          <p>RDAA Intern</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <a id="" class="btn_more" role="butto">See More</a>
+        </div>
+      </div>
+    </li>
+    <li class="timeline_ch">
+      <p class="timeline-date">2018 / 01 - 06</p>
+      <div class="timeline-content" data-src1="./assets/experience-microsoft-1.png">
         <div class="d-flex flex-column">            
           <h5>台灣微軟 第14屆 未來生涯體驗計劃</h5>
           <p>RDAA Intern</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button" onclick="console.log('more.....')">瞭解更多</a>
+          <a id="" class="btn_more" role="button">See More</a>
         </div>
       </div>
     </li>
-    <li>
+    <li class="timeline_en" style="display: none;">
       <p class="timeline-date">2017 / 07 - 08</p>
-      <div class="timeline-content d-flex justify-content-between" data-src1="./assets/experience-trunk-1.jpg" data-src2="./assets/experience-trunk-2.jpg" data-title="創科資訊 Trunk Studio" data-subtitle="UI Designer Intern" data-des="我在創科資訊中單任介面設計實習生一職，負責或接觸過以下專案：
-      <br/><span>台灣步道App (GoHiking)</span><br/>
-      我負責優化、redesign整個App的介面設計、資訊架構、流程規劃，瞭解到產品的遊戲化，和商業模式的重要性，以及社群互動能帶給使用者的正面效果，更幫助...。
-      <br/><span>VIPT東南亞求職平台</span><br/>
-      VIPT是一個幫助台灣企業和移工媒合工作的平台，我幫助設計其中的「企業」Landing page的網頁設計。
-      <br/><span>LFP香水實驗室</span><br/>
-      我負責設計LFP香水實驗室網站其中的活動頁，並與前端工程實習生共同合作開發，透過此次經驗我更能熟悉與前端協作的流程和要注意的細節。
-      <br/><span>ADMS</span><br/>
-      透過設計ADMS廣告監測後台的網站介面，我接觸到dashboard的設計模式，更提升資訊設計的能力。" data-desold="在創科資訊中我擔任介面設計暑期實習生，其中負責幫助優化台灣步道的App介面、規劃功能和流程，除了更熟悉Sketch之外，學習到將遊戲化、商業模式、社群互動等等，考慮進設計思考裡。除此之外也幫忙其他專案設計網站的介面，再將設計稿輸出給工程師實作，學習到一些方便的協作工具，利用工程師容易理解的描述，可以更有效率的溝通，利用外掛可以快速完成設計規範，亦可以讓開發減少負擔。暑假的兩個月也很榮幸可以參與暑期學習的前端課程，讓我學習到更多知識和技術，也對數位產品領域有更深的熱情！" data-haslink="none" data-link="">
+      <div class="timeline-content" data-src1="./assets/experience-trunk-1.jpg">
+        <div class="d-flex flex-column">
+          <h5>Trunk Studio</h5>
+          <p>UI Designer Intern</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <a id="" class="btn_more" role="button">See More</a>
+        </div>
+      </div>
+    </li>
+    <li class="timeline_ch">
+      <p class="timeline-date">2017 / 07 - 08</p>
+      <div class="timeline-content" data-src1="./assets/experience-trunk-1.jpg">
         <div class="d-flex flex-column">
           <h5>創科資訊 Trunk Studio</h5>
           <p>UI Designer Intern</p>
         </div>
         <div class="d-flex align-items-center">
-          <a id="" class="btn_more" role="button">瞭解更多</a>
+          <a id="" class="btn_more" role="button">See More</a>
         </div>
       </div>
     </li>
-    <li>
+    <li class="timeline_en" style="display: none;">
       <p class="timeline-date">2015 / 09 - 2019 / 06</p>
-      <div class="timeline-content  d-flex justify-content-between" data-src1="none" data-src2="none" data-title="國立臺北教育大學 NTUE" data-subtitle="數位科技設計學系" data-des="Iwewfonslcmsa;:)" data-haslink="none" data-link="">
+      <div class="timeline-content">
+        <div class="d-flex flex-column">            
+          <h5>NTUE (National Taipei University of Education)</h5>
+          <p>Department of Digital Technology Design</p>
+        </div>
+      </div>
+    </li>
+    <li class="timeline_ch">
+      <p class="timeline-date">2015 / 09 - 2019 / 06</p>
+      <div class="timeline-content">
         <div class="d-flex flex-column">            
           <h5>國立臺北教育大學 NTUE</h5>
           <p>數位科技設計學系</p>
-        </div>
-        <div class="d-flex align-items-center">
         </div>
       </div>
     </li>
   </ul>
 </div>
 <div class="col-12 col-sm-9 introCard" id="award">
-    <h1><img src="../images/dot.png" height="48px" class="">比賽獎項 <div>Competition Awards</div></h1>
+    <h1>Awards</h1>
+    <label class="switch-input mt-2" id="lanugaugeSwitch_experience1">
+      <input type="checkbox" role="switch" id="lanugaugeSwitchCheckbox_experience1" trigger-target="timeline2" class="visually-hidden">
+      <span class="switch-input__thumb" aria-hidden="true"></span>
+      <span class="switch-input__decor" data-switch-input-state="on" aria-hidden="true">
+          中
+      </span>
+      <span class="switch-input__decor" data-switch-input-state="off" aria-hidden="true">
+          En
+      </span>
+  </label>
     <ul class="timeline">
-      <li>
-        <p class="timeline-date">2018 / 10 - now</p>
-        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-3-1.jpg" data-src2="none" data-title="國立臺北教育大學 Web & App 創作競賽" data-subtitle="校App 企劃組+成品實作組 第二名" data-des="我跟朋友們一起做的專題，可以透過和藍芽耳機連線的方式，測量學童的腦波，進而增加學童的記憶力，參與這次專案讓我學習到要怎麼將連線外部裝置的流程設計的更順暢、更貼心，另一方面也學習到設計不同種類的分析數據應該怎麼表現，可以讓使用者最快理解其中的資訊，透過比賽更看到來自全國的充滿創意又實用的點子，希望自己也能不段努力，期許在下一次比賽成績能更加進步。" data-haslink="yes" data-link="../meracle/">
+      <li class="timeline2_ch">
+        <p class="timeline-date">2018 / 10 </p>
+        <div class="timeline-content">
           <div class="d-flex flex-column">      
             <h5>跨界超越競賽 Trans Action Award</h5>
             <p>進入決賽</p>
           </div>
-          <div class="d-flex align-items-center">
-            <!-- <a id="" class="btn_more" role="button">瞭解更多</a> -->
+        </div>
+      </li>
+      <li class="timeline2_en" style="display: none;">
+        <p class="timeline-date">2018 / 10 </p>
+        <div class="timeline-content" data-src2="none">
+          <div class="d-flex flex-column">      
+            <h5>Trans Action Award</h5>
+            <p>Final Contest</p>
           </div>
         </div>
       </li>
-      <li>
-        <p class="timeline-date">2017 / 11 / 23</p>
-        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-3-1.jpg" data-src2="none" data-title="國立臺北教育大學 Web & App 創作競賽" data-subtitle="校App 企劃組+成品實作組 第二名" data-des="我跟朋友們一起做的專題，可以透過和藍芽耳機連線的方式，測量學童的腦波，進而增加學童的記憶力，參與這次專案讓我學習到要怎麼將連線外部裝置的流程設計的更順暢、更貼心，另一方面也學習到設計不同種類的分析數據應該怎麼表現，可以讓使用者最快理解其中的資訊，透過比賽更看到來自全國的充滿創意又實用的點子，希望自己也能不段努力，期許在下一次比賽成績能更加進步。" data-haslink="yes" data-link="../meracle/">
+      <li class="timeline2_ch">
+        <p class="timeline-date">2017 / 11</p>
+        <div class="timeline-content" data-src1="./assets/award-ntue-1.jpg" data-link="../meracle/">
           <div class="d-flex flex-column">      
             <h5>國立臺北教育大學 Web & App 創作競賽</h5>
             <p>App 企劃組+成品實作組 第二名</p>
           </div>
           <div class="d-flex align-items-center">
-            <!-- <a id="" class="btn_more" role="button">瞭解更多</a> -->
+            <a id="" class="btn_more" role="button">See More</a>
           </div>
         </div>
       </li>
-      <li>
-        <p class="timeline-date">2017 / 11 / 04</p>
-        <div class="timeline-content d-flex justify-content-between" data-src1="./assets/exp-2-1.jpg" data-src2="./assets/exp-2-2.jpg" data-title="22屆全國大專院校資訊應用服務創新競賽" data-subtitle="校園4G行動應用服務 佳作 & 鈦坦敏捷開發特別獎 第三名" data-des="我跟朋友們一起做的專題，可以透過和藍芽耳機連線的方式，測量學童的腦波，進而增加學童的記憶力，參與這次專案讓我學習到要怎麼將連線外部裝置的流程設計的更順暢、更貼心，另一方面也學習到設計不同種類的分析數據應該怎麼表現，可以讓使用者最快理解其中的資訊，透過比賽更看到來自全國的充滿創意又實用的點子，希望自己也能不段努力，期許在下一次比賽成績能更加進步。" data-haslink="yes" data-link="../meracle/">
+      <li class="timeline2_en" style="display: none;">
+        <p class="timeline-date">2017 / 11</p>
+        <div class="timeline-content" data-src1="./assets/award-ntue-1.jpg" data-link="../meracle/">
+          <div class="d-flex flex-column">      
+            <h5>NTUE Web & App Creation Competition</h5><h5>
+            <p>App Planning & Implementation Divisions, 2nd Place</p>
+          </h5></div>
+          <div class="d-flex align-items-center">
+            <a id="" class="btn_more" role="button">See More</a>
+          </div>
+        </div>
+      </li>
+      <li class="timeline2_ch">
+        <p class="timeline-date">2017 / 11</p>
+        <div class="timeline-content" data-src1="./assets/award-ict-1.jpg" data-src2="./assets/award-ict-2.jpg" data-link="../meracle/">
           <div class="d-flex flex-column">
             <h5>22屆全國資訊應用服務創新競賽</h5>
             <p>校園4G行動應用服務 佳作 & 鈦坦敏捷開發特別獎 第三名</p>
           </div>
           <div class="d-flex align-items-center">
-            <!-- <a id="" class="btn_more" role="button">瞭解更多</a> -->
+            <a id="" class="btn_more" role="button">See More</a>
+          </div>
+        </div>
+      </li>
+      <li class="timeline2_en" style="display: none;">
+        <p class="timeline-date">2017 / 11</p>
+        <div class="timeline-content" data-src1="./assets/award-ict-1.jpg" data-src2="./assets/award-ict-2.jpg" data-link="../meracle/">
+          <div class="d-flex flex-column">
+            <h5>International ICT Innovative Services Awards 2017</h5>
+            <p>Excellent Work & Third Place</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <a id="" class="btn_more" role="button">See More</a>
           </div>
         </div>
       </li>
     </ul>
 </div>
-<div class="col-12 col-sm-9 introCard" id="skill">
-    <h1><img src="../images/dot.png" height="48px" class="">技能 <div>Professional Skills</div></h1>
-    <div class="d-flex flex-wrap mt-4">
-      <span><p class="skill-90">Sketch</p></span>
-      <span><p class="skill-90">Principle</p></span>
-      <span><p class="skill-90">Illustrator</p></span>
-      <span><p class="skill-70">Photoshop</p></span>
-      <span><p class="skill-50">Zeplin</p></span>
-      <!-- <span><p class="skill-50">Marvel</p></span> -->
-      <!-- <span><p class="skill-30">ProtoPie</p></span> -->
-    </div>
-    <div class="d-flex flex-wrap">    
-      <span><p class="skill-90">HTML</p></span>
-      <span><p class="skill-90">CSS</p></span>
-      <span><p class="skill-90">Bootstrap</p></span>
-      <span><p class="skill-70">Jquery</p></span>      
-      <span><p class="skill-30">PHP</p></span>
-      <!-- <span><p class="skill-50">React Native</p></span> -->
-      <!-- <span><p class="skill-30">WordPress</p></span> -->
-    </div>
-</div>
 <div class="col-12 col-sm-9 d-flex flex-column align-items-center" id="outro">
-    <h5>感謝你的觀看:)</h5>
-    <!-- <div class="d-flex flex-row justfy-content-center">
-      <a class="text-center" role="button" id="">
-          取得我的簡歷 
-      </a>
-    </div> -->
     <div class="d-flex flex-row justfy-content-center">
       <a class="text-center" role="button" id="gotoTop">
-          回到上面 
+        <i data-feather="arrow-up"></i>
+          Top
       </a>
-      <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_self">
-          聯絡我
+      <a href="./assets/2025resume_en.pdf" download="Resume_LoraLin_En.pdf" class="text-center" role="button">
+          <i data-feather="download"></i>
+          Resume
+      </a>
+      <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_blank">
+          <i data-feather="send"></i>
+          Email
       </a>
     </div>
 </div>
@@ -421,239 +521,115 @@
 </div>
 <div class="expWindow d-flex flex-column">
   <div class="close-tag"></div>
-  <div id="expGallery" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#expGallery" data-slide-to="0" class="active"></li>
-      <li data-target="#expGallery" data-slide-to="1"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img id="expGalleryImg-1" class="d-block" src="" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img id="expGalleryImg-2" class="d-block" src="" alt="Second slide">
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#expGallery" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#expGallery" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+  <div id="expGallery">
+    <img id="expGalleryImg-1" class="d-none" src="">
+    <img id="expGalleryImg-2" class="d-none" src="">
   </div>
-
-  <div id="expArticle" class="">
+  <div id="expArticle" class="d-none w-100">
       <h5></h5>
       <p></p>
       <p></p>
-      <a href="" role="button">查看詳細介紹Go</a>
+      <a href="" id="expArticle_btn" class="d-none" role="button" target="_blank">
+        View Works<i data-feather="arrow-right"></i>
+      </a>
   </div>
 </div>
 
 <script>
-//定義calssName
-var sideBar = $('.sideBar') ;
-//sideBar距離上面
-var sticky = $('.sideBar').offset().top;
-// var stickyXS = sticky-50;
-var stickySM = sticky-22;
-//裝置寬度
-var deviceWidth = $(window).width();
-//break point
-var smSize = 575.98;
-
+const $sideBar = $('.sideBar');
+const sticky = $sideBar.offset().top;
+const stickySM = sticky - 22;
+const smSize = 575.98;
+const aboutPageItems = ['about', 'skill', 'experience', 'award'];
+let deviceWidth = $(window).width();
 
 $(document).ready(function(){
   fixSideBar();
 });
 
-//調整裝置大小時
 $(window).resize(function() {
   deviceWidth = $(window).width();
-  console.log('resize........to ' + deviceWidth + 'px');
-  showActive(); //重新判斷active的條件
+  showActive();
 });
 
-//捲動視窗時  
-$(window).scroll(function(){
-  console.log('----------------\nwindow is scrolling to ' + window.pageYOffset + 
-  'px,\n and sideBar is away from top ' + sideBar.offset().top + ' px\n---------------');  
-  fixSideBar(); //固定sideBar
-  showActive(); //顯示active樣式
+$(window).scroll(function() {
+  fixSideBar();
+  showActive();
 });
-
 
 function showActive() {
-  if( deviceWidth > smSize ){ //裝置高於575.98px時，顯示active的區域
-
-    $('.sideBarContent a').css('border-bottom','none');//把border-bottom的樣式取消
+  const activeClassName = [deviceWidth > smSize ? 'active_lg': 'active_sm', deviceWidth > smSize ? 'active_sm': 'active_lg'];
+  const reserveSpace = deviceWidth > smSize ? 32 : 180;
+  const windowOffset = window.pageYOffset;
+  const itemsOffset = [$('#about').offset().top - reserveSpace, $('#skill').offset().top - reserveSpace, $('#experience').offset().top - reserveSpace, $('#award').offset().top - reserveSpace, windowOffset + 1];
+  
+    $('.sideBarContent a').removeClass(activeClassName[1]);
     
-    if(sideBar.offset().top+22 < 840){
-      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');
-      $('#aboutTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#aboutTarget').css('color','#050505');
-    }else if(sideBar.offset().top+22 >= 840 && sideBar.offset().top+22 < 1480){
-      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#experienceTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#experienceTarget').css('color','#050505');
-    }else if(sideBar.offset().top+22 >= 1480 && sideBar.offset().top+22 < 1980){
-      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#awardTarget-md').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#awardTarget-md').css('color','#050505');
-    }else if(sideBar.offset().top+22 >= 1980){
-      $('.js-scroll-trigger').css('border-right','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#skillTarget').css('border-right','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#skillTarget').css('color','#050505');
+    for (const [index, value] of itemsOffset.entries()) {
+      if (windowOffset - value < 0) {
+        $('.js-scroll-trigger').removeClass(activeClassName[0]);
+        $(`#${aboutPageItems[index - 1]}Target`).addClass(activeClassName[0]);
+        break;
+      }
     }
-
-  }else if( deviceWidth >= 375 ){ //裝置低於575.98px、大於375px時，顯示active的區域
-
-    $('.sideBarContent a').css('border-right','none');//把border-right的樣式取消
-
-    if(window.pageYOffset < 1530){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');
-      $('#aboutTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#aboutTarget').css('color','#050505');
-    }else if(window.pageYOffset < 2270){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#experienceTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#experienceTarget').css('color','#050505');
-    }else if(window.pageYOffset < 2840){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#awardTarget-sm').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#awardTarget-sm').css('color','#050505');
-    }else if(window.pageYOffset >= 2840){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#skillTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#skillTarget').css('color','#050505');
-    }
-
-  }else if( deviceWidth <= 360 ){ //裝置低於360px時，顯示active的區域
-    $('.sideBarContent a').css('border-right','none');//把border-right的樣式取消
-
-    if(window.pageYOffset < 1600){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');
-      $('#aboutTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#aboutTarget').css('color','#050505');
-    }else if(window.pageYOffset < 2340){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#experienceTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#experienceTarget').css('color','#050505');
-    }else if(window.pageYOffset < 2940){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#awardTarget-sm').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#awardTarget-sm').css('color','#050505');
-    }else if(window.pageYOffset >= 2940){
-      $('.js-scroll-trigger').css('border-bottom','rgba(0, 0, 0, 0.01) 5px solid');
-      $('.js-scroll-trigger').css('color','#595959');      
-      $('#skillTarget').css('border-bottom','rgba(0, 0, 0, 0.2) 5px solid');
-      $('#skillTarget').css('color','#050505');
-    }
-  }
 }
 
 function fixSideBar() {
   if( deviceWidth > smSize ){
     if (window.pageYOffset >= stickySM) {
-      $('.sideBar').addClass('sticky');
+      $sideBar.addClass('sticky');
     } else {
-      $('.sideBar').removeClass('sticky'); 
+      $sideBar.removeClass('sticky'); 
     }
   }else{
     if (window.pageYOffset >= sticky) {
-      $('.sideBar').addClass('sticky');
+      $sideBar.addClass('sticky');
     } else {
-      $('.sideBar').removeClass('sticky'); 
+      $sideBar.removeClass('sticky'); 
     }
   }
 }
 
-
-//點擊sideBarContent的動畫
+// animation of clicking sideBarContent
 $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-    var target = $(this.hash);
+    let target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    console.log('' + this.hash + '=' + target.offset().top);
+    
+    const distance = deviceWidth > smSize ? target.offset().top - 20 :target.offset().top - 140
+
     if (target.length) {
-      if( deviceWidth > smSize ){
-        $('html, body').animate({
-          scrollTop: target.offset().top-20
-        }, 1000, "easeInOutExpo");
+        $('html, body').animate({ scrollTop: distance }, 1000, "easeInOutExpo");
         return false;
-      }else{
-        $('html, body').animate({
-          scrollTop: target.offset().top-140
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
     }
   }
 });
 
-$('.timeline-content').mouseenter(function() {
-  $(this).children('div').children('.btn_more').css('background','#496F85');
-  $(this).children('div').children('.btn_more').css('color','#FFFFFF');
-})
-
-$('.timeline-content').mouseleave(function() {
-  $(this).children('div').children('.btn_more').css('background','rgba(256,256,256, .7)');
-  $(this).children('div').children('.btn_more').css('color','#496F85');
-})
-
 // About page Popup Modal Start
 $('.btn_more').click(function() {
-  var clicked_content = $(this).parent('div').parent('.timeline-content');
+  $('#expGalleryImg-1, #expGalleryImg-2').attr('src', '').addClass('d-none');
+  $('#expArticle_btnexpArticle_btn').attr('href', '').addClass('d-none');
 
-  var src1 = clicked_content.data('src1');
-  var src2 = clicked_content.data('src2');
-  var title = clicked_content.data('title');
-  var subtitle = clicked_content.data('subtitle');
-  var des = clicked_content.data('des');
-  var haslink = clicked_content.data('haslink');
-  var link = clicked_content.data('link');
+  const $clicked_content = $(this).parents('.timeline-content');
+  const src1 = $clicked_content.data('src1');
+  const src2 = $clicked_content.data('src2');
+  const link = $clicked_content.data('link');
+
+  if(src1 != null && src1 != undefined  && src1 != ''){
+    $('#expGalleryImg-1').attr('src', src1).removeClass('d-none');
+  }
   
-  if(src1 !== 'none' && src2 !== 'none'){
-    $('#expGallery').css('display','flex');
-    // $('#expArticle').css('width','50%');
-    $('#expGalleryImg-1').attr('src',src1);
-    $('#expGalleryImg-2').attr('src',src2);
-  }else if(src1 !== 'none' && src2 == 'none'){
-    $('#expGallery').css('display','flex');
-    // $('#expArticle').css('width','50%');
-    $('#expGalleryImg-1').attr('src',src1);
-    $('#expGalleryImg-2').attr('src',src1);
-  }else if(src1 == 'none' && src2 == 'none'){
-    $('#expGallery').css('display','none');
-    $('#expArticle').css('width','100%');
+  if(src2 != null && src2 != undefined && src2 != ''){
+    $('#expGalleryImg-2').attr('src', src2).removeClass('d-none');
   }
- 
-  $('#expArticle h5').html(title);
-  $('#expArticle p:first').html(subtitle);
-  $('#expArticle p:last').html(des);
+  
+  if(link != null && link != undefined && link != ''){
+    $('#expArticle_btnexpArticle_btn').attr('href', link).removeClass('d-none');
+  }
   $('.expWindow').addClass('window-show');
-  if( haslink == 'yes' ){
-    $('#expArticle a').attr('href',link);
-  }else if( haslink == 'none' ){
-    $('#expArticle a').css('display','none');
-  }
-})
+});
 
 $('.close-tag').click(function(){
-  console.log('close-tag clicked');
   $('.expWindow').removeClass('window-show');
 }); 
 
@@ -664,7 +640,6 @@ $(document).keyup(function(e){
       $('.expWindow').removeClass('window-show');
   }
 });
-// about page popup modal End
 
 function copyInfo(id) {
   const $temp = $('<input>');
@@ -688,7 +663,49 @@ function popUpDialog(content){
   });
 }
 
-function changeLanguage() {
+$('.skillDetail').on('mouseenter', function(e) { 
+  let skillTitle = $(this).attr('skill-title');
+  let skillProperty = skillTitle.toLowerCase().replace(/ /g,'');
+  let skillDescription = $(this).attr('skill-description') == undefined ?  '' : $(this).attr("skill-description");
+  let skillWorks = $(this).attr('skill-work');
+  let hasWork = skillWorks == undefined ? 'd-none' : '';
+
+  let popover = `<div id="skillPopover">
+      <div id="skillPopover_title">
+        <h6>${skillTitle}</h6>
+        <p>${skillDescription}</p>
+      </div>
+      <div id="skillPopover_seemore" class="${hasWork}">
+        <a target="_blank" href="${skillWorks}">See My Works</a>
+      </div>
+      <div id="skillPopover_image">
+        <img src="./assets/skill_${skillProperty}.png">
+      </div>
+    </div>`;
+
+  $(this).prepend(popover);
+});
+
+$('.skillDetail').on('mouseleave', function() { 
+  $('#skillPopover').remove();
+});
+
+$('[id^="lanugaugeSwitchCheckbox_"]').on("change", function(){ changeAboutPageLanguage(this);});
+
+function changeAboutPageLanguage(target) {
+  const $switcher = $(target);
+  const targetName  = $switcher.attr('trigger-target');
+
+  if($switcher.prop('checked')) {
+    $('.' +  targetName + '_en').show();
+    $('.' +  targetName + '_ch').hide();
+  } else {
+    $('.' +  targetName + '_ch').show();
+    $('.' +  targetName + '_en').hide();
+  }
+}
+
+function changeResumeLanguage() {
   const $hiddenImage = $('.resumeImage.d-none');
   const $displayedImage = $('.resumeImage:not(.d-none)');
   const $hiddenBtn = $('.controlBar a[download].d-none');
