@@ -207,11 +207,11 @@
       
   		<div class="row maxWidth">
   			<div class="intro">
-    <div class="col-12 justify-content-center mt-5 mb-5">
-        <h4 id="sayHello">Hello～<span></span>, <br class="d-block d-sm-none">I'm Lora Lin,  </h4>
-        <h1>a UI<span>/</span>UX Designer. </h1>
+    <div class="d-flex col-12 justify-content-center">
+        <h4 id="sayHello">Hi <span></span>, <br class="d-block d-sm-none">I'm Lora Lin 😊</h4>
+        <h1 class="d-none">a UI<span>/</span>UX Designer. </h1>
     </div>
-    <div class="col-12 d-flex justify-content-center mt-5">
+    <div class="col-12 justify-content-center mt-5 d-none">
         <div class="button-container button-flip3d-vertical2">
             <div class="flipper flipper-flip3d-vertical2">
                 <div class="button front">
@@ -240,12 +240,11 @@
         $('#sayHello span').append('nice to meet you');
     }
 
-    //點擊CTA的button
     $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        //滑下去作品集的動畫
+
         if (target.length) {
             $('html, body').animate(
                 {scrollTop: target.offset().top-20}, 1000, "easeInOutExpo");
@@ -300,7 +299,7 @@
         
          
           <span class="tag">
-              UX Research & Design
+              UX Research
           </span>
           
         

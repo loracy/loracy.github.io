@@ -23,7 +23,7 @@
 
   <!-- Title -->
   
-  <title>taischool - Lora | portfolio</title>
+  <title>Tai School - Lora | portfolio</title>
 
   <!--Favicon-->
   <link rel="icon" href="/favicon/favicon.ico">
@@ -207,12 +207,12 @@
       
   		<div class="row maxWidth">
   			<div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/unsplash.jpg" alt="taischool">
+  <img class="img-fluid project-img" src="/images/taischool/cover.png" alt="Tai School">
 </div>
       
 <div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
-  <h1>taischool</h1>
-</div><!-- titleSection -->
+  <h1>Tai School</h1>
+</div>
 
 <div class="col-1 col-sm-1 col-md-3 col-lg-3 pt-lg-3 mb-0 mb-md-4 portfolioSidebar">
   <div class="portfolioSidebar-container portfolioSidebar-relative d-flex flex-row justify-content-end">
@@ -221,29 +221,53 @@
     <div class="portfolioSidebar-progress">
     </div>
   </div>
-</div><!-- portfolioSidebar -->
+</div>
 
-<!-- <div class="col-12 col-md-7 pt-lg-3 mb-4 portfolioSection"> -->
 <div class="col-12 col-sm-9 col-md-8 col-lg-8 pt-lg-3 mb-4 portfolioSection">
-  <h3>產品介紹</h3>
-<h3>擔任職位</h3>
-<p><span class="strenthen">UI / UX  Design</span></p>
-<p><a href="https://www.taischool.com/about" target="_blank" rel="noopener">https://www.taischool.com/about</a></p>
+  <span class="works-platform">
+<i data-feather="smartphone"></i>Website
+</span>
+<span class="works-role ml-2">
+<i data-feather="briefcase"></i>UI / UX  Design
+</span>
+<h3>Overview</h3>
+<p>In this website, I am in charge of the UI design, including RWD design, graphic delivery, animaion planning, .</p>
+<h3>Mockups</h3>
+<img src="/images/taischool/cart.png" class="demoImg mb-lg-2">
+<img src="/images/taischool/chapter(noComment).png" class="demoImg mb-lg-2">
+<img src="/images/taischool/courseList(full).png" class="demoImg mb-lg-2">
+<img src="/images/taischool/goldenMember.png" class="demoImg mb-lg-2">
+<img src="/images/taischool/purchaseHistory.png" class="demoImg mb-lg-2">
+<img src="/images/taischool/accountInfo.png" class="demoImg mb-lg-2">
+<img src="/images/taischool/withCoupon.png" class="demoImg mb-lg-2">
+<h3>Prototype</h3>
+<video class="demoVideo" width="400" controls>
+  <source src="/images/taischool/courseVideo-1.mp4" type="video/mp4">
+</video>
+<video class="demoVideo" width="400" controls>
+  <source src="/images/taischool/about-1new.mp4" type="video/mp4">
+</video>
+<h3>Website</h3>
+<p><a href="https://www.taischool.com/about" target="_blank" rel="noopener">https://www.taischool.com/about</a><button class="outlineBtn d-inline-flex ml-3" onclick="window.open('https://www.taischool.com/abouthttps://www.taischool.com/about')"><i data-feather="link"></i></button><button class="outlineBtn d-inline-flex mx-1" onclick="copyUrl('https://www.taischool.com/about')"><i data-feather="copy"></i></button></p>
 
-</div><!-- portfolioSection -->
+</div>
 
-<div class="col-12 d-flex flex-column align-items-center thankSection">
-  <p><span></span>感謝你的觀看：）</p>
-  <a class="text-center" role="button" id="gotoTop">回到最上面</a>
-</div><!-- thankSection -->
+<div class="col-12 d-flex justify-content-center align-items-center thankSection">
+  <a class="text-center" role="button" target="_blank" href="mailto:lora860227@gmail.com">
+    <i data-feather="send"></i>Contact
+  </a>
+  <a class="text-center" role="button" id="gotoTop">
+    <i data-feather="arrow-up"></i>Top
+  </a>
+</div>
 
 <div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
     
-    <a class="d-flex align-items-center link-prevPage" href="" data-link="myfrees/">
+    <a class="d-flex align-items-center link-prevPage" href="" data-link="tdal/">
       <img src="/images/svg/arrow-left.svg">
       <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
         <span>上一篇</span>
-        Myfrees
+        TDAL
       </p>
     </a>
   
@@ -257,7 +281,7 @@
       <img src="/images/svg/arrow-right.svg">
     </a>
   
-</div><!-- navigateSection -->
+</div>
 
 
 <script>
@@ -280,9 +304,6 @@
     $('.link-nextPage').attr('href', '../../' + nextLink + guestName);
     $('.link-prevPage').attr('href', '../../' + prevLink + guestName);
     
-    //＝＝＝＝＝＝＝＝＝＝＝＝有關作品集旁邊的sidebar＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-
-    //得到作品集裡面所有的大標題
     var obj = $('.portfolioSection h3');
     
     //把作品集裡所有的大標題，弄成旁邊進度條的可點擊之Menu
@@ -297,10 +318,10 @@
       }
     });
     
-    //點擊progress的item，會滑到該項目的文章
+
     $('.portfolioSidebar-Item').click(function() {
       var target = $(this).index();
-      console.log(obj[target].offsetTop);
+
       if( deviceWidth > smSize ){
         $('html, body').animate(
           {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
@@ -312,19 +333,9 @@
     
     $(window).scroll(function(){
       fixPortfolioSidebar();
-      progessBar();
-      
-      //＝＝＝＝＝＝＝＝＝＝＝＝＝debug用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-      // console.log('Window Offset = ' + window.pageYOffset);
-      // console.log('h3[3] = ' + obj[0].offsetTop);
-      // console.log('h3[3] = ' + obj[1].offsetTop);
-      // console.log('h3[3] = ' + obj[2].offsetTop);
-      // console.log('h3[3] = ' + obj[3].offsetTop);
-      //＝＝＝＝＝＝＝＝＝＝＝＝＝debug用＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-    
+      progessBar();    
     });
     
-    // fix the side bar beside the article
     function fixPortfolioSidebar(){
       var addSticky = $('.titleSection').offset().top + 100;
       if( deviceWidth >= smSize ){
@@ -355,31 +366,107 @@
       var currentHeight = window.pageYOffset;
       $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
     }
+
+    function copyUrl(url) {
+      const $temp = $('<input>');
+      const text = url;
+
+      if(text != '' || text != null || text != undefined) { 
+        $('body').append($temp);
+        $temp.val(text).select();
+        document.execCommand('copy');
+        $temp.remove();
+        popUpDialog(`The URL has been copied to your clipboard.`);
+      }
+    }
+
+    function popUpDialog(content){
+      $('.popup').html(content);
+      $('.popup').fadeIn(400 ,function(){
+        setTimeout(() => {
+          $('.popup').fadeOut(2000);
+        }, 2500);
+      });
+    }
     </script>
 
-<div class="window">
+<div class="portfolioWindow">
+
     <div class="close-tag"></div>
     <img src="">
+
+    <div class="previous-tag">
+        <i data-feather="arrow-left"></i>
+    </div>
+    <div class="next-tag">
+        <i data-feather="arrow-right"></i>
+    </div>
 </div>
-<!-- popup modal js -->
 <script>
+    let $precentImg, $prevImg, $nextImg;
+
+    $('.previous-tag').click(function(){
+        $precentImg = $prevImg.length == 0 ? $precentImg : $prevImg;
+        $prevImg = $precentImg.prev('.demoImg').length == 0 ? $precentImg : $precentImg.prev('.demoImg');
+        $nextImg =  $precentImg.next('.demoImg');
+        $('.next-tag').show();
+
+        if($prevImg == $precentImg) {
+            $('.previous-tag').hide();
+        }
+
+        const src = $precentImg.attr('src');
+        $('.portfolioWindow img').attr('src', src)
+    });
+    
+    $('.next-tag').click(function(){
+        $precentImg = $nextImg.length == 0 ? $precentImg : $nextImg;
+        $prevImg =  $precentImg.prev('.demoImg');
+        $nextImg =  $precentImg.next('.demoImg').length == 0 ? $precentImg : $precentImg.next('.demoImg');
+        $('.previous-tag').show();
+
+        if($nextImg == $precentImg) {
+            $('.next-tag').hide();
+        }
+
+        const src = $precentImg.attr('src');
+        $('.portfolioWindow img').attr('src', src);
+    });
+    
     $('.demoImg').click(function(){
-        console.log('demoImg is clicked');
-        var src = this.src;
-        $('.window img').attr('src',src);
-        $('.window').addClass('window-show');
+        const src = this.src;
+        
+        $precentImg =  $(this);
+        $prevImg =  $precentImg.prev('.demoImg');
+        $nextImg =  $precentImg.next('.demoImg');
+        
+        if($prevImg.length == 0  && $nextImg.length == 0) {
+            $('.previous-tag, .next-tag').hide();
+        } else {
+            if($prevImg.length == 0) {
+                $('.previous-tag').hide();
+                $('.next-tag').show();
+            } else if($nextImg.length == 0) {
+                $('.next-tag').hide();
+                $('.previous-tag').show();
+            } else {
+                $('.next-tag, .previous-tag').show();
+            }
+        }
+
+        $('.portfolioWindow img').attr('src', src);
+        $('.portfolioWindow').addClass('window-show');
     });
 
     $('.close-tag').click(function(){
-        console.log('close-tag clicked');
-        $('.window').removeClass('window-show');
+        $('.portfolioWindow').removeClass('window-show');
     });
 
     $(document).keyup(function(e){
         var keyWhich =  e.which;
         var keyCode =  e.keyCode;
         if(keyWhich == 27 || keyCode == 27){
-            $('.window').removeClass('window-show');
+            $('.portfolioWindow').removeClass('window-show');
         }
     });        
 </script>

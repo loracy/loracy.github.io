@@ -18,6 +18,8 @@
     --main-green: #496f85;
     --secondary-green-100: #8AA1B1;
     --secondary-green-30: #8aa1b14d;
+    --font-darkest: #292b2c;
+    --font-dark: #797979;
 
     --switch-input-thumb-size: 32px;
     --switch-input-thumb-bg: #ffffff;
@@ -99,7 +101,6 @@ ul{
     z-index: 100;
 }
 
-
 /* ------------intro------------ */
 #sayHello span{
     font-family: inherit;
@@ -107,7 +108,7 @@ ul{
 
 .intro{
     width: 100%;
-    height: 70vh;
+    /* height: 70vh; */
 }
 
 .intro h1{
@@ -141,7 +142,7 @@ ul{
     font-family: inherit!important;
     font-weight: 600;
     color: #404345;
-    margin-top: 24px;
+    margin-top: 4px;
     margin-bottom: 24px;
     letter-spacing: .02rem;
 }
@@ -163,7 +164,6 @@ ul{
     .intro h4 span{
         font-size: 1.3rem;
     }
-
 }
 
 /* ---------------intro button start---------------- */
@@ -270,6 +270,22 @@ ul{
 
 /* ---------------intro button end---------------- */
 
+.works-platform,
+.works-role {
+    font-family: inherit;
+    font-size: inherit;
+    display: inline-block;
+    border-bottom: 1.5px dashed rgba(0, 0, 0, 0.4);
+    padding-right: 4px;
+    margin: 0 0 5px 0;
+}
+
+.works-role svg,
+.works-platform svg {
+    height: 12px;
+    margin-right: 4px;
+}
+
 .portfolioList li{
     padding: 15px;
     background-color: rgba(256,256,256,.2);
@@ -290,7 +306,6 @@ button {
 
 button:hover {
     color: #000;
-    border: solid #000 2px;
     text-decoration: none;
 }
 
@@ -344,7 +359,6 @@ textarea:focus {
     }
 }
 
-
 .portfolioSidebar-container{
     margin-right: 48px;
     margin-top: 48px;
@@ -375,10 +389,6 @@ textarea:focus {
         background: rgba(256, 256, 256, 0.5);
         z-index: -1;
     }
-}
-
-.portfolioSidebar-h3list{
-    
 }
 
 @media screen and (max-width: 767px) {
@@ -443,12 +453,11 @@ textarea:focus {
     text-align: left;
     font-size: 1.1rem;
     font-weight: bold;
-    letter-spacing: 0.12rem;
-    color: rgba(0,0,0, 0.6);
-    background: rgba(256, 256, 256, 0.2);
+    letter-spacing: 0.06rem;
+    color: var(--font-darkest);
     display: flex;
     align-items: center;
-    padding: 12px;
+    padding: 10px;
 }
 
 .portfolioSection p{
@@ -470,12 +479,41 @@ textarea:focus {
     color: #333333;
     text-decoration: none;
     border-bottom: 1px solid #bbbbbb;
+    padding: 1px 2px 1px 5px;
+    font-size: 0.8em;
+}
+
+.outlineBtn {
+    border: 1px solid var(--font-darkest);
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 0.6em;
+    padding: 4px 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.outlineBtn:hover {
+    background-color: var(--secondary-green-30);
+    cursor: pointer;
+}
+
+.outlineBtn svg{
+    color: var(--font-darkest);
+    height: 12px;
+}
+
+.portfolioSection a svg{
+    color: var(--font-darkest);
+    height: 12px;
 }
 
 .portfolioSection a:hover{
     color: #000000;
     text-decoration: none;
     border-bottom: 1px solid #555555;
+    cursor: pointer;
 }
 
 .navbar-brand {
@@ -487,7 +525,6 @@ textarea:focus {
 }
 
 .navbar-brand:hover {
-
     text-shadow: .5px .5px #576982;
     transition: all 1s; 
 }
@@ -537,7 +574,7 @@ textarea:focus {
 
 .portfolio-img {
     width: 100%;
-    max-height: 250px;
+    max-height: 220px;
     display: block;
     object-fit: cover;
 }
@@ -549,7 +586,6 @@ textarea:focus {
 }
 
 /* ------workCard------ */
-
 .workCard {
     width: 100%;
     height: 100%;
@@ -558,15 +594,15 @@ textarea:focus {
     position: relative;
     padding-bottom: 16px;
     background: #fff;
-    box-shadow: 0 20px 24px -10px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 20px 24px -8px rgba(0, 0, 0, 0.2);
     border-radius: .4rem;
-    transition: all .35s;
+    transition: all .25s;
 }
 
 .workCard:hover {
-    box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.13), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     cursor: pointer;
-    transition: all .35s;    
+    transition: all .25s;    
 }
 
 .workCard .overlay {
@@ -577,7 +613,7 @@ textarea:focus {
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.15);
-    transition: all .4s;
+    transition: all .25s;
 }
 
 .workCard .product-title {
@@ -587,7 +623,6 @@ textarea:focus {
     text-decoration: none !important;
     font-size: 16px;
     color: #292b2c;
-    /* color: #284247; */
     letter-spacing: 1px;
     line-height: 24px;
     text-align: left;
@@ -613,7 +648,6 @@ textarea:focus {
     transition: opacity 0.35s, transform 0.35s;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    /* border-radius: .4rem; */
 }
 
 /* ------portfolio title------ */
@@ -628,7 +662,6 @@ textarea:focus {
 }
 
 /* ------tags------ */
-
 .tags-container {
     margin-top: 20px;
 }
@@ -649,7 +682,6 @@ textarea:focus {
     padding: 4px 16px;
     float: left;
     margin-left: 0;
-    
 }
 
 .tags-filter{
@@ -668,7 +700,6 @@ textarea:focus {
     margin-left: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-
 }
 
 .tags-filter .tag:hover {
@@ -701,6 +732,14 @@ span {
 }
 
 /* ------demoImg------ */
+.demoVideo{
+    border: rgba(255, 255, 255, 0.4) 5px solid;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0px 3px 9px rgba(0,0,0,.05);
+    transition: all 0.5s;
+    margin-left: 8px;
+}
 
 .demoImg{
     border: rgba(255, 255, 255, 0.4) 5px solid;
@@ -708,6 +747,7 @@ span {
     border-radius: 4px;
     box-shadow: 0px 3px 9px rgba(0,0,0,.05);
     max-height: 280px;
+    max-width: 320px;
     transition: all 0.5s;
     margin-left: 8px;
 }
@@ -739,20 +779,28 @@ span {
 }
 
 /* ------window------ */
-
-.window{
+.portfolioWindow{
+    background: rgba(0, 0, 0, 0.7);
+    border: rgba(0, 0, 0, 0.1) 16px solid;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);    
     position: fixed;
-    height: 80%;
+    width: 100vw;
+    height: 100vh;
     left: 50%;
     top: 50%;
     visibility: hidden;
     opacity: 0;
+    z-index: 100;
     -webkit-transition: all 0.6s;
     -webkit-transform: translateX(-50%) translateY(-50%) scale(0.6);
+    overflow: scroll;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 575.98px) {
-    .window{
+    .portfolioWindow{
         height: 100%;
         width: 100%;
         left: 50%;
@@ -764,7 +812,7 @@ span {
     }
 }
 
-.window img{
+.portfolioWindow img{
     height: 100%;
     border: rgba(255, 255, 255, 0.6) 8px solid;
     border-radius: 4px;
@@ -772,10 +820,9 @@ span {
 }
 
 @media screen and (max-width: 575.98px) {
-    .window img{
+    .portfolioWindow img{
         width: 100%;
         height: auto;
-
     }
 }
 
@@ -785,25 +832,65 @@ span {
     -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
-/* -----close-tag----- */
+/* -----close & next & previous tag----- */
+.next-tag,
+.previous-tag {
+    color:  #FFF;
+    position: absolute;
+    top: calc(50% - 16px);
+    width: 32px;
+    height: 32px;
+    cursor: pointer;    
+    background: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.1) 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    z-index: 101;
+}
+.next-tag {
+    right: 32px;
+}
+.previous-tag {
+    left: 32px;
+}
+.next-tag:hover,
+.previous-tag:hover{
+    border: rgba(255, 255, 255, 0.1) 3px solid;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.next-tag:active,
+.previous-tag:active{
+    border: rgba(255, 255, 255, 0.2) 3px solid;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+    box-shadow: 0px 0px 0 rgba(0, 0, 0, 0.2);
+}
+
 .close-tag {
     position: absolute;
     right: 12px;
     top: 12px;
     width: 32px;
     height: 32px;
-    cursor: pointer;    
-    background: rgba(255, 255, 255, 0.2);
-    border: rgba(255, 255, 255, 0.1) 2px solid;
-    border-radius: 4px;
-    box-shadow: 0px 2px 6px rgba(0,0,0,.2);
-    -webkit-transition: all 1s;
-    -ms-transition: all 1s;
-    -moz-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
+    cursor: pointer;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
     z-index: 100;
 }
+
+.close-tag:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.1) 2px solid;
+    -webkit-transition: all 0.1s;
+    transition: all 0.1s;
+}
+
 .close-tag:before,
 .close-tag:after {
     content: '';
@@ -821,6 +908,7 @@ span {
     width: 10%;
     height: 80%;
 }
+
 .close-tag:after {
     top: 45%;
     left: 10%;
@@ -851,12 +939,6 @@ span {
         width: 100vw;
         z-index: 200;
     }
-}
-
-.window-show{
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
 #expGallery{
@@ -971,29 +1053,34 @@ span {
     margin: 0;
 }
 
+.thankSection a svg {
+    margin-right: 4px;
+    height: 18px;
+}
+
 .thankSection a{
     text-decoration: none;
     color: #545454!important;
     font-size: 12px;
     font-weight: bold;
-    background: rgba(256, 256, 256, .5) !important;
+    background: rgba(255, 255, 255, .5) !important;
     border: 1px solid #CFD9DF !important;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, .1) !important;
-    padding: 12px 32px;
+    padding: 12px 32px 12px 26px;
     max-width: 240px;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
 }
-
 
 .thankSection a:hover{
     text-decoration: none;
-    color: #000000!important;
-    background: rgba(256, 256, 256, .7) !important;
+    background: rgba(256, 256, 256, .9) !important;
     box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, .05) !important;    
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
 }
 
 .thankSection a span{
@@ -1634,7 +1721,6 @@ label[id^="lanugaugeSwitch_"] {
     color: white;
     font-size: 12px;
     font-weight: bold;
-    /* background: rgba(256, 256, 256, .5); */
     background: #496f85;
     padding: 12px 32px;
     margin: 0 8px;
@@ -1642,12 +1728,10 @@ label[id^="lanugaugeSwitch_"] {
     border-radius: 8px;
     box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, .1);
     max-width: 240px;
-    transition: all 1s;
-    -webkit-transition: all 0.5s;
-
+    transition: all 0.05s;
+    -webkit-transition: all 0.05s;
     display: flex;
     align-items: center;
-
 }
 
 #outro a svg {
@@ -1657,26 +1741,23 @@ label[id^="lanugaugeSwitch_"] {
 }
 
 #outro a:hover{
-    color: #000000;
     text-decoration: none;
     box-shadow: 0px 1px 4px rgba(0,0,0,.1);    
-    transition: all 1s;
+    transition: all 0.05s;
+    -webkit-transition: all 0.05s;
     cursor: pointer;
-    /* cursor: url(shoes3.png) 12 27, pointer; */
 }
 
 @media screen and (max-width: 575.98px) {
     #outro {
         margin-top: 24px;
     }
-
 }
 
 #main{
     width: 100%;
     position: relative;
     overflow: hidden;
-
 }
 
 .mask-top{
@@ -1688,8 +1769,6 @@ label[id^="lanugaugeSwitch_"] {
     left: 0;
     transition: all .8s;
     z-index: 10;
-    
-    
 }
 
 .mask-bottom{
@@ -1703,8 +1782,6 @@ label[id^="lanugaugeSwitch_"] {
     z-index: 10;
 }
 
-
-
 .mask-top:hover,
 .mask-bottom:hover{
     top: 0px;
@@ -1713,7 +1790,6 @@ label[id^="lanugaugeSwitch_"] {
     transition: all .8s;
     z-index: 100;
 }
-
 
 #qq-intro{
     position: fixed;
@@ -1760,24 +1836,6 @@ label[id^="lanugaugeSwitch_"] {
         top: 0%;        
     }
 }
-
-/* #qq-intro #hair{
-    display: none;
-    position: absolute;
-    top: -200%;
-    
-    animation: slideDown 4s ease-in-out both;
-} */
-
-/* ellipse { 
-    stroke-dasharray: 3; 
-    stroke-dashoffset: 2; 
-}
-ellipse,path,circle { 
-    stroke-dasharray: 1000; 
-    stroke-dashoffset: 1000; 
-    animation: dash 2s linear both ; 
-}  */
 
 #ContactMenuList {
     height: 100%;
@@ -1882,7 +1940,6 @@ ellipse,path,circle {
     container-type: inline-size;
     display: flex;
     align-items: center;
-    /* box-shadow: 0 0 0 1.5px rgba(139, 161, 177, 0.3); */
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
 }
 
@@ -1932,16 +1989,6 @@ ellipse,path,circle {
     margin: 0;
     box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.3);
     z-index: 0;
-}
-
-.switch-input:has(:focus) .switch-input__thumb {
-}
-
-.switch-input:has(:focus-visible) .switch-input__thumb {
-}
-
-.switch-input:has(:checked) {
-    
 }
 
 .switch-input:has(:checked) .switch-input__thumb {
