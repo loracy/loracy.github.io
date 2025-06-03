@@ -20,7 +20,6 @@
     --secondary-green-30: #8aa1b14d;
     --font-darkest: #292b2c;
     --font-dark: #797979;
-
     --switch-input-thumb-size: 32px;
     --switch-input-thumb-bg: #ffffff;
     --switch-input-thumb-stroke: 1px solid grey;
@@ -86,19 +85,30 @@ ul{
 }
 
 .popup{
-    display: none;
-    width: 280px;
+    display: block;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
     position: fixed;
-    right: 24px;
-    bottom: 24px;
+    right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: -25%;
     color: rgba(0, 0, 0, 0.88);
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
     font-size: .8em;
-    padding: 1.2em 1.6em;
-    background: rgba(256, 256, 256,.9);
-    border: rgba(256, 256, 256, .5) 1px solid;
-    border-radius: 4px;
-    box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.1), 0 1px 6px 0 rgba(0, 0, 0, 0.3);
-    z-index: 100;
+    padding: 1.2em 1.8em;
+    background: rgba(255, 255, 255, 0.9);
+    border: rgba(255, 255, 255, .3) 1px solid;
+    box-shadow: 0 -3px 12px -1px rgba(0, 0, 0, 0.15), 0 0 4px 0 rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup.popupshow{
+    bottom: -1px;
+    transition: all 0.4s ease-in-out;
 }
 
 /* ------------intro------------ */
@@ -399,14 +409,14 @@ textarea:focus {
 
 .portfolioSidebar-Item{
     font-size: .88rem;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.05rem;
     font-weight: 300;
     text-decoration: none;
     text-align: right;
     color: rgb(89, 89, 89);    
-    padding: 16px 32px 16px 0;
+    padding: 16px 18px 16px 10px;
     border-right: rgba(0, 0, 0, 0.05) 5px solid;
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .portfolioSidebar-Item:hover{
@@ -414,7 +424,7 @@ textarea:focus {
     text-decoration: none;
     color: rgb(89, 89, 89);    
     background: rgba(256,256,256,.15);
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .portfolioSidebar-Item:visited, 
@@ -676,7 +686,7 @@ textarea:focus {
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 14px;
-    color: #CFD9DF;
+    color: var(--secondary-green-100);
     letter-spacing: 0.8px;
     line-height: 16px;
     padding: 4px 16px;
@@ -827,9 +837,9 @@ span {
 }
 
 .window-show{
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    visibility: visible!important;
+    opacity: 1!important;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(1)!important;
 }
 
 /* -----close & next & previous tag----- */
@@ -1060,27 +1070,28 @@ span {
 
 .thankSection a{
     text-decoration: none;
-    color: #545454!important;
+    color: #545454 !important;
     font-size: 12px;
     font-weight: bold;
-    background: rgba(255, 255, 255, .5) !important;
+    background: rgba(255, 255, 255, .6) !important;
     border: 1px solid #CFD9DF !important;
     border-radius: 4px;
-    box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, .1) !important;
-    padding: 12px 32px 12px 26px;
+    box-shadow: 0 1px 5px -1px rgba(0, 0, 0, .15) !important;
+    padding: 12px 28px 12px 22px;
     max-width: 240px;
     display: flex;
     align-items: center;
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
+    transition: all 0.15s;
+    -webkit-transition: all 0.15s;
 }
 
 .thankSection a:hover{
     text-decoration: none;
-    background: rgba(256, 256, 256, .9) !important;
-    box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, .05) !important;    
-    transition: all 0.1s;
-    -webkit-transition: all 0.1s;
+    color: var(--font-darkest) !important;
+    background: rgba(256, 256, 256, .95) !important;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .05) !important;
+    transition: all 0.15s;
+    -webkit-transition: all 0.15s;
 }
 
 .thankSection a span{
