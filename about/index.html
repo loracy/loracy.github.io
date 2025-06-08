@@ -530,9 +530,20 @@
         <i data-feather="arrow-up"></i>
           Top
       </a>
-      <a href="./assets/2025resume_en.pdf" download="Resume_LoraLin_En.pdf" class="text-center" role="button">
+      <div class="btn-group dropup ml-2" id="resumeDownloadSelector">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+          Resume (中文)
+        </button>
+        <div class="dropdown-menu">
+          <button class="dropdown-item" onclick="switchResumeSelector('ch')">Resume (中文)
+          </button><button class="dropdown-item" onclick="switchResumeSelector('en')">Resume (English)
+        </button></div>
+      </div>
+      <a href="../resume/assets/2025resume_en.pdf" download="Resume_LoraLin_En.pdf" class="d-none text-center" role="button" id="switchResumeSelectorOption_en">
           <i data-feather="download"></i>
-          Resume
+      </a>
+      <a href="../resume/assets/2025resume.pdf" download="Resume_LoraLin.pdf" class="text-center" role="button" id="switchResumeSelectorOption_ch">
+          <i data-feather="download"></i>
       </a>
       <a class="text-center" href="mailto:lora860227@gmail.com" role="button" target="_blank">
           <i data-feather="send"></i>
@@ -540,7 +551,6 @@
       </a>
     </div>
 </div>
-
 </div>
 <div class="expWindow d-flex flex-column">
   <div class="close-tag"></div>
@@ -720,6 +730,21 @@ function changeResumeLanguage() {
 
 function enterFullScreen(){
   $('.resumeContainer').addClass('FullScreen');
+}
+
+function switchResumeSelector(lanugauge) {
+  const type = lanugauge != '' && lanugauge != null && lanugauge != undefined ? lanugauge : 'en';
+
+  if(type == 'ch')  {
+    $('#resumeDownloadSelector .dropdown-toggle').text('Resume (中文)');
+    $('#switchResumeSelectorOption_en').addClass('d-none');
+    $('#switchResumeSelectorOption_ch').removeClass('d-none');
+
+  } else {
+    $('#resumeDownloadSelector .dropdown-toggle').text('Resume (English)');
+    $('#switchResumeSelectorOption_en').removeClass('d-none');
+    $('#switchResumeSelectorOption_ch').addClass('d-none');
+  }
 }
 </script>
 
