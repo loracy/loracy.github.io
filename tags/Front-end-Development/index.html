@@ -237,7 +237,7 @@
       <div class="row maxWidth">
         <div class="intro">
     <div class="d-flex col-12 justify-content-center">
-        <h4 id="sayHello">Hi <span></span>, <br class="d-block d-sm-none">I'm Lora Lin 😊</h4>
+        <h4 id="sayHello">Hi<span></span>, I'm Lora Lin 😊</h4>
         <h1 class="d-none">a UI<span>/</span>UX Designer. </h1>
     </div>
     <div class="col-12 justify-content-center mt-5 d-none">
@@ -253,19 +253,17 @@
         </div>
     </div>
 </div>
-
-<!-- <script> -->
 <script charset="utf-8">
     if(window.location.hash){
         var guestName = window.location.hash;
 
         if(guestName === '#goToWorks'){
-            $('#sayHello span').append('nice to meet you');
+            $('#sayHello span').append(', nice to meet you');
         }else{
             $('#sayHello span').append(decodeURI(guestName.slice(1)));
         }
     }else{
-        $('#sayHello span').append('nice to meet you');
+        $('#sayHello span').append(', nice to meet you');
     }
 
     $('a.btn-explore[href*="#"]:not([href="#"])').click(function() {    

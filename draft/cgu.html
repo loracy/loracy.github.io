@@ -235,24 +235,12 @@
 </a>
 
       <div class="row maxWidth">
-        <div class="col-12 mb-4">
-  <img class="img-fluid project-img" src="/images/cgu/cover.png" alt="肺癌照護APP">
-</div>
-      
-<div class="col-12 col-lg-8 offset-lg-2 pt-3 titleSection">
-  <h1>肺癌照護APP</h1>
-</div>
-
-<div class="col-1 col-sm-1 col-md-3 col-lg-3 pt-lg-3 mb-0 mb-md-4 portfolioSidebar">
-  <div class="portfolioSidebar-container portfolioSidebar-relative d-flex flex-row justify-content-end">
-    <div class="portfolioSidebar-h3list d-flex flex-column">
-    </div>
-    <div class="portfolioSidebar-progress">
-    </div>
+        
+  <div class="col-12 mb-4">
+    <img class="img-fluid project-img" src="/images/cgu/cover.png" alt="肺癌照護APP">
   </div>
-</div>
 
-<div class="col-12 col-sm-9 col-md-8 col-lg-8 pt-lg-3 mb-4 portfolioSection">
+<div class="row pt-lg-3 mb-4 px-4 portfolio-content justify-content-sm-end">
   <h3>開發動機</h3>
 <p>此專案是與長庚醫院和長庚大學合作開發，<br>
 由於肺癌患者通常需要大量往返醫院回診或進行療程，<br>
@@ -307,219 +295,202 @@
 <p>透過簡單的改善，我將不同狀態代表的顏色依照嚴重程度列在下面，使用者便能在不去記憶圖示的情況下，有效的理解整體的空氣狀態。</p>
 
 </div>
-
-<div class="col-12 d-flex justify-content-center align-items-center thankSection">
-  <a class="text-center mx-2" role="button" href="/resume/">
-    <i data-feather="file-text"></i>Resume
-  </a>
-  <a class="text-center mx-2" role="button" target="_blank" href="mailto:lora860227@gmail.com">
-    <i data-feather="send"></i>Contact
-  </a>
-  <a class="text-center mx-2" role="button" id="gotoTop">
-    <i data-feather="arrow-up"></i>Top
-  </a>
+<div class="expWindow d-flex flex-column">
+  <div class="close-tag"></div>
+  <div id="expGallery">
+    <img id="expGalleryImg-1" class="d-none" src="">
+    <img id="expGalleryImg-2" class="d-none" src="">
+  </div>
+  <div id="expArticle" class="d-none w-100">
+      <h5></h5>
+      <p></p>
+      <p></p>
+      <a href="" id="expArticle_btn" class="d-none" role="button" target="_blank">
+        View Works<i data-feather="arrow-right"></i>
+      </a>
+  </div>
 </div>
-
-<div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
-    
-    <a class="d-flex align-items-center link-prevPage" href="" data-link="tdal/">
-      <img src="/images/svg/arrow-left.svg">
-      <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
-        <span>上一篇</span>
-        TDAL
-      </p>
-    </a>
-  
-      
-  
-    <a class="d-flex align-items-center link-nextPage" href="" data-link="angularconf/">
-      <p class="d-flex flex-column align-items-end mb-0 mr-md-3">
-        <span>下一篇</span>
-        Angular Taiwain Conference
-      </p>
-      <img src="/images/svg/arrow-right.svg">
-    </a>
-  
-</div>
-
 
 <script>
-    //裝置寬度
-    var deviceWidth = $(window).width();
-    //break point
-    var smSize = 767.9;
+const $sideBar = $('.sideBar');
+const sticky = $sideBar.offset().top;
+const stickySM = sticky - 22;
+const smSize = 575.98;
+const aboutPageItems = ['about', 'skill', 'experience', 'award'];
+let deviceWidth = $(window).width();
 
-    //讓大標題前面有方塊圖案
-    $('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
-    
-    //讓文章底下感謝區域，顯示來客名字
-    var guestName = window.location.hash;
-    if(guestName && guestName != '#goToWorks'){
-      $('.thankSection p span').append( decodeURI(guestName).slice(1) + '，');
-    }
-    //把來客名字傳到下一頁
-    var nextLink = $('.link-nextPage').data('link');
-    var prevLink = $('.link-prevPage').data('link');
-    $('.link-nextPage').attr('href', '../../' + nextLink + guestName);
-    $('.link-prevPage').attr('href', '../../' + prevLink + guestName);
-    
-    var obj = $('.portfolioSection h3');
-    
-    //把作品集裡所有的大標題，弄成旁邊進度條的可點擊之Menu
-    $.each( obj, function( key, value ) {
-      console.log(value.offsetTop);
-      if( deviceWidth > smSize ){
-        $('.portfolioSidebar-h3list')
-        .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
-      }else{
-        $('.portfolioSidebar-h3list')
-        .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+(key+1)+'</a>');
-      }
-    });
-    
+$(document).ready(function(){
+  fixSideBar();
+});
 
-    $('.portfolioSidebar-Item').click(function() {
-      var target = $(this).index();
+$(window).resize(function() {
+  deviceWidth = $(window).width();
+  showActive();
+});
 
-      if( deviceWidth > smSize ){
-        $('html, body').animate(
-          {scrollTop: obj[target].offsetTop + 870}, 1000, "easeInOutExpo");
-      }else{
-        $('html, body').animate(
-          {scrollTop: obj[target].offsetTop + 450}, 1000, "easeInOutExpo");
-      }
-    });
+$(window).scroll(function() {
+  fixSideBar();
+  showActive();
+});
+
+function showActive() {
+  const activeClassName = [deviceWidth > smSize ? 'active_lg': 'active_sm', deviceWidth > smSize ? 'active_sm': 'active_lg'];
+  const reserveSpace = deviceWidth > smSize ? 32 : 180;
+  const windowOffset = window.pageYOffset;
+  const itemsOffset = [$('#about').offset().top - reserveSpace, $('#skill').offset().top - reserveSpace, $('#experience').offset().top - reserveSpace, $('#award').offset().top - reserveSpace, windowOffset + 1];
+  
+    $('.sideBarContent a').removeClass(activeClassName[1]);
     
-    $(window).scroll(function(){
-      fixPortfolioSidebar();
-      progessBar();    
-    });
-    
-    function fixPortfolioSidebar(){
-      var addSticky = $('.titleSection').offset().top + 100;
-      if( deviceWidth >= smSize ){
-          if (window.pageYOffset >= addSticky) {
-            $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
-            $('.portfolioSidebar-container').removeClass('portfolioSidebar-relative');
-          } else {
-            $('.portfolioSidebar-container').removeClass('portfolioSidebar-sticky'); 
-            $('.portfolioSidebar-container').addClass('portfolioSidebar-relative');
-          }
-        }else{
-          if (window.pageYOffset >= addSticky-150) {
-            $('.portfolioSidebar-container').css('opacity','1');
-            $('.portfolioSidebar-container').addClass('portfolioSidebar-sticky');
-            if(window.innerHeight <= 680){
-              $('.portfolioSidebar-sticky').css('top','53vh');
-            }
-          }else{
-            $('.portfolioSidebar-container').css('opacity','0');
-          }
-
-        }
-    }
-    
-    //計算progress bar的長度，依照抵達的頁面高度而變化
-    function progessBar(){
-      var totalHeight = $(document).height() - window.innerHeight; //整個頁面的長度 扣掉 使用者瀏覽器的高度
-      var currentHeight = window.pageYOffset;
-      $('.portfolioSidebar-progress').css('height', currentHeight / totalHeight * 100 +'%');
-    }
-
-    function copyUrl(url) {
-      const $temp = $('<input>');
-      const text = url;
-
-      if(text != '' || text != null || text != undefined) { 
-        $('body').append($temp);
-        $temp.val(text).select();
-        document.execCommand('copy');
-        $temp.remove();
-        popUpDialog(`The URL has been copied to your clipboard.`);
+    for (const [index, value] of itemsOffset.entries()) {
+      if (windowOffset - value < 0) {
+        $('.js-scroll-trigger').removeClass(activeClassName[0]);
+        $(`#${aboutPageItems[index - 1]}Target`).addClass(activeClassName[0]);
+        break;
       }
     }
-  </script>
+}
 
-<div class="portfolioWindow">
+function fixSideBar() {
+  if( deviceWidth > smSize ){
+    if (window.pageYOffset >= stickySM) {
+      $sideBar.addClass('sticky');
+    } else {
+      $sideBar.removeClass('sticky'); 
+    }
+  }else{
+    if (window.pageYOffset >= sticky) {
+      $sideBar.addClass('sticky');
+    } else {
+      $sideBar.removeClass('sticky'); 
+    }
+  }
+}
 
-    <div class="close-tag"></div>
-    <img src="">
-
-    <div class="previous-tag">
-        <i data-feather="arrow-left"></i>
-    </div>
-    <div class="next-tag">
-        <i data-feather="arrow-right"></i>
-    </div>
-</div>
-<script>
-    let $precentImg, $prevImg, $nextImg;
-
-    $('.previous-tag').click(function(){
-        $precentImg = $prevImg.length == 0 ? $precentImg : $prevImg;
-        $prevImg = $precentImg.prev('.demoImg').length == 0 ? $precentImg : $precentImg.prev('.demoImg');
-        $nextImg =  $precentImg.next('.demoImg');
-        $('.next-tag').show();
-
-        if($prevImg == $precentImg) {
-            $('.previous-tag').hide();
-        }
-
-        const src = $precentImg.attr('src');
-        $('.portfolioWindow img').attr('src', src)
-    });
+// animation of clicking sideBarContent
+$('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {    
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    let target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
     
-    $('.next-tag').click(function(){
-        $precentImg = $nextImg.length == 0 ? $precentImg : $nextImg;
-        $prevImg =  $precentImg.prev('.demoImg');
-        $nextImg =  $precentImg.next('.demoImg').length == 0 ? $precentImg : $precentImg.next('.demoImg');
-        $('.previous-tag').show();
+    const distance = deviceWidth > smSize ? target.offset().top - 20 :target.offset().top - 140
 
-        if($nextImg == $precentImg) {
-            $('.next-tag').hide();
-        }
+    if (target.length) {
+        $('html, body').animate({ scrollTop: distance }, 1000, "easeInOutExpo");
+        return false;
+    }
+  }
+});
 
-        const src = $precentImg.attr('src');
-        $('.portfolioWindow img').attr('src', src);
-    });
-    
-    $('.demoImg').click(function(){
-        const src = this.src;
-        
-        $precentImg =  $(this);
-        $prevImg =  $precentImg.prev('.demoImg');
-        $nextImg =  $precentImg.next('.demoImg');
-        
-        if($prevImg.length == 0  && $nextImg.length == 0) {
-            $('.previous-tag, .next-tag').hide();
-        } else {
-            if($prevImg.length == 0) {
-                $('.previous-tag').hide();
-                $('.next-tag').show();
-            } else if($nextImg.length == 0) {
-                $('.next-tag').hide();
-                $('.previous-tag').show();
-            } else {
-                $('.next-tag, .previous-tag').show();
-            }
-        }
+$('.btn_more').click(function() {
+  $('#expGalleryImg-1, #expGalleryImg-2').attr('src', '').addClass('d-none');
+  $('#expArticle_btnexpArticle_btn').attr('href', '').addClass('d-none');
 
-        $('.portfolioWindow img').attr('src', src);
-        $('.portfolioWindow').addClass('window-show');
-    });
+  const $clicked_content = $(this).parents('.timeline-content');
+  const src1 = $clicked_content.data('src1');
+  const src2 = $clicked_content.data('src2');
+  const link = $clicked_content.data('link');
 
-    $('.close-tag').click(function(){
-        $('.portfolioWindow').removeClass('window-show');
-    });
+  if(src1 != null && src1 != undefined  && src1 != ''){
+    $('#expGalleryImg-1').attr('src', src1).removeClass('d-none');
+  }
+  
+  if(src2 != null && src2 != undefined && src2 != ''){
+    $('#expGalleryImg-2').attr('src', src2).removeClass('d-none');
+  }
+  
+  if(link != null && link != undefined && link != ''){
+    $('#expArticle_btnexpArticle_btn').attr('href', link).removeClass('d-none');
+  }
+  $('.expWindow').addClass('window-show');
+});
 
-    $(document).keyup(function(e){
-        var keyWhich =  e.which;
-        var keyCode =  e.keyCode;
-        if(keyWhich == 27 || keyCode == 27){
-            $('.portfolioWindow').removeClass('window-show');
-        }
-    });        
+$('.close-tag').click(function(){
+  $('.expWindow').removeClass('window-show');
+}); 
+
+$(document).keyup(function(e){
+  var keyWhich =  e.which;
+  var keyCode =  e.keyCode;
+  if(keyWhich == 27 || keyCode == 27){
+      $('.expWindow').removeClass('window-show');
+  }
+});
+
+$('.skillDetail').on('mouseenter', function(e) { 
+  let skillTitle = $(this).attr('skill-title');
+  let skillProperty = skillTitle.toLowerCase().replace(/ /g,'');
+  let skillDescription = $(this).attr('skill-description') == undefined ?  '' : $(this).attr("skill-description");
+  let skillWorks = $(this).attr('skill-work');
+  let hasWork = skillWorks == undefined ? 'd-none' : '';
+
+  let popover = `<div id="skillPopover">
+      <div id="skillPopover_title">
+        <h6>${skillTitle}</h6>
+        <p>${skillDescription}</p>
+      </div>
+      <div id="skillPopover_seemore" class="${hasWork}">
+        <a target="_blank" href="${skillWorks}">See My Works</a>
+      </div>
+      <div id="skillPopover_image">
+        <img src="./assets/skill_${skillProperty}.png">
+      </div>
+    </div>`;
+
+  $(this).prepend(popover);
+});
+
+$('.skillDetail').on('mouseleave', function() { 
+  $('#skillPopover').remove();
+});
+
+$('[id^="lanugaugeSwitchCheckbox_"]').on("change", function(){ changeAboutPageLanguage(this);});
+
+function changeAboutPageLanguage(target) {
+  const $switcher = $(target);
+  const targetName  = $switcher.attr('trigger-target');
+
+  if($switcher.prop('checked')) {
+    $('.' +  targetName + '_en').show();
+    $('.' +  targetName + '_ch').hide();
+  } else {
+    $('.' +  targetName + '_ch').show();
+    $('.' +  targetName + '_en').hide();
+  }
+}
+
+function changeResumeLanguage() {
+  const $hiddenImage = $('.resumeImage.d-none');
+  const $displayedImage = $('.resumeImage:not(.d-none)');
+  const $hiddenBtn = $('.controlBar a[download].d-none');
+  const $displayedBtn = $('.controlBar a[download]:not(.d-none)');
+  
+  $hiddenImage.removeClass('d-none');
+  $displayedImage.addClass('d-none');
+  
+  $hiddenBtn.removeClass('d-none');
+  $displayedBtn.addClass('d-none');
+}
+
+function enterFullScreen(){
+  $('.resumeContainer').addClass('FullScreen');
+}
+
+function switchResumeSelector(lanugauge) {
+  const type = lanugauge != '' && lanugauge != null && lanugauge != undefined ? lanugauge : 'en';
+
+  if(type == 'ch')  {
+    $('#resumeDownloadSelector .dropdown-toggle').text('Resume (中文)');
+    $('#switchResumeSelectorOption_en').addClass('d-none');
+    $('#switchResumeSelectorOption_ch').removeClass('d-none');
+
+  } else {
+    $('#resumeDownloadSelector .dropdown-toggle').text('Resume (English)');
+    $('#switchResumeSelectorOption_en').removeClass('d-none');
+    $('#switchResumeSelectorOption_ch').addClass('d-none');
+  }
+}
 </script>
+
 
       </div>
       
