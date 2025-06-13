@@ -1418,8 +1418,8 @@ label[id^="lanugaugeSwitch_"] {
 
 .aboutContent {
     text-align: left;
-    font-size: 1em;
-    line-height: 2rem;
+    font-size: 0.9em;
+    line-height: 1.3em;
     margin: 2.2rem 0 0 0;
     opacity: .9;
     white-space: normal;
