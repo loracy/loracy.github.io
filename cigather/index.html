@@ -165,7 +165,7 @@
         });
     </script>
   </a>
-  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-right py-2 mt-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse text-center" id="navbarCollapse">
@@ -252,7 +252,7 @@
   </div>
 </div>
 
-<div class="col-12 col-sm-9 col-md-8 col-lg-8 pt-lg-3 mb-4 portfolioSection">
+<div class="col-12 col-sm-9 col-md-8 col-lg-8 pt-lg-3 mb-4 pb-md-0 pb-5 portfolioSection">
   <span class="works-role ml-2">
 <i data-feather="briefcase"></i>UX  Research
 </span>
@@ -343,6 +343,12 @@
   <a class="text-center mx-2" role="button" id="gotoTop">
     <i data-feather="arrow-up"></i>Top
   </a>
+   
+  <a class="text-center mx-2 d-none" role="button" href="/angularconf/" id="previousPage">
+    <i data-feather="arrow-left-circle"></i>Previous
+  </a>
+  
+  
 </div>
 
 <div class="col-12 col-lg-10 offset-lg-1 my-5 my-md-4 my-lg-0 d-flex justify-content-between navigateSection">
@@ -350,7 +356,7 @@
     <a class="d-flex align-items-center link-prevPage" href="" data-link="angularconf/">
       <img src="/images/svg/arrow-left.svg">
       <p class="d-flex flex-column align-items-start mb-0 ml-md-3">
-        <span>上一篇</span>
+        <span>Previous</span>
         Angular Taiwan Conference
       </p>
     </a>
@@ -361,12 +367,36 @@
   
 </div>
 
-
 <script>
     //裝置寬度
     var deviceWidth = $(window).width();
     //break point
     var smSize = 767.9;
+
+    $(document).ready(function(){
+      toggleSmNavigation();
+    });
+
+    $(window).resize(function() {
+        toggleSmNavigation();
+    });
+
+    function toggleSmNavigation() {
+      if($('#previousPage').length != 0) {
+        if(deviceWidth > smSize) {
+          $('#previousPage').addClass('d-none');
+        } else {
+          $('#previousPage').removeClass('d-none');
+        }
+      }
+      if($('#nextPage').length != 0) {
+        if(deviceWidth > smSize) {
+          $('#nextPage').addClass('d-none');
+        } else {
+          $('#nextPage').removeClass('d-none');
+        }
+      }
+    }
 
     //讓大標題前面有方塊圖案
     $('.portfolioSection h3').prepend('<img src="../images/dot.png" height="36px" class="" />');
@@ -385,17 +415,13 @@
     var obj = $('.portfolioSection h3');
     
     //把作品集裡所有的大標題，弄成旁邊進度條的可點擊之Menu
-    $.each( obj, function( key, value ) {
-      console.log(value.offsetTop);
+    $.each( obj, function(key, value) {
       if( deviceWidth > smSize ){
-        $('.portfolioSidebar-h3list')
-        .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
+        $('.portfolioSidebar-h3list').append('<a class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+value.textContent+'</a>');
       }else{
-        $('.portfolioSidebar-h3list')
-        .append('<a onclick="console.log(\''+ value +'\')" class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+(key+1)+'</a>');
+        $('.portfolioSidebar-h3list').append('<a class="portfolioSidebar-Item" id="portfolioSidebar-Item-'+ key +'">'+(key+1)+'</a>');
       }
     });
-    
 
     $('.portfolioSidebar-Item').click(function() {
       var target = $(this).index();
@@ -411,7 +437,7 @@
     
     $(window).scroll(function(){
       fixPortfolioSidebar();
-      progessBar();    
+      progessBar();
     });
     
     function fixPortfolioSidebar(){

@@ -165,7 +165,7 @@
         });
     </script>
   </a>
-  <button class="navbar-toggler navbar-toggler-right py-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-right py-2 mt-2" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse text-center" id="navbarCollapse">
@@ -332,6 +332,12 @@ $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     }
   }
 });
+
+$('.btn_detail').click(function() {
+  $(this).parent('p.timeline-content-detail').addClass('Full');
+  $(this).addClass('d-none');
+});
+
 
 $('.btn_more').click(function() {
   $('#expGalleryImg-1, #expGalleryImg-2').attr('src', '').addClass('d-none');
